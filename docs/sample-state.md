@@ -1,3 +1,5 @@
+```js
+
 {
   session: {
     currentUser: {
@@ -81,3 +83,4 @@
     1: { campaign_id: 1},
   }
 }
+```

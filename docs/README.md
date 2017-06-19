@@ -25,11 +25,11 @@ S-Mart is a web application inspired by Indiegogo built using Ruby on Rails and 
 
 ##Design Docs
 
-* View Wireframes[wireframes]
-* React Components[components]
-* API endpoints[api-endpoints]
-* DB schema[schema]
-* Sample State[sample-state]
+* View Wireframes [wireframes]
+* React Components [components]
+* API endpoints [api-endpoints]
+* DB schema [schema]
+* Sample State [sample-state]
 
 [wireframes]: docs/wireframes
 [components]: docs/component-hierarchy.md

@@ -32,10 +32,11 @@ S-Mart is a web application inspired by Indiegogo built using Ruby on Rails and 
 * Sample State [sample-state]
 
 [wireframes]: wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[components]: component-hierarchy.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
+
 
 ## Implementation Timeline
 

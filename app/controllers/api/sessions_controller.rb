@@ -22,6 +22,7 @@ class Api::SessionsController < ApplicationController
       render :show
     else
       render json: ['You were not logged in'], status: 404
+    end
   end
 
 end

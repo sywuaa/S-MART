@@ -1,4 +1,4 @@
-export const login = ({ user }) => {
+export const login = (user) => {
   return $.ajax({
       method: 'POST',
       url: 'api/session',

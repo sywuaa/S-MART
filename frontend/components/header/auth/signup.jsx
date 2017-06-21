@@ -11,10 +11,10 @@ class SignUp extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errors = this.errors.bind(this);
   }
-  //
-  // componentWillMount(){
-  //   debugger
-  // }
+
+  componentWillUnmount(){
+    this.props.clearErrors();
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -30,7 +30,7 @@ class SignUp extends React.Component {
     if(this.props.errors) {
       return (
         this.props.errors.map( error => {
-          return (<li key={error}> {error} </li>);
+          return (<li key={error}> * {error} </li>);
         })
       );
     }

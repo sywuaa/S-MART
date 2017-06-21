@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class LogIn extends React.Component {
   constructor(props){
@@ -7,9 +7,14 @@ class LogIn extends React.Component {
       username: '',
       password: ''
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errors = this.errors.bind(this);
+
+
+  }
+
+  componentWillUnmount(){
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
@@ -26,7 +31,7 @@ class LogIn extends React.Component {
     if(this.props.errors) {
       return (
         this.props.errors.map( error => {
-          return (<li key={error}> {error} </li>);
+          return (<li key={error}> * {error} </li>);
         })
       );
     }

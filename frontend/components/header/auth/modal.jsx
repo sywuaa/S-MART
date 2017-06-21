@@ -27,9 +27,6 @@ class ModalContainer extends React.Component {
     this.openSignupModal = this.openSignupModal.bind(this);
     this.openLoginModal = this.openLoginModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    // this.afterOpenModal = this.afterOpenModal.bind(this);
-    // this.toggleSignIn = this.toggleSignIn.bind(this);
-
     this.toggleFormType = this.toggleFormType.bind(this);
   }
 
@@ -50,22 +47,22 @@ class ModalContainer extends React.Component {
 
   toggleFormType(){
     let type;
-    (this.state.formType === 'login') ? type = 'signup' : type = 'login';
+    this.state.formType === 'login' ? type = 'signup' : type = 'login';
     this.setState({formType: type });
   }
 
   render() {
     const SignUpForm = (
       <div>
-      <button onClick={this.toggleFormType}>Log In Instead</button>
-      <SignUpContainer />
+        <button onClick={this.toggleFormType}>Log In Instead</button>
+        <SignUpContainer />
       </div>
     );
 
     const LogInForm = (
       <div>
-      <button onClick={this.toggleFormType}>Sign Up</button>
-      <LogInContainer />
+        <button onClick={this.toggleFormType}>Sign Up</button>
+        <LogInContainer />
       </div>
     );
 

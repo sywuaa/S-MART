@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 a = User.create([
-  { first_name: 'a', last_name: 'aa', email: 'a@gmail.com', password: 'asdasdasd', country: 'usa', city: 'new york',},
-  { first_name: 'b', last_name: 'bb', email: 'b@gmail.com', password: 'asdasdasd', country: 'usa', city: 'new york',}
+  { username: 'asd', password: 'asdasdasd', first_name: 'a', last_name: 'aa', email: 'a@gmail.com',  country: 'usa', city: 'new york',},
+  { username: 'bsd', password: 'asdasdasd',first_name: 'b', last_name: 'bb', email: 'b@gmail.com', country: 'usa', city: 'new york',}
   ])

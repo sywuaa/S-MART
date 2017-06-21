@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170620132948) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["password_digest"], name: "index_users_on_password_digest", unique: true, using: :btree
     t.index ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
 end

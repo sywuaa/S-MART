@@ -11,6 +11,10 @@ class SignUp extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errors = this.errors.bind(this);
   }
+  //
+  // componentWillMount(){
+  //   debugger
+  // }
 
   handleSubmit(e) {
     e.preventDefault();

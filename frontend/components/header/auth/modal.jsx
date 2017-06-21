@@ -6,7 +6,7 @@ import SignUpContainer from './signup_container';
 
 const customStyles = {
   content : {
-    top                   : '20%',
+    top                   : '30%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
@@ -20,13 +20,17 @@ class ModalContainer extends React.Component {
     super();
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      formType: ''
     };
 
     this.openSignupModal = this.openSignupModal.bind(this);
     this.openLoginModal = this.openLoginModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
+    // this.afterOpenModal = this.afterOpenModal.bind(this);
+    // this.toggleSignIn = this.toggleSignIn.bind(this);
+
+    this.toggleFormType = this.toggleFormType.bind(this);
   }
 
   openSignupModal() {
@@ -34,9 +38,6 @@ class ModalContainer extends React.Component {
     this.setState({modalIsOpen: true});
   }
 
-  afterOpenModal() {
-    this.subtitle.style.color = '#f00';
-  }
 
   openLoginModal() {
     this.state.formType = 'login';
@@ -47,7 +48,27 @@ class ModalContainer extends React.Component {
     this.setState({modalIsOpen: false});
   }
 
+  toggleFormType(){
+    let type;
+    (this.state.formType === 'login') ? type = 'signup' : type = 'login';
+    this.setState({formType: type });
+  }
+
   render() {
+    const SignUpForm = (
+      <div>
+      <button onClick={this.toggleFormType}>Log In Instead</button>
+      <SignUpContainer />
+      </div>
+    );
+
+    const LogInForm = (
+      <div>
+      <button onClick={this.toggleFormType}>Sign Up</button>
+      <LogInContainer />
+      </div>
+    );
+
     return (
       <div>
         <div>
@@ -56,13 +77,12 @@ class ModalContainer extends React.Component {
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
-            onAfterOpen={this.afterOpenModal}
             style={customStyles}
             contentLabel="auth-form-container"
           >
 
           <div className="auth-form">
-            {this.state.formType === 'signup' ? <SignUpContainer /> : <LogInContainer />}
+            {this.state.formType === 'signup' ? SignUpForm : LogInForm }
           </div>
           </Modal>
         </div>

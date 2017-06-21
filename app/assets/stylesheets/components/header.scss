@@ -27,6 +27,38 @@
 
 .login-form {
   display: block;
+  font-size: 18px;
+  align-items: center;
+}
+
+.login-form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form button {
+  margin-left: 85px;
+}
+
+.signup-container {
+  margin: 10px;
+}
+
+.signup-form {
+  display: block;
+  font-size: 18px;
+  align-items: center;
+}
+
+.signup-form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-form button {
+  margin-left: 85px;
 }
 
 h3 {
@@ -52,7 +84,12 @@ button {
   margin: 10px;
   border-radius: 5px;
   color: black;
-  border: 2px solid green;
+  border: 2px solid $green;
   width: 100px;
   text-align: center;
+}
+
+button:hover {
+  opacity: 0.9;
+  background-color: $lightest-purple
 }

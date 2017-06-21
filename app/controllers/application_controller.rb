@@ -16,8 +16,8 @@ class ApplicationController < ActionController::Base
     session[:session_token] = user.reset_session_token
   end
 
-  def log_out(user)
-    user.reset_session_token
+  def log_out
+    current_user.reset_session_token
     session[:session_token] = nil
   end
 

@@ -16,9 +16,8 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    if @user
-      log_out(@user)
+    if current_user
+      log_out
       render :show
     else
       render json: ['You were not logged in'], status: 404

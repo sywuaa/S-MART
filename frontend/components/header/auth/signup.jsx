@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LogIn extends React.Component {
+class SignUp extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class LogIn extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.login({user});
+    this.props.signup({user});
   }
 
   update(input) {
@@ -34,11 +34,11 @@ class LogIn extends React.Component {
 
   render() {
     return(
-      <section className="login-container">
+      <section className="signup-container">
         <ul>
           {this.errors()}
         </ul>
-        <form className="login-form" onSubmit={this.handleSubmit}>
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <label>Username
             <input type="text"
               value={this.state.username}
@@ -55,7 +55,7 @@ class LogIn extends React.Component {
             </input>
           </label>
 
-          <button>Log In</button>
+          <button>Sign Up</button>
 
         </form>
       </section>

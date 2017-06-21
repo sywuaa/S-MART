@@ -1,9 +1,9 @@
 import React from 'react';
-import AuthContainer from './header/auth/auth_container';
+import Header from './header/header';
 
 const App = () => (
-  <div>
-    <AuthContainer />
+  <div className="header">
+    <Header />
   </div>
 );
 

@@ -5,14 +5,7 @@ import LogInContainer from './login_container';
 import SignUpContainer from './signup_container';
 
 const customStyles = {
-  content : {
-    top                   : '30%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+  
 };
 
 class ModalContainer extends React.Component {
@@ -54,14 +47,22 @@ class ModalContainer extends React.Component {
   render() {
     const SignUpForm = (
       <div>
-        <button onClick={this.toggleFormType}>Log In Instead</button>
+        <span>
+          <button onClick={this.toggleFormType}>Log In</button>
+        </span>
+        <br></br>
+        <br></br>
         <SignUpContainer />
       </div>
     );
 
     const LogInForm = (
       <div>
-        <button onClick={this.toggleFormType}>Sign Up</button>
+        <span>
+          <button onClick={this.toggleFormType}>Sign Up</button>
+          <br></br>
+          <br></br>
+        </span>
         <LogInContainer />
       </div>
     );
@@ -74,7 +75,7 @@ class ModalContainer extends React.Component {
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
-            style={customStyles}
+            className='modal-style'
             contentLabel="auth-form-container"
           >
 

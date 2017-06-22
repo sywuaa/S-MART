@@ -5,7 +5,12 @@ class SignUp extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      first_name: '',
+      last_name: '',
+      email: '',
+      country: '',
+      city: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -56,6 +61,46 @@ class SignUp extends React.Component {
               value={this.state.password}
               placeholder="Password"
               onChange={this.update("password")}>
+            </input>
+          </label>
+
+          <label>First Name
+            <input type ="text"
+              value={this.state.first_name}
+              placeholder="First Name"
+              onChange={this.update("first_name")}>
+            </input>
+          </label>
+
+          <label>Last Name
+            <input type ="text"
+              value={this.state.laste_name}
+              placeholder="Last Name"
+              onChange={this.update("last_name")}>
+            </input>
+          </label>
+
+          <label>Email
+            <input type ="text"
+              value={this.state.email}
+              placeholder="Email"
+              onChange={this.update("email")}>
+            </input>
+          </label>
+
+          <label>Country
+            <input type ="text"
+              value={this.state.country}
+              placeholder="Country"
+              onChange={this.update("country")}>
+            </input>
+          </label>
+
+          <label>City
+            <input type ="text"
+              value={this.state.city}
+              placeholder="City"
+              onChange={this.update("city")}>
             </input>
           </label>
 

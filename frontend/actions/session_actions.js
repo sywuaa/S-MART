@@ -22,6 +22,7 @@ export const logout = (user) => dispatch => {
 };
 
 export const signup = (user) => dispatch => {
+  debugger
   return (
     APIUtil.signup(user)
       .then( user => dispatch(receiveCurrentUser(user)),

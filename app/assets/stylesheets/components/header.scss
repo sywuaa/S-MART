@@ -61,8 +61,35 @@
   margin-left: 85px;
 }
 
+.auth-form {
+  display: block;
+  font-size: 18px;
+  align-items: center;
+}
+
 .auth-form li {
   color: red
+}
+
+.auth-form span {
+  font-size: 20px;
+  margin-left: 85px;
+}
+
+.modal-style {
+  left: 40%;
+  right: auto;
+  position: absolute;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin-top: 85px;
+  background-color: transparentize(#e2ede1, 0.6);
+}
+
+content {
+  margin-top: '20px';
+  position: absolute;
 }
 
 h3 {
@@ -79,6 +106,7 @@ label {
 }
 
 input {
+  padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
   margin: 5px;

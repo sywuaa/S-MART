@@ -1,20 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Title from './title';
+import Story from './story';
 
 const mapStateToProps = (state) => {
   return({
-    title: state.campaign
+    story: state.campaign
   });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return({
-    
+
   });
 };
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Title);
+  null,
+  null
+)(story);

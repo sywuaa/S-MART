@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return(
     <div className="header-container">
-      <div className="left=nav">
+      <div className="left-nav">
         <Link className="logo" to='/'>S-Mart</Link>
         <span>Explore</span>
         <span>How It Works</span>

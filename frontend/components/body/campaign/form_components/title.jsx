@@ -6,13 +6,9 @@ class Title extends React.Component {
 
   }
 
-  // update(input) {
-  //   return e => this.setState({[input]: e.target.value });
-  // }
-
   render(){
     return(
-      <div>
+      <div className="camp-title">
         <form>
           <label>Title
             <input onChange={this.props.change('title')}

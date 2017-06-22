@@ -5,6 +5,7 @@
   justify-content: space-between;
   font-size: 15px;
   background-color: $lightest-blue;
+  font-family: "Benton Sans","Helvetica","sans-serif"
 }
 
 .header {
@@ -15,13 +16,16 @@
   margin-right: 20px;
 }
 
+.left-nav {
+  margin-left: 50px;
+}
+
 .logo {
   font-size: 30px;
   margin: 20px;
   margin-right: 30px;
-  font-family: fantasy;
-  color: #e22fd6;
-  font-weight: bolder;
+  color: $logo-pink;
+  font-weight: 1;
 }
 
 .login-container {
@@ -99,9 +103,13 @@ h3 {
   display: flex;
 }
 
-span {
+.header span {
   margin: 15px;
-  color: $light-blue;
+  color: black;
+}
+
+.header span:hover {
+  color: $logo-pink;
 }
 
 label {
@@ -119,12 +127,11 @@ button {
   margin: 10px;
   border-radius: 5px;
   color: black;
-  border: 2px solid $green;
   width: 100px;
   text-align: center;
 }
 
 button:hover {
   opacity: 0.9;
-  background-color: $lightest-purple
+  color: $logo-pink
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import TitleContainer from './form_components/title_container';
+import Title from './form_components/title';
+import Story from './form_components/story';
 
 const components = {
-  title: TitleContainer,
-  body: () => (<div>body</div>),
+  title: Title,
+  story: Story,
   reward: () => <div>reward</div>
 };
 
@@ -14,10 +15,19 @@ class SaveCampaign extends React.Component {
 
     this.state = {
       component: 'title',
-      title: ''
+      title: '',
+      story: '',
+      reward: '',
+      goal_amt: ''
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    const campaign = this.state
+    this.props.createCampaign({campaign}).then( (camp) => console.log(camp));
   }
 
   handleClick(target) {
@@ -38,12 +48,11 @@ class SaveCampaign extends React.Component {
 
     return(
       <page>
-        {this.state.title}
         <container className="campaign-sidebar">
           <section onClick={this.handleClick('title')}>
             Title
           </section>
-          <section onClick={this.handleClick('body')}>
+          <section onClick={this.handleClick('story')}>
             Story
           </section>
           <section onClick={this.handleClick('reward')}>
@@ -52,9 +61,11 @@ class SaveCampaign extends React.Component {
         </container>
 
         <div>
-          <Com change={this.handleChange} title={this.state.title} />
+          <Com change={this.handleChange} title={this.state.title} story={this.state.story} />
         </div>
-        
+
+        <button onClick={this.handleSubmit}>Save</button>
+
 
       </page>
     );

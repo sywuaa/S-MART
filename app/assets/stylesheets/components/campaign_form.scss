@@ -1,4 +1,4 @@
-.campaign-bar {
+.campaign-sidebar {
   padding: 20px 0;
   width: 20%;
   bottom: 80%;
@@ -9,7 +9,7 @@
   background-color: $light-blue;
 }
 
-.campaign-bar section {
+.campaign-sidebar section {
   margin: 5px;
   padding: 5px;
   display: flex;
@@ -17,4 +17,9 @@
   width: 80%;
   height: 10%;
   justify-content: center;
+}
+
+.campaign-sidebar section:hover {
+  background-color: #95b3e5;
+  cursor: pointer;
 }

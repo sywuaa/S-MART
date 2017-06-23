@@ -88,7 +88,6 @@
 .camp-com-page input {
   width: 80%;
   height: 50px;
-  border: 1px solid black;
   padding-left: 10px;
   background-color: #ffffff;
 }
@@ -105,4 +104,11 @@
 
 .camp-form-date {
   display: flex;
+}
+
+.camp-page input {
+  border: 1px solid #c6c6c6;
+}
+.camp-page input:focus {
+  border-color: black;
 }

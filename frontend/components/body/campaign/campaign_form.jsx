@@ -1,11 +1,12 @@
 import React from 'react';
 import Basic from './form_components/basic';
 import Story from './form_components/story';
+import Reward from './form_components/reward';
 
 const components = {
   basic: Basic,
   story: Story,
-  reward: () => <div>reward</div>
+  reward: Reward
 };
 
 

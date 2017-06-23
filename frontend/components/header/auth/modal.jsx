@@ -5,7 +5,7 @@ import LogInContainer from './login_container';
 import SignUpContainer from './signup_container';
 
 const customStyles = {
-  
+
 };
 
 class ModalContainer extends React.Component {

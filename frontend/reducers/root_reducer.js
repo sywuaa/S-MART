@@ -3,7 +3,8 @@ import sessionReducer from './session_reducer';
 import campaignReducer from './campaign_reducer';
 
 const rootReducer = combineReducers({
-  session: sessionReducer
+  session: sessionReducer,
+  campaign: campaignReducer
 });
 
 export default rootReducer;

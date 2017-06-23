@@ -2,6 +2,7 @@ import React from 'react';
 import Basic from './form_components/basic';
 import Story from './form_components/story';
 import Reward from './form_components/reward';
+import { merge } from 'lodash';
 
 const components = {
   basic: Basic,
@@ -14,33 +15,31 @@ class SaveCampaign extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      component: 'basic',
-      title: '',
-      story: '',
-      reward: '',
-      goal_amt: ''
-    };
+    this.state = merge( {} , this.props.campaign, {component: 'basic'});
+
+
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit() {
-    const campaign = this.state
+    const campaign = this.state;
     this.props.createCampaign({campaign}).then( (camp) => console.log(camp));
   }
 
   handleClick(target) {
       return () => {
-        this.setState({component: target})
+        this.setState({component: target});
       }
   }
 
   handleChange(input){
     return (e) => {
-      this.setState({[input]: e.target.value})
-    }
+      window.scrollTo(0,0);
+      this.setState({[input]: e.target.value});
+
+    };
   }
 
   render(){
@@ -76,7 +75,7 @@ class SaveCampaign extends React.Component {
 
         <div className="camp-com-page">
           <div className="campaign-form-components">
-            <Com change={this.handleChange} title={this.state.title} story={this.state.story} />
+            <Com change={this.handleChange} campaign={this.state} />
           </div>
         </div>
 

@@ -112,3 +112,14 @@
 .camp-page input:focus {
   border-color: black;
 }
+
+.camp-form-continue-submit {
+  display: flex;
+  font-size: 24px;
+  margin-top: 70px;
+  justify-content: flex-end;
+}
+
+.camp-form-button {
+  text: $logo-pink;
+}

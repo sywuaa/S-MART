@@ -93,7 +93,7 @@ class Reward extends React.Component {
 
         <div className="camp-form-continue-submit">
           <div>
-            <button onClick={this.props.change('component')} value='rewards'>Continue</button>
+            <button onClick={this.props.change('component')} value='rewards'>Save & Continue</button>
           </div>
         </div>
 

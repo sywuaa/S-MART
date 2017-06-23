@@ -10,7 +10,7 @@
   color: white;
   justify-content: center;
   width: 250px;
-  height: 130vh;
+  height: 200vh;
   font-size: 25px;
   background-color: black;
 }
@@ -115,11 +115,20 @@
 
 .camp-form-continue-submit {
   display: flex;
-  font-size: 24px;
+  font-size: 16px;
   margin-top: 70px;
   justify-content: flex-end;
 }
 
-.camp-form-button {
-  text: $logo-pink;
+.camp-form-continue-submit button {
+  border-radius: 2px;
+  color: #c6c6c6;
+  text-align: center;
+  height: 40px;
+  width: 160px;
+  background-color: #7A69B3;
+}
+
+.camp-form-continue-submit button:hover {
+  background-color: #6a59a0;
 }

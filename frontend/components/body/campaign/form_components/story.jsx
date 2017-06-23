@@ -8,7 +8,7 @@ class Story extends React.Component {
 
   render(){
     return(
-      <div className="camp-title">
+      <div className="camp-components">
         <div>
           <h2>Pitch Video or Image</h2>
         </div>

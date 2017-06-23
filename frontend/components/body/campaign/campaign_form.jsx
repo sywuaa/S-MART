@@ -47,15 +47,16 @@ class SaveCampaign extends React.Component {
     const Com = components[this.state.component];
 
     return(
-      <page className="camp-page">
-        <div className="camp-form-title">
-          <container className="campaign-sidebar">
+      <div className="camp-page">
+          <div className="campaign-sidebar">
 
-            <section >
-              <div>
-                {this.state.title || 'Campaign'}
+            <div className="camp-form-title">
+              <div >
+                <div>
+                  {this.state.title || 'Campaign'}
+                </div>
               </div>
-            </section>
+            </div>
 
             <div className="form-tabs">
               <section onClick={this.handleClick('title')}>
@@ -68,18 +69,17 @@ class SaveCampaign extends React.Component {
                 Rewards
               </section>
             </div>
-          </container>
-        </div>
+          </div>
 
         <div className="camp-com-page">
-          <div>
+          <div className="campaign-form-components">
             <Com change={this.handleChange} title={this.state.title} story={this.state.story} />
           </div>
         </div>
 
 
 
-      </page>
+      </div>
     );
   }
 

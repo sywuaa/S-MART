@@ -8,7 +8,7 @@ class Title extends React.Component {
 
   render(){
     return(
-      <div className="camp-title">
+      <div className="camp-components">
         <div>
           <h2>Basic</h2>
         </div>

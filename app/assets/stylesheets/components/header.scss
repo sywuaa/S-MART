@@ -87,43 +87,58 @@
   left: 40%;
   right: auto;
   position: absolute;
+  display: flex;
   padding: 10px;
   border: 2px solid black;
   border-radius: 15px;
   margin-top: 85px;
-  background-color: transparentize(#e2ede1, 0.6);
+  background-color: transparentize(#e2ede1, 0);
 }
 
-content {
+.modal-style button {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.modal-style input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.header-container content {
   margin-top: '20px';
   position: absolute;
 }
 
-h3 {
+.header-container h3 {
   display: flex;
 }
 
-.header span {
+.header-container span {
   margin: 15px;
   color: black;
 }
 
-.header span:hover {
+.header-container span:hover {
   color: $logo-pink;
 }
 
-label {
+.header-container label {
   margin: 5px;
 }
 
-input {
+.header-container input {
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
   margin: 5px;
 }
 
-button {
+.header-container button {
   margin: 10px;
   border-radius: 5px;
   color: black;
@@ -131,7 +146,7 @@ button {
   text-align: center;
 }
 
-button:hover {
+.header-container button:hover {
   opacity: 0.9;
   color: $logo-pink
 }

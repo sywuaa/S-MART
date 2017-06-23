@@ -47,24 +47,36 @@ class SaveCampaign extends React.Component {
     const Com = components[this.state.component];
 
     return(
-      <page>
-        <container className="campaign-sidebar">
-          <section onClick={this.handleClick('title')}>
-            Title
-          </section>
-          <section onClick={this.handleClick('story')}>
-            Story
-          </section>
-          <section onClick={this.handleClick('reward')}>
-            Rewards
-          </section>
-        </container>
+      <page className="camp-page">
+        <div className="camp-form-title">
+          <container className="campaign-sidebar">
 
-        <div>
-          <Com change={this.handleChange} title={this.state.title} story={this.state.story} />
+            <section >
+              <div>
+                {this.state.title || 'Campaign'}
+              </div>
+            </section>
+
+            <div className="form-tabs">
+              <section onClick={this.handleClick('title')}>
+                Title
+              </section>
+              <section onClick={this.handleClick('story')}>
+                Story
+              </section>
+              <section onClick={this.handleClick('reward')}>
+                Rewards
+              </section>
+            </div>
+          </container>
         </div>
 
-        <button onClick={this.handleSubmit}>Save</button>
+        <div className="camp-com-page">
+          <div>
+            <Com change={this.handleChange} title={this.state.title} story={this.state.story} />
+          </div>
+        </div>
+
 
 
       </page>
@@ -74,3 +86,6 @@ class SaveCampaign extends React.Component {
 }
 
 export default SaveCampaign;
+
+
+// <button onClick={this.handleSubmit}>Save</button>

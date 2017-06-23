@@ -13,7 +13,7 @@ class Story extends React.Component {
           <h2>Pitch Video or Image</h2>
         </div>
         <div>
-          <span className="basic">
+          <span className="story">
             Add a video or image to appear on the top of your campaign page. Campaigns with videos raise 2000% more than campaigns without videos. Keep your video 2-3 minutes. Learn how to make a great video.
           </span>
         </div>
@@ -25,31 +25,75 @@ class Story extends React.Component {
           <label className="label-tag2">Enter a YouTube or Vimeo URL to appear at the top of your campaign page.</label>
 
             <input className="form-input" onChange={this.props.change('title')}
-              value={this.props.title} >
+              value={this.props.title} placeholder="Title" >
             </input>
         </div>
 
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">Campaign Tagline *</label>
-          <label className="label-tag2">CProvide a short description that best describes your campaign to your audience.</label>
+          <label className="label-tag">Video Overlay Image (Optional)</label>
+          <label className="label-tag2">Choose an image to represent your video before it plays. 640 x 427 recommended resolution, 620 x 415 minimum resolution.</label>
 
-            <input className="form-input" onChange={this.props.change('title')}
-              value={this.props.title} >
+            <input className="form-input" onChange={this.props.change('slogan')}
+              value={this.props.slogan} placeholder="TagLine  /  Slogan" >
             </input>
         </div>
 
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">IMAGE IMAGE IMAGE * </label>
-          <label className="label-tag2">What is the title of your campaign?</label>
+          <h2>Campaign Overview</h2>
+        </div>
+        <div>
+          <span className="story">
+            Introduce yourself, your background, your campaign and why it’s important to you. Express the magnitude of what contributors will help you achieve.
+          </span>
+        </div>
 
-            <input type="textarea" className="form-input" onChange={this.props.change('title')}
-              value={this.props.title} >
+        <div>
+        <br></br>
+        <br></br>
+          <label className="label-tag">Overview Image *</label>
+          <label className="label-tag2">Choose an image for the overview section of your campaign page. Pick an image that shows off your product or the benefit of your campaign. PNG or JPG. 320 x 240 recommended resolution.</label>
+
+            <input className="form-input" onChange={this.props.change('slogan')}
+              value={this.props.slogan} placeholder="TagLine  /  Slogan" >
             </input>
         </div>
+
+        <div>
+        <br></br>
+        <br></br>
+          <label className="label-tag">Campaign Overview *</label>
+          <label className="label-tag2">Lead with a compelling statement that describes your campaign and why it’s important to you, highlight key campaign features, and remember - keep it short!</label>
+
+            <input className="form-input" onChange={this.props.change('slogan')}
+              value={this.props.slogan} placeholder="TagLine  /  Slogan" >
+            </input>
+        </div>
+
+
+        <div>
+        <br></br>
+        <br></br>
+          <h2>Campaign Pitch *</h2>
+        </div>
+        <div>
+          <span className="story">
+            Tell potential contributors more about your campaign. Provide details that will motivate people to contribute. A good pitch is compelling, informative, and easy to digest.
+          </span>
+          <br></br>
+          <br></br>
+
+            <input type="textarea" onChange={this.props.change('slogan')}
+              value={this.props.slogan} placeholder="Tell us the story">
+            </input>
+        </div>
+
+
+
+
       </div>
     );
 

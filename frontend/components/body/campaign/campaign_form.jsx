@@ -1,9 +1,9 @@
 import React from 'react';
-import Title from './form_components/title';
+import Basic from './form_components/basic';
 import Story from './form_components/story';
 
 const components = {
-  title: Title,
+  basic: Basic,
   story: Story,
   reward: () => <div>reward</div>
 };
@@ -14,7 +14,7 @@ class SaveCampaign extends React.Component {
     super(props);
 
     this.state = {
-      component: 'title',
+      component: 'basic',
       title: '',
       story: '',
       reward: '',
@@ -59,8 +59,8 @@ class SaveCampaign extends React.Component {
             </div>
 
             <div className="form-tabs">
-              <section onClick={this.handleClick('title')}>
-                Title
+              <section onClick={this.handleClick('basic')}>
+                Basic
               </section>
               <section onClick={this.handleClick('story')}>
                 Story
@@ -69,6 +69,8 @@ class SaveCampaign extends React.Component {
                 Rewards
               </section>
             </div>
+
+
           </div>
 
         <div className="camp-com-page">

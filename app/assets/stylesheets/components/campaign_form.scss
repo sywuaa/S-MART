@@ -9,8 +9,8 @@
 .campaign-sidebar {
   color: white;
   justify-content: center;
-  width: 200px;
-  height: 625px;
+  width: 250px;
+  height: 130vh;
   font-size: 25px;
   background-color: black;
 }
@@ -18,7 +18,7 @@
 .camp-form-title {
   display: block;
   padding-top: 90px;
-  width: 200px;;
+  width: 250px;;
   height: 100px;
   justify-content: center;
   text-align: center;
@@ -34,7 +34,7 @@
 
 .form-tabs section {
   display: block;
-  width: 200px;
+  width: 250px;
   height: 50px;
   margin: 0 0 20px 0;
   padding-top: 25px;
@@ -54,7 +54,7 @@
   font-family: "Benton Sans", "Helvetica", "sans-serif";
   width: 600px;
   padding: 55px;
-  padding-left: 80px;
+  padding-left: 120px;
   font-size: 16px;
   justify-content: center;
   margin: 5px;
@@ -87,8 +87,22 @@
 
 .camp-com-page input {
   width: 80%;
-  height: 30px;
+  height: 50px;
   border: 1px solid black;
-  padding: 5px;
+  padding-left: 10px;
   background-color: #ffffff;
+}
+
+.camp-form-location {
+  display: flex;
+}
+.camp-form-location input {
+  margin-right: 50px;
+  width: 210px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.camp-form-date {
+  display: flex;
 }

@@ -1,6 +1,8 @@
 class Api::CampaignsController < ApplicationController
 
   def index
+    @campaigns = Campaign.all
+    render :index
   end
 
   def create
@@ -13,9 +15,15 @@ class Api::CampaignsController < ApplicationController
   end
 
   def edit
+    @campaign = Campaign.find(params[:id])
+    if @campaign.update_attributes(camp_params)
+      render :show
+    else
+      render json @campaign.errors.full_messages
   end
 
   def show
+    @campaign = Campaign.find(params[:id])
   end
 
   private

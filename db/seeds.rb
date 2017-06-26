@@ -9,7 +9,7 @@
 a = User.create([
   { username: 'asd', password: 'asdasdasd', first_name: 'a', last_name: 'aa', email: 'a@gmail.com'},
   { username: 'bsd', password: 'asdasdasd',first_name: 'b', last_name: 'bb', email: 'b@gmail.com'},
-  { username: 'miu', password: 'miumiu',first_name: 'Mr. Miu', last_name: 'Miu Miu', email: 'miumiu@gmail.com'}
+  { username: 'miu', password: 'miumiumiu',first_name: 'Mr. Miu', last_name: 'Miu Miu', email: 'miumiu@gmail.com'}
   ])
 
 b = Campaign.create([

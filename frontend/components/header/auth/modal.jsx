@@ -46,24 +46,50 @@ class ModalContainer extends React.Component {
 
   render() {
     const SignUpForm = (
-      <div>
-        <span>
-          <button onClick={this.toggleFormType}>Log In</button>
-        </span>
-        <br></br>
+      <div className="modal-container-inside">
+        <div className="modal-container-top">
+          <div>
+            Sign up with email
+          </div>
+        </div>
         <br></br>
         <SignUpContainer />
+
+        <div className="modal-container-bottom">
+          <span>
+            By signing up you agree to our Terms of Use and Privacy Policy.
+          </span>
+        </div>
+
+        <div className="changeAuth-formtype">
+          <span>Already have an account?</span>
+          <button onClick={this.toggleFormType}>Log In</button>
+        </div>
+
       </div>
     );
 
     const LogInForm = (
-      <div>
-        <span>
+      <div className="modal-container-inside">
+        <div className="modal-container-top">
+          <div>
+            Sign up with email
+          </div>
+        </div>
+        <br></br>
+        <LogInContainer/>
+
+        <div className="modal-container-bottom">
+          <span>
+            By logging in you agree to our Terms of Use and Privacy Policy.
+          </span>
+        </div>
+
+        <div className="changeAuth-formtype">
+          <span>Already have an account?</span>
           <button onClick={this.toggleFormType}>Sign Up</button>
-          <br></br>
-          <br></br>
-        </span>
-        <LogInContainer />
+        </div>
+
       </div>
     );
 

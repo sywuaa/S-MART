@@ -33,45 +33,73 @@
 }
 
 .login-container {
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid Gray;
+  padding-bottom: 20px;
 }
 
 .login-form {
-  display: block;
-  font-size: 18px;
-  align-items: center;
-}
-
-.login-form label {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.login-form button {
-  margin-left: 85px;
+.login-form input {
+  background-color: White;
+  border: 1px solid Gray;
+  margin: 5px;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
 }
 
 .signup-container {
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid Gray;
+  padding-bottom: 20px;
 }
 
 .signup-form {
-  display: block;
+  display: flex;
   font-size: 18px;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.signup-form label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.signup-form input {
+  background-color: White;
+  border: 1px solid Gray;
+  margin: 5px;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
 }
 
 .signup-form button {
-  margin-left: 85px;
+  padding: 5px;
+  border-radius: 2px;
+  color: White;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: $logo-pink;
 }
 
+.login-form button {
+  padding: 5px;
+  border-radius: 2px;
+  color: White;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: $logo-pink;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
 .auth-form {
   display: block;
   font-size: 18px;
@@ -82,10 +110,6 @@
   color: red
 }
 
-.auth-form span {
-  font-size: 20px;
-  margin-left: 85px;
-}
 
 .modal-style {
   left: 40%;
@@ -93,27 +117,59 @@
   position: absolute;
   display: flex;
   padding: 10px;
-  border: 2px solid black;
+  border: 1px solid Gray;
   margin-top: 85px;
-  background-color: White;
+  background-color: lighten(#f5f5f5, 1);
+
+
 }
 
-.modal-style button {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 3px;
+.modal-container-inside {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
 }
 
-.modal-style input {
-  border: 1px solid black;
-  border-radius: 5px;
+.modal-container-top {
+  display: block;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: Black;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-container-top {
+  display: flex;
+  font-size: 20px;
+  border-bottom: 1px solid Gray;
+}
+
+.modal-container-bottom {
+  font-size: 16px;
   padding: 5px;
-  margin: 5px;
+  border-bottom: 1px solid Gray;
+}
+
+.changeAuth-formtype {
+  padding: 10px;
+  font-size: 14px;
+  color: Gray;
+}
+
+.changeAuth-formtype span {
+  margin-right: 10px;
+}
+
+.changeAuth-formtype button {
+  color: #0eb4b6;
 }
 
 .header-container content {
-  margin-top: '20px';
+  margin-top: 20px;
   position: absolute;
 }
 

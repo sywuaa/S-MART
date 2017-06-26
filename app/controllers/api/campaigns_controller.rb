@@ -13,6 +13,8 @@ class Api::CampaignsController < ApplicationController
     else
       render json @campaign.errors.full_messages
     end
+
+
   end
 
   def edit

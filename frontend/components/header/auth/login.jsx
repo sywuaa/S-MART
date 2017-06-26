@@ -44,7 +44,7 @@ class LogIn extends React.Component {
           {this.errors()}
         </ul>
         <form className="login-form" onSubmit={this.handleSubmit}>
-          <label>Username
+          <label>
             <input type="text"
               value={this.state.username}
               placeholder="Username"
@@ -52,16 +52,18 @@ class LogIn extends React.Component {
             </input>
           </label>
 
-          <label>Password
+          <label>
             <input type ="password"
               value={this.state.password}
               placeholder="Password"
               onChange={this.update("password")}>
             </input>
           </label>
-          <label>
+
+          <div className="form-button">
             <button>Log In</button>
-          </label>
+          </div>
+
         </form>
       </section>
     )

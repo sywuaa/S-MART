@@ -46,7 +46,7 @@ class SignUp extends React.Component {
           {this.errors()}
         </ul>
         <form className="signup-form" onSubmit={this.handleSubmit}>
-          <label>Username
+          <label>
             <input type="text"
               value={this.state.username}
               placeholder="Username"
@@ -54,7 +54,7 @@ class SignUp extends React.Component {
             </input>
           </label>
 
-          <label>Password
+          <label>
             <input type ="password"
               value={this.state.password}
               placeholder="Password"
@@ -62,7 +62,7 @@ class SignUp extends React.Component {
             </input>
           </label>
 
-          <label>First Name
+          <label>
             <input type ="text"
               value={this.state.first_name}
               placeholder="First Name"
@@ -70,7 +70,7 @@ class SignUp extends React.Component {
             </input>
           </label>
 
-          <label>Last Name
+          <label>
             <input type ="text"
               value={this.state.laste_name}
               placeholder="Last Name"
@@ -78,7 +78,7 @@ class SignUp extends React.Component {
             </input>
           </label>
 
-          <label>Email
+          <label>
             <input type ="text"
               value={this.state.email}
               placeholder="Email"
@@ -86,7 +86,9 @@ class SignUp extends React.Component {
             </input>
           </label>
 
-          <button>Sign Up</button>
+          <div className="form-button">
+            <button>Create an Account</button>
+          </div>
 
         </form>
       </section>

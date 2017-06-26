@@ -25,7 +25,7 @@ class Story extends React.Component {
           <label className="label-tag2">Enter a YouTube or Vimeo URL to appear at the top of your campaign page.</label>
 
             <input className="form-input" onChange={this.props.change('vid_url')}
-              value={this.props.vid_url} placeholder="http://" >
+              value={this.props.campaign.vid_url} placeholder="http://" >
             </input>
         </div>
 
@@ -36,7 +36,7 @@ class Story extends React.Component {
           <label className="label-tag2">Choose an image to represent your video before it plays. 640 x 427 recommended resolution, 620 x 415 minimum resolution.</label>
 
             <input className="form-input" onChange={this.props.change('vid_olay_image_url')}
-              value={this.props.vid_olay_image_url} placeholder="IMAGE HERE" >
+              value={this.props.campaign.vid_olay_image_url} placeholder="http://" >
             </input>
         </div>
 
@@ -58,7 +58,7 @@ class Story extends React.Component {
           <label className="label-tag2">Choose an image for the overview section of your campaign page. Pick an image that shows off your product or the benefit of your campaign. PNG or JPG. 320 x 240 recommended resolution.</label>
 
             <input className="form-input" onChange={this.props.change('overview_image_url')}
-              value={this.props.overview_image_url} placeholder="IMAGE HERE" >
+              value={this.props.campaign.overview_image_url} placeholder="http://" >
             </input>
         </div>
 
@@ -69,7 +69,7 @@ class Story extends React.Component {
           <label className="label-tag2">Lead with a compelling statement that describes your campaign and why it’s important to you, highlight key campaign features, and remember - keep it short!</label>
 
             <input className="form-input" onChange={this.props.change('over_view')}
-              value={this.props.over_view} placeholder="Tell us a bit" >
+              value={this.props.campaign.over_view} placeholder="Tell us a bit" >
             </input>
         </div>
 
@@ -87,7 +87,7 @@ class Story extends React.Component {
           <br></br>
 
             <input type="textarea" onChange={this.props.change('story')}
-              value={this.props.story} placeholder="Tell us the story">
+              value={this.props.campaign.story} placeholder="Tell us the story">
             </input>
         </div>
 

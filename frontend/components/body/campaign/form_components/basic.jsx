@@ -7,7 +7,6 @@ class Basic extends React.Component {
   }
 
   render(){
-
     return(
       <div className="camp-components">
         <div>
@@ -26,7 +25,7 @@ class Basic extends React.Component {
           <label className="label-tag2">What is the title of your campaign?</label>
 
             <input className="form-input" onChange={this.props.change('title')}
-              value={this.props.title} placeholder="Title" >
+              value={this.props.campaign.title} placeholder="Title" >
             </input>
         </div>
 
@@ -37,7 +36,19 @@ class Basic extends React.Component {
           <label className="label-tag2">Provide a short description that best describes your campaign to your audience.</label>
 
             <input className="form-input" onChange={this.props.change('slogan')}
-              value={this.props.slogan} placeholder="TagLine  /  Slogan" >
+              value={this.props.campaign.slogan} placeholder="TagLine  /  Slogan" >
+            </input>
+        </div>
+
+        <div>
+        <br></br>
+        <br></br>
+          <label className="label-tag">Goal *</label>
+          <label className="label-tag2">Set a Goal</label>
+
+            <strong>$</strong>
+            <input className="form-input-goal" onChange={this.props.change('goal')}
+              value={this.props.campaign.goal} placeholder="Goal" type="number">
             </input>
         </div>
 
@@ -48,8 +59,8 @@ class Basic extends React.Component {
           <label className="label-tag2">Upload a square image that represents your campaign.640 x 640 recommended resolution, 220 x 220 minimum resolution.
           </label>
 
-            <input type="textarea" className="form-input" onChange={this.props.change('square_image')}  placeholder="IMAGE HERE"
-              value={this.props.square_image} >
+            <input type="textarea" className="form-input" onChange={this.props.change('square_image')}  placeholder="http://"
+              value={this.props.campaign.square_image} >
             </input>
         </div>
 
@@ -62,13 +73,13 @@ class Basic extends React.Component {
           <div className="camp-form-location">
             <div>
               <input type="text" className="form-input" onChange={this.props.change('city')} placeholder="City"
-                value={this.props.city} >
+                value={this.props.campaign.city} >
               </input>
             </div>
 
             <div>
               <input type="text" className="form-input" onChange={this.props.change('country')} placeholder="Country"
-                value={this.props.country} >
+                value={this.props.campaign.country} >
               </input>
             </div>
           </div>
@@ -84,13 +95,13 @@ class Basic extends React.Component {
           <div className="camp-form-date">
             <div>
               <input type="date" onChange={this.props.change('start_date')}
-                value={this.props.start_date} >
+                value={this.props.campaign.start_date} >
               </input>
             </div>
 
             <div>
               <input type="date" onChange={this.props.change('end_date')}
-                value={this.props.end_date} >
+                value={this.props.campaign.end_date} >
               </input>
             </div>
           </div>

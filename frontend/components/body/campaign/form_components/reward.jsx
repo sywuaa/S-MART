@@ -1,99 +1,137 @@
 import React from 'react';
 
 class Reward extends React.Component {
-  constructor(props){
-    super(props);
+    constructor(props) {
+      super(props);
 
-  }
+      this.state = {
+        title: '',
+        description: '',
+        price: '',
+        item: ''
+      };
+
+      this.handlePerk = this.handlePerk.bind(this);
+    }
+
+    update(input) {
+      return e => this.setState({[input]: e.target.value});
+    }
+
+    handlePerk() {
+      const reward = this.state;
+      this.props.handleRewards(reward);
+
+      this.setState({
+        title: '',
+        description: '',
+        price: '',
+        item: ''
+      });
+    }
 
   render(){
+    if(this.props.campaign.rewards) {
+      this.rewardList = this.props.campaign.rewards.map( (reward,index) => {
+        return (
+
+          <div key={index} className="reward-space">
+            <strong>Reward {index+1} :</strong>
+            <div className="reward-container">
+
+              <div className="reward-element">
+                <span>Title:</span>
+                <span>Price:</span>
+                <span>Item:</span>
+                <span>description:</span>
+
+              </div>
+
+              <div className="reward-element-attributes">
+                <span>{reward.title}</span>
+                <span>{reward.price}</span>
+                <span>{reward.item}</span>
+                <span>{reward.description}</span>
+              </div>
+
+            </div>
+
+          </div>
+        );
+      });
+    }
+
     return(
       <div className="camp-components">
         <div>
-          <h2>Pitch Video or Image</h2>
+          <h2>Perks</h2>
         </div>
         <div>
           <span className="story">
-            Add a video or image to appear on the top of your campaign page. Campaigns with videos raise 2000% more than campaigns without videos. Keep your video 2-3 minutes. Learn how to make a great video.
+            Perks are incentives offered to backers in exchange for their support. You may edit your perk details until the perk is claimed. Visit the Help Center to learn about different kinds of perks you can offer.
           </span>
         </div>
 
+        <div className="rewardList-container">
+          {this.rewardList}
+        </div>
+
+
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">Video URL *</label>
-          <label className="label-tag2">Enter a YouTube or Vimeo URL to appear at the top of your campaign page.</label>
+          <label className="label-tag">Title *</label>
+          <label className="label-tag2">The title for your perk is what will appear on your campaign page and throughout Indiegogo. Create a title that best describes the contents of what this perk is offering.</label>
 
-            <input className="form-input" onChange={this.props.change('vid_url')}
-              value={this.props.vid_url} placeholder="http://" >
+            <input className="form-input" onChange={this.update('title')}
+              value={this.state.title} placeholder="Title">
             </input>
         </div>
 
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">Video Overlay Image (Optional)</label>
-          <label className="label-tag2">Choose an image to represent your video before it plays. 640 x 427 recommended resolution, 620 x 415 minimum resolution.</label>
+          <label className="label-tag">Price *</label>
+          <label className="label-tag2">Set an amount that you want to collect from backers who claim this perk. This amount should represent how much you want to receive for all the items included in this perk.</label>
 
-            <input className="form-input" onChange={this.props.change('vid_olay_image_url')}
-              value={this.props.vid_olay_image_url} placeholder="IMAGE HERE" >
+            <input className="form-input" onChange={this.update('price')} type="number"
+              value={this.state.price} placeholder="$ 0" >
             </input>
         </div>
 
         <div>
         <br></br>
         <br></br>
-          <h2>Campaign Overview</h2>
-        </div>
-        <div>
-          <span className="story">
-            Introduce yourself, your background, your campaign and why it’s important to you. Express the magnitude of what contributors will help you achieve.
-          </span>
-        </div>
+          <label className="label-tag">Included Items *</label>
+          <label className="label-tag2">What items are you offering to backers who claim this perk? Items could be physical, digital, experiences, or even just a thank you. You can specify how many you are offering in this perk.</label>
 
-        <div>
-        <br></br>
-        <br></br>
-          <label className="label-tag">Overview Image *</label>
-          <label className="label-tag2">Choose an image for the overview section of your campaign page. Pick an image that shows off your product or the benefit of your campaign. PNG or JPG. 320 x 240 recommended resolution.</label>
-
-            <input className="form-input" onChange={this.props.change('overview_image_url')}
-              value={this.props.overview_image_url} placeholder="IMAGE HERE" >
+            <input className="form-input" onChange={this.update('item')}
+              value={this.state.item} placeholder="Item" >
             </input>
         </div>
 
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">Campaign Overview *</label>
-          <label className="label-tag2">Lead with a compelling statement that describes your campaign and why it’s important to you, highlight key campaign features, and remember - keep it short!</label>
+          <label className="label-tag">Description *</label>
+          <label className="label-tag2">Describe the details of this perk. Be creative, this is your opportunity to educate backers on what they will be receiving after they claim this perk.</label>
 
-            <input className="form-input" onChange={this.props.change('over_view')}
-              value={this.props.over_view} placeholder="Tell us a bit" >
+            <input className="form-input" onChange={this.update('description')}
+              value={this.state.description} placeholder="Description" >
             </input>
         </div>
 
 
-        <div>
-        <br></br>
-        <br></br>
-          <h2>Campaign Pitch *</h2>
-        </div>
-        <div>
-          <span className="story">
-            Tell potential contributors more about your campaign. Provide details that will motivate people to contribute. A good pitch is compelling, informative, and easy to digest.
-          </span>
-          <br></br>
-          <br></br>
 
-            <input type="textarea" onChange={this.props.change('story')}
-              value={this.props.story} placeholder="Tell us the story">
-            </input>
+        <div className="camp-form-continue-submit">
+          <div>
+            <button onClick={this.handlePerk}> Add Perk </button>
+          </div>
         </div>
 
         <div className="camp-form-continue-submit">
           <div>
-            <button onClick={this.props.change('component')} value='rewards'>Save & Continue</button>
+            <button onClick={this.props.change('component')} value='Final'>Save & Continue</button>
           </div>
         </div>
 

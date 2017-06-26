@@ -73,7 +73,7 @@ class ModalContainer extends React.Component {
       <div className="modal-container-inside">
         <div className="modal-container-top">
           <div>
-            Sign up with email
+            Welcome Back !!
           </div>
         </div>
         <br></br>

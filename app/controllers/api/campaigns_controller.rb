@@ -6,6 +6,7 @@ class Api::CampaignsController < ApplicationController
   end
 
   def create
+    debugger
     @campaign = Campaign.new(camp_params)
     @campaign.user_id = current_user.id
     if @campaign.save

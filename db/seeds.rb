@@ -7,6 +7,26 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 a = User.create([
-  { username: 'asd', password: 'asdasdasd', first_name: 'a', last_name: 'aa', email: 'a@gmail.com',  country: 'usa', city: 'new york',},
-  { username: 'bsd', password: 'asdasdasd',first_name: 'b', last_name: 'bb', email: 'b@gmail.com', country: 'usa', city: 'new york',}
+  { username: 'asd', password: 'asdasdasd', first_name: 'a', last_name: 'aa', email: 'a@gmail.com'},
+  { username: 'bsd', password: 'asdasdasd',first_name: 'b', last_name: 'bb', email: 'b@gmail.com'},
+  { username: 'miu', password: 'miumiu',first_name: 'Mr. Miu', last_name: 'Miu Miu', email: 'miumiu@gmail.com'}
+  ])
+
+b = Campaign.create([
+  { user_id: 1, title:'shaopal', goal: 10000, slogan: 'eat eat eat', city: 'new york', country: 'usa'},
+  { user_id: 1, title:'miu fishing', goal: 10000, slogan: 'fish miu', city: 'new york', country: 'usa'}
+  ])
+
+c = Reward.create([
+  { title: 'All you can eat', description: 'eating frenzy', campaign_id: 1, price: 15},
+  { title: 'All you can eat X2 ', description: 'eating frenzy X2', campaign_id: 1, price: 30},
+  { title: 'Fish Miu', description: 'fish miu for 10 minutes', campaign_id: 2, price: 10},
+  { title: 'Fish Miu X2', description: 'fish miu for 20 minutes', campaign_id: 2, price: 20},
+  { title: 'Fish Miu X3', description: 'fish miu for 30 minutes', campaign_id: 2, price: 30}
+  ])
+
+d = Contribution.create([
+  { user_id: 1, reward_id: 1},
+  { user_id: 1, reward_id: 2},
+  { user_id: 2, reward_id: 2}
   ])

@@ -16,6 +16,10 @@
   margin-right: 20px;
 }
 
+.right-nav div {
+  display: flex;
+}
+
 .left-nav {
   margin-left: 50px;
 }
@@ -90,9 +94,8 @@
   display: flex;
   padding: 10px;
   border: 2px solid black;
-  border-radius: 15px;
   margin-top: 85px;
-  background-color: transparentize(#e2ede1, 0);
+  background-color: White;
 }
 
 .modal-style button {

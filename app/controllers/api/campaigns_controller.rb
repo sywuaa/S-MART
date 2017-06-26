@@ -7,10 +7,11 @@ class Api::CampaignsController < ApplicationController
 
   def create
     @campaign = Campaign.new(camp_params)
+    @campaign.user_id = current_user.id
     if @campaign.save
       render :show
     else
-      render @campaign.errors.full_messages
+      render json @campaign.errors.full_messages
     end
   end
 
@@ -20,6 +21,7 @@ class Api::CampaignsController < ApplicationController
       render :show
     else
       render json @campaign.errors.full_messages
+    end
   end
 
   def show
@@ -28,7 +30,7 @@ class Api::CampaignsController < ApplicationController
 
   private
   def camp_params
-    params.require(:campaign).permit(:title, :goal_amt, :story, :country)
+    params.require(:campaign).permit(:title, :goal, :slogan, :square_image_url, :city, :country, :start_date, :end_date, :vid_url, :vid_olay_image_url, :overview_image_url, :overview, :story)
   end
 
 end

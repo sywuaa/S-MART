@@ -8,9 +8,7 @@ class SignUp extends React.Component {
       password: '',
       first_name: '',
       last_name: '',
-      email: '',
-      country: '',
-      city: ''
+      email: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -85,22 +83,6 @@ class SignUp extends React.Component {
               value={this.state.email}
               placeholder="Email"
               onChange={this.update("email")}>
-            </input>
-          </label>
-
-          <label>Country
-            <input type ="text"
-              value={this.state.country}
-              placeholder="Country"
-              onChange={this.update("country")}>
-            </input>
-          </label>
-
-          <label>City
-            <input type ="text"
-              value={this.state.city}
-              placeholder="City"
-              onChange={this.update("city")}>
             </input>
           </label>
 

@@ -4,6 +4,17 @@ import SignUpContainer from './signup_container';
 import ModalContainer from './modal';
 
 class Auth extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.demoLogin = this.demoLogin.bind(this);
+  }
+
+  demoLogin(){
+    const user = {username: 'miu', password: 'miumiu'};
+    this.props.login({user});
+  }
+
   render(){
     if(this.props.currentUser){
       const currentUser = this.props.currentUser;
@@ -17,9 +28,12 @@ class Auth extends React.Component {
       );
     }else {
       return(
+        <div>
+        <button onClick={this.demoLogin}>Demo</button>
         <section className='modal-container'>
           <ModalContainer />
         </section>
+        </div>
       );
     }
   }

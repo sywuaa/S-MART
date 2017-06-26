@@ -11,7 +11,7 @@ const campaignReducer = (state = defaultState(), action) => {
   let campaign;
   switch(action.type){
     case RECEIVE_CAMPAIGN:
-      campaign = action.campaign;
+      campaign = merge( {}, action.campaign);
       return { campaign };
     case RECEIVE_ALL_CAMPAIGNS:
       const campaigns = selectAllCampaigns(action.campaigns);

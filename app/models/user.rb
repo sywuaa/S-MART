@@ -9,8 +9,6 @@
 #  first_name          :string           not null
 #  last_name           :string           not null
 #  email               :string           not null
-#  country             :string           not null
-#  city                :string           not null
 #  total_contributions :integer          default(0)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
@@ -18,7 +16,23 @@
 
 class User < ActiveRecord::Base
 
-  validates :username, :password_digest, :session_token, :first_name, :last_name, :email, :country, :city, presence: true
+  has_one :campaign,
+    class_name: :Campaign,
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :contributions,
+    class_name: :Contribution,
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :rewards,
+    through: :contributions,
+    source: :reward
+
+  
+
+  validates :username, :password_digest, :session_token, :first_name, :last_name, :email, presence: true
   validates :password_digest, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 

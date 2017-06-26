@@ -59,9 +59,9 @@ class LogIn extends React.Component {
               onChange={this.update("password")}>
             </input>
           </label>
-
-          <button>Log In</button>
-
+          <label>
+            <button>Log In</button>
+          </label>
         </form>
       </section>
     )

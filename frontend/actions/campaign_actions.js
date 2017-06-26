@@ -11,7 +11,7 @@ export const createCampaign = (campaign) => dispatch => {
   );
 };
 
-export const fecthCampaign = (id) => dispatch => {
+export const fetchCampaign = (id) => dispatch => {
   return(
     APIUtil.fetchCampaign(id)
       .then( campaign => dispatch(receiveCampaign(campaign)))

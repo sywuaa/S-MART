@@ -16,7 +16,7 @@ export const fetchAllCampaigns = () => {
 export const fetchCampaign = (id) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/campaigns'
+    url: `api/campaigns/${id}`
   });
 };
 

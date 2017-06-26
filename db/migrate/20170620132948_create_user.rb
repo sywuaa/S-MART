@@ -7,15 +7,13 @@ class CreateUser < ActiveRecord::Migration[5.0]
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :email, null: false
-      t.string :country, null:false
-      t.string :city, null: false
       t.integer :total_contributions, default: 0
 
       t.timestamps
     end
-    add_index :users, :username, unique: true
-    add_index :users, :session_token, unique: true
-    add_index :users, :password_digest, unique: true
-    add_index :users, :email, unique: true
+    # add_index :users, :username, unique: true
+    # add_index :users, :session_token, unique: true
+    # add_index :users, :password_digest, unique: true
+    # add_index :users, :email, unique: true
   end
 end

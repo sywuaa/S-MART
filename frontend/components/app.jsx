@@ -6,10 +6,10 @@ import Campaign from './body/campaign/campaign';
 const App = () => (
   <div className="header">
     <Header />
-    <Campaign />
+    <SaveCampaign />
   </div>
 );
 
 export default App;
 
-// <SaveCampaign />
+// <Campaign />

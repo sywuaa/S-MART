@@ -6,11 +6,33 @@ class Api::CampaignsController < ApplicationController
   end
 
   def create
-    debugger
     @campaign = Campaign.new(camp_params)
     @campaign.user_id = current_user.id
+
     if @campaign.save
-      render :show
+
+      reward_errors = []
+      params[:campaign][:rewards].each do |key, reward|
+        new_reward = Reward.new({
+                                title: reward['title'],
+                                item: reward['item'],
+                                price: reward['price'].to_i,
+                                description: reward['description'],
+                                campaign_id: @campaign.id
+                                })
+
+        if !new_reward.save
+          reward_errors.push(new_reward.errors.full_messages)
+        end
+
+      end
+      
+      if reward_errors.empty?
+        render :show
+      else
+        render json ["reward creation error"], status: 500
+      end
+
     else
       render json @campaign.errors.full_messages
     end

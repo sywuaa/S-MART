@@ -6,6 +6,7 @@ class Api::RewardsController < ApplicationController
       render true
     else
       render json @reward.errors.full_messages
+    end
   end
 
 

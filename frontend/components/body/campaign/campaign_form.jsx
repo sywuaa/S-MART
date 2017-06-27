@@ -53,7 +53,7 @@ class SaveCampaign extends React.Component {
   }
 
   render(){
-
+    debugger
     const Com = components[this.state.component];
     return(
       <div className="camp-page">

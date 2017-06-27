@@ -46,14 +46,11 @@ class SaveCampaign extends React.Component {
 
   handleRewards(reward){
       const rewardList = [].concat(this.state.rewards);
-      console.log(rewardList);
       rewardList.push(reward);
-      console.log(rewardList);
       this.setState({rewards: rewardList});
   }
 
   render(){
-    debugger
     const Com = components[this.state.component];
     return(
       <div className="camp-page">

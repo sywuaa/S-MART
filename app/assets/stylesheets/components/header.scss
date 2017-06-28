@@ -57,6 +57,7 @@
 
 .signup-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-bottom: 1px solid Gray;
   padding-bottom: 20px;

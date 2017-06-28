@@ -8,16 +8,22 @@ class Campaign extends React.Component {
   constructor(props){
     super(props);
     debugger
+    this.state = this.props.campaign;
   }
 
   componentDidMount(){
     this.props.fetchCampaign(this.props.id);
   }
 
+  componentWillReceiveProps(newProps){
+    if(!this.props.campaign || parseInt(newProps.match.params.id) !== this.props.campaign.id){
+      this.props.fetchCampaign(newProps.match.params.id);
+    }
+  }
+
   render() {
-    debugger
-    if(currentCampaign !== null && currentCampaign === this.props.id){
-      const { campaign } = this.props;
+    const { campaign } = this.props;
+    if(campaign){
       return(
         <div className="body">
           <div className="camp-show-page">

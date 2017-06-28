@@ -47,7 +47,7 @@ class SaveCampaign extends React.Component {
   handleSubmit() {
     const campaign = this.state;
     const formData = new FormData();
-
+    debugger
     Object.keys(campaign).forEach( key => {
       formData.append(`campaign[${key}]`, campaign[key]);
     })

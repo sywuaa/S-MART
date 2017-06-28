@@ -70,10 +70,23 @@ class Campaign extends React.Component {
 
                 <div className="camp-show-story">
 
-                  <div className="square_image_url">
+                  <div className="image_url">
                     <img src={campaign.square_image_url} />
                   </div>
+
+                  <div className="image_url">
+                    <img src={campaign.overview_image_url} />
+                  </div>
+                  
                   Story go here
+
+                  <div className="image_url">
+                    <img src={campaign.square_image_url} />
+                  </div>
+
+                  <div className="image_url">
+                    <img src={campaign.overview_image_url} />
+                  </div>
 
                   <span>blah blah blah</span>
                   <span>blah blah blah</span>

@@ -47,10 +47,11 @@ class SaveCampaign extends React.Component {
   handleSubmit() {
     const campaign = this.state;
     const formData = new FormData();
-    debugger
     Object.keys(campaign).forEach( key => {
       formData.append(`campaign[${key}]`, campaign[key]);
-    })
+    });
+
+    formData.append("campaign[rewards_attributes]", JSON.stringify(this.state.rewards_attributes));
 
     this.props.createCampaign(formData)
       .then( (obj) => this.props.history.push(`/campaigns/${obj.payload.campaign.id}`)

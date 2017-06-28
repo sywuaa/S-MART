@@ -6,9 +6,10 @@ class Api::CampaignsController < ApplicationController
   end
 
   def create
+
+    params[:campaign][:rewards_attributes] = JSON.parse(params[:campaign][:rewards_attributes])
     @campaign = Campaign.new(camp_params)
     @campaign.user_id = current_user.id
-
     if @campaign.save
       render :show
     else

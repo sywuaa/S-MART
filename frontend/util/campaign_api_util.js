@@ -1,8 +1,10 @@
-export const createCampaign = ({campaign}) => {
+export const createCampaign = (formData) => {
   return $.ajax({
     method: 'POST',
     url: 'api/campaigns',
-    data: {campaign}
+    contentType: false,
+    processData: false,
+    data: formData
   });
 };
 

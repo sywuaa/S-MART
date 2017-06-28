@@ -28,8 +28,11 @@
 class Campaign < ActiveRecord::Base
   validates :title, presence: true
 
-  has_attached_file :square_image_url, default_url: "miu.jpg"
-  validates_attachment_content_type :square_image_url, content_type: /\Aimage\/.*\z/
+  has_attached_file :square_image, default_url: "miu.jpg"
+  validates_attachment_content_type :square_image, content_type: /\Aimage\/.*\z/
+
+  has_attached_file :overview_image, default_url: "miu.jpg"
+  validates_attachment_content_type :overview_image, content_type: /\Aimage\/.*\z/
 
   belongs_to :creator,
     class_name: :User,

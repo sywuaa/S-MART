@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react-redux';
-import Tile from '../tiles';
+import Tile from './tiles';
 
 class IndexPage extends React.Component {
   constructor(props){

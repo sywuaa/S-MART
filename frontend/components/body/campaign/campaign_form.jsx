@@ -23,16 +23,17 @@ class SaveCampaign extends React.Component {
       title: '',
       goal: '',
       slogan: '',
-      square_image_url: '',
+      square_image: null,
       city: '',
       country: '',
       start_date: '',
       end_date: '',
       vid_url: '',
-      vid_olay_image_url: '',
-      overview_image_url: '',
+      overview_image: null,
       overview: '',
       story: '',
+      squareUrl: null,
+      overviewUrl: null
     };
 
 
@@ -40,15 +41,36 @@ class SaveCampaign extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRewards = this.handleRewards.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
   handleSubmit() {
     const campaign = this.state;
-    this.props.createCampaign({campaign})
+    const formData = new FormData();
+
+    Object.keys(campaign).forEach( key => {
+      formData.append(`campaign[${key}]`, campaign[key]);
+    })
+
+    this.props.createCampaign(formData)
       .then( (obj) => this.props.history.push(`/campaigns/${obj.payload.campaign.id}`)
     );
   }
 
+  updateFile(input) {
+    return (e) => {
+      let file = e.currentTarget.files[0];
+      let fileReader = new FileReader();
+      fileReader.onloadend = function () {
+        this.setState({ [`${input}_image`]: file, [`${input}Url`]: fileReader.result });
+      }.bind(this);
+
+      if(file){
+        fileReader.readAsDataURL(file);
+      }
+    };
+
+  }
 
   handleClick(target) {
     window.scrollTo(0,0);
@@ -92,7 +114,7 @@ class SaveCampaign extends React.Component {
                 Story
               </section>
               <section onClick={this.handleClick('reward')}>
-                Rewards
+                Perks
               </section>
               <section onClick={this.handleClick('final')}>
                 Final
@@ -104,7 +126,7 @@ class SaveCampaign extends React.Component {
 
         <div className="camp-com-page">
           <div className="campaign-form-components">
-            <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit} handleClick={this.handleClick}/>
+            <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit} handleClick={this.handleClick} updateFile={this.updateFile}/>
           </div>
         </div>
 

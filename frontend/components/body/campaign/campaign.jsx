@@ -11,13 +11,13 @@ class Campaign extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchCampaign(this.props.id)
+    this.props.fetchCampaign(this.props.id);
   }
 
   render() {
-    const {campaign} = this.props;
-    if(campaign.id === this.props.currentCampaign){
-
+    debugger
+    if(currentCampaign !== null && currentCampaign === this.props.id){
+      const { campaign } = this.props;
       return(
         <div className="body">
           <div className="camp-show-page">
@@ -47,11 +47,6 @@ class Campaign extends React.Component {
                     {campaign.overview}
                   </div>
 
-                  <div className="square_image_url">
-                    <img src={campaign.square_image_url} />
-                  </div>
-
-
                   <div className="creator">
                     Creator : {campaign.creator.username}
                   </div>
@@ -68,6 +63,10 @@ class Campaign extends React.Component {
               <div className="camp-show-body">
 
                 <div className="camp-show-story">
+
+                  <div className="square_image_url">
+                    <img src={campaign.square_image_url} />
+                  </div>
                   Story go here
 
                   <span>blah blah blah</span>
@@ -94,11 +93,11 @@ class Campaign extends React.Component {
           </div>
 
         </div>
-
       );
     }else {
       return null;
     }
+
   }
 
 }

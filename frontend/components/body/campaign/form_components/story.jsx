@@ -3,7 +3,6 @@ import React from 'react';
 class Story extends React.Component {
   constructor(props){
     super(props);
-
   }
 
   render(){
@@ -32,17 +31,6 @@ class Story extends React.Component {
         <div>
         <br></br>
         <br></br>
-          <label className="label-tag">Video Overlay Image (Optional)</label>
-          <label className="label-tag2">Choose an image to represent your video before it plays. 640 x 427 recommended resolution, 620 x 415 minimum resolution.</label>
-
-            <input className="form-input" onChange={this.props.change('vid_olay_image_url')}
-              value={this.props.campaign.vid_olay_image_url} placeholder="http://" >
-            </input>
-        </div>
-
-        <div>
-        <br></br>
-        <br></br>
           <h2>Campaign Overview</h2>
         </div>
         <div>
@@ -57,9 +45,11 @@ class Story extends React.Component {
           <label className="label-tag">Overview Image *</label>
           <label className="label-tag2">Choose an image for the overview section of your campaign page. Pick an image that shows off your product or the benefit of your campaign. PNG or JPG. 320 x 240 recommended resolution.</label>
 
-            <input className="form-input" onChange={this.props.change('overview_image_url')}
-              value={this.props.campaign.overview_image_url} placeholder="http://" >
+          <div className="img-input">
+            <input type="file" onChange={this.props.updateFile('overview')}>
             </input>
+            <img src={this.props.campaign.overviewUrl} />
+          </div>
         </div>
 
         <div>
@@ -106,3 +96,15 @@ class Story extends React.Component {
 }
 
 export default Story;
+
+        //
+        // <div>
+        // <br></br>
+        // <br></br>
+        //   <label className="label-tag">Video Overlay Image (Optional)</label>
+        //   <label className="label-tag2">Choose an image to represent your video before it plays. 640 x 427 recommended resolution, 620 x 415 minimum resolution.</label>
+        //
+        //     <input className="form-input" onChange={this.props.change('vid_olay_image_url')}
+        //       value={this.props.campaign.vid_olay_image_url} placeholder="http://" >
+        //     </input>
+        // </div>

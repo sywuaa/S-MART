@@ -59,9 +59,11 @@ class Basic extends React.Component {
           <label className="label-tag2">Upload a square image that represents your campaign.640 x 640 recommended resolution, 220 x 220 minimum resolution.
           </label>
 
-            <input type="textarea" className="form-input" onChange={this.props.change('square_image_url')}  placeholder="http://"
-              value={this.props.campaign.square_image_url} >
+          <div className="img-input">
+            <input className="img-input" type="file" onChange={this.props.updateFile('square')} >
             </input>
+            <img src={this.props.campaign.squareUrl} />
+          </div>
         </div>
 
         <div>

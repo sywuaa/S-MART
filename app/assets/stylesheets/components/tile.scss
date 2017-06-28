@@ -1,14 +1,14 @@
 .tile-container {
   border: 1px solid Gray;
   margin: 30px;
-  width: 200px;
-  height: 400px;
+  width: 230px;
+  height: 460px;
   flex-direction: column;
 }
 
 img {
-  width: 200px;
-  height: 250px;
+  width: 230px;
+  height: 280px;
 }
 
 .percent-line {
@@ -18,7 +18,7 @@ img {
 
 .tile-info {
   display: flex;
-  font-size: 14px;
+  font-size: 20px;
   flex-direction: column;
   height: 200px;
 }

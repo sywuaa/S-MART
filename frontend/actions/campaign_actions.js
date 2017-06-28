@@ -4,9 +4,9 @@ export const UPDATE_CAMPAIGN = 'UPDATE_CAMPAIGN';
 
 import * as APIUtil from '../util/campaign_api_util';
 
-export const createCampaign = (campaign) => dispatch => {
+export const createCampaign = (formData) => dispatch => {
   return(
-    APIUtil.createCampaign(campaign)
+    APIUtil.createCampaign(formData)
       .then( campaign => dispatch(receiveCampaign(campaign)))
   );
 };

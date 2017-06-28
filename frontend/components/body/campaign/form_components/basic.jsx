@@ -59,8 +59,8 @@ class Basic extends React.Component {
           <label className="label-tag2">Upload a square image that represents your campaign.640 x 640 recommended resolution, 220 x 220 minimum resolution.
           </label>
 
-            <input type="textarea" className="form-input" onChange={this.props.change('square_image')}  placeholder="http://"
-              value={this.props.campaign.square_image} >
+            <input type="textarea" className="form-input" onChange={this.props.change('square_image_url')}  placeholder="http://"
+              value={this.props.campaign.square_image_url} >
             </input>
         </div>
 
@@ -110,7 +110,7 @@ class Basic extends React.Component {
 
         <div className="camp-form-continue-submit">
           <div>
-            <button onClick={this.props.change('component')} value='story'>Save & Continue</button>
+            <button onClick={this.props.handleClick('story')} value='story'>Save & Continue</button>
           </div>
         </div>
 

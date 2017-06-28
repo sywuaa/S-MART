@@ -16,8 +16,24 @@ const components = {
 class SaveCampaign extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = merge( {} , this.props.campaign, {component: 'basic', rewards: []});
+    // this.state = merge( {} , this.props.campaign, {component: 'basic', rewards_attributes: []});
+    this.state = {
+      component: 'basic',
+      rewards_attributes: [],
+      title: '',
+      goal: '',
+      slogan: '',
+      square_image_url: '',
+      city: '',
+      country: '',
+      start_date: '',
+      end_date: '',
+      vid_url: '',
+      vid_olay_image_url: '',
+      overview_image_url: '',
+      overview: '',
+      story: '',
+    };
 
 
     this.handleClick = this.handleClick.bind(this);
@@ -28,26 +44,30 @@ class SaveCampaign extends React.Component {
 
   handleSubmit() {
     const campaign = this.state;
-    this.props.createCampaign({campaign}).then( (camp) => console.log(camp));
+    this.props.createCampaign({campaign})
+      .then( (obj) => this.props.history.push(`/campaigns/${obj.payload.campaign.id}`)
+    );
   }
+
 
   handleClick(target) {
-      return () => {
-        this.setState({component: target});
-      }
-  }
-
-  handleChange(input){
-    return (e) => {
-      window.scrollTo(0,0);
-      this.setState({[input]: e.target.value});
+    window.scrollTo(0,0);
+    return () => {
+      this.setState({component: target});
     };
   }
 
+  handleChange(input){
+      return (e) => {
+        window.scrollTo(0,0);
+        this.setState({[input]: e.target.value});
+      };
+  }
+
   handleRewards(reward){
-      const rewardList = [].concat(this.state.rewards);
+      const rewardList = this.state.rewards_attributes;
       rewardList.push(reward);
-      this.setState({rewards: rewardList});
+      this.setState({rewards_attributes: rewardList});
   }
 
   render(){
@@ -84,7 +104,7 @@ class SaveCampaign extends React.Component {
 
         <div className="camp-com-page">
           <div className="campaign-form-components">
-            <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit}/>
+            <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit} handleClick={this.handleClick}/>
           </div>
         </div>
 
@@ -97,6 +117,3 @@ class SaveCampaign extends React.Component {
 }
 
 export default SaveCampaign;
-
-
-// <button onClick={this.handleSubmit}>Save</button>

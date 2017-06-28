@@ -10,19 +10,21 @@
 .camp-show-page {
   background-color: #bc9789;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 1200px;
   padding-top: 50px;
 }
 
 .camp-show-top-block {
   display: flex;
+  justify-content: center;
+  height: 500px;
 }
 
 .camp-show-top {
   background-color: #5d98f7;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   width: 1000px;
   height: 400px;
@@ -39,22 +41,62 @@
 .camp-show-overview {
   background-color: #8c8907;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 400px;
   height: 400px;
+  padding: 10px;
+}
+
+.camp-show-overview div {
+  margin: 10px 0 10px 0;
+}
+
+.overview-label {
+  color: #0eb4b6;
+  border-bottom: 2px solid #0eb4b6;
+}
+
+.camp-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.camp-title strong {
+  margin: 8px;
+}
+
+.camp-show-body-container {
+  background-color: #6a078c;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .camp-show-body {
-  background-color: #6a078c;
+  background-color: #42f456;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 1000px;
-  padding-top: 50px;
 }
 .camp-show-story {
-  background-color: #6a078c;
+  background-color: #c16a47;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 500px;
-  heigth: 2000px;
+  height: 1000px;
+}
+
+.camp-show-story span {
+  display: block;
+  margin-top: 50px;
+}
+
+.camp-show-reward {
+  background-color: #4449aa;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
 }

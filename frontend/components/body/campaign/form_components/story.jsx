@@ -68,8 +68,8 @@ class Story extends React.Component {
           <label className="label-tag">Campaign Overview *</label>
           <label className="label-tag2">Lead with a compelling statement that describes your campaign and why it’s important to you, highlight key campaign features, and remember - keep it short!</label>
 
-            <input className="form-input" onChange={this.props.change('over_view')}
-              value={this.props.campaign.over_view} placeholder="Tell us a bit" >
+            <input className="form-input" onChange={this.props.change('overview')}
+              value={this.props.campaign.overview} placeholder="Tell us a bit" >
             </input>
         </div>
 
@@ -93,7 +93,7 @@ class Story extends React.Component {
 
         <div className="camp-form-continue-submit">
           <div>
-            <button onClick={this.props.change('component')} value='reward'>Save & Continue</button>
+            <button onClick={this.props.handleClick('reward')} value='reward'>Save & Continue</button>
           </div>
         </div>
 

@@ -1,89 +1,110 @@
 import React from 'react';
-import Basic from './form_components/basic';
-import Story from './form_components/story';
-import Reward from './form_components/reward';
 import { merge } from 'lodash';
-
-const components = {
-  basic: Basic,
-  story: Story,
-  reward: Reward
-};
+import { Component } from 'react-redux';
+import { Player } from 'video-react';
 
 
 class Campaign extends React.Component {
   constructor(props){
     super(props);
-
-
-    // this.handleClick = this.handleClick.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    debugger
   }
 
-  // handleSubmit() {
-  //   const campaign = this.state;
-  //   this.props.createCampaign({campaign}).then( (camp) => console.log(camp));
-  // }
-  //
-  // handleClick(target) {
-  //     return () => {
-  //       this.setState({component: target});
-  //     }
-  // }
-  //
-  // handleChange(input){
-  //   return (e) => {
-  //     window.scrollTo(0,0);
-  //     this.setState({[input]: e.target.value});
-  //
-  //   };
-  // }
+  componentDidMount(){
+    this.props.fetchCampaign(this.props.id)
+  }
 
   render() {
+    const {campaign} = this.props;
+    if(campaign.id === this.props.currentCampaign){
 
-    return(
-      <div className="body">
-        <div className="camp-show-page">
-          <div className="camp-show-top-block">
-            <div className="camp-show-top">
+      return(
+        <div className="body">
+          <div className="camp-show-page">
+            <div className="camp-show-top-block">
 
-              <div className="camp-show-video">
-                video go here
+              <div className="camp-show-top">
+
+                <div className="camp-show-video">
+
+                  <iframe width="550" height="400" src={campaign.vid_url} ></iframe>
+
+                </div>
+
+                <div className="camp-show-overview">
+
+                  <div className="overview-label">
+                    InDemand
+                  </div>
+
+                  <div className="camp-title">
+                    {campaign.title}
+                    <strong>:</strong>
+                    {campaign.slogan}
+                  </div>
+
+                  <div>
+                    {campaign.overview}
+                  </div>
+
+                  <div className="square_image_url">
+                    <img src={campaign.square_image_url} />
+                  </div>
+
+
+                  <div className="creator">
+                    Creator : {campaign.creator.username}
+                  </div>
+
+                </div>
+
               </div>
-
-              <div className="camp-show-overview">
-                overview go here
-              </div>
-
             </div>
-          </div>
 
-          <br></br>
-          <br></br>
+            <br></br>
+            <br></br>
 
-          <div>
-            <div className="camp-show-body">
+            <div className="camp-show-body-container">
+              <div className="camp-show-body">
 
-              <div className="camp-show-story">
+                <div className="camp-show-story">
+                  Story go here
 
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+                  <span>blah blah blah</span>
+
+                </div>
+
+                <div className="camp-show-reward">
+                  Rewards go here
+                </div>
 
               </div>
-
-              <div className="camp-show-reward">
-
-              </div>
-
             </div>
+
           </div>
 
         </div>
 
-      </div>
-
-    );
+      );
+    }else {
+      return null;
+    }
   }
 
 }
 
 export default Campaign;
+
+// <div className="square_image_url">
+//   <img src={campaign.square_image_url} />
+// </div>

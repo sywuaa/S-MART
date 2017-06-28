@@ -20,7 +20,7 @@ export const fetchCampaign = (id) => dispatch => {
 
 export const fetchAllCampaigns = () => dispatch => {
   return(
-    APIUtil.fecthAllCampaigns()
+    APIUtil.fetchAllCampaigns()
       .then( campaigns => dispatch(receiveAllCampaigns(campaigns)))
   );
 };
@@ -32,10 +32,10 @@ export const updateCampaign = (campaign) => {
   );
 };
 
-export const receiveCampaign = (campaign) => {
+export const receiveCampaign = (payload) => {
   return {
     type: RECEIVE_CAMPAIGN,
-    campaign
+    payload
   };
 };
 

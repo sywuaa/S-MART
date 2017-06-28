@@ -13,8 +13,18 @@ a = User.create([
   ])
 
 b = Campaign.create([
-  { user_id: 1, title:'shaopal', goal: 10000, slogan: 'eat eat eat', city: 'new york', country: 'usa'},
-  { user_id: 1, title:'miu fishing', goal: 10000, slogan: 'fish miu', city: 'new york', country: 'usa'}
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
+  { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'}
   ])
 
 c = Reward.create([

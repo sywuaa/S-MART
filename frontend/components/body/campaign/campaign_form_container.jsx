@@ -5,7 +5,6 @@ import SaveCampaign from './campaign_form';
 
 const mapStateToProps = (state) => {
   return({
-    // userId: state.session.currentUser.id,
     campaign: state.campaign
   });
 };

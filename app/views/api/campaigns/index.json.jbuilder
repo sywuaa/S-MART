@@ -1,9 +1,6 @@
-@campaigns.each do |campaign|
-  json.set! campaign.id do
+json.array! @campaigns do |campaign|
 
-    json.extract! campaign, :id, :title, :slogan, :square_image_url, :start_date, :end_date
+    json.extract! campaign, :id, :title, :slogan, :start_date, :end_date
+    json.square_image_url asset_path(campaign.square_image_url.url)
 
-    json.creator @campaign.user.username
-
-  end
 end

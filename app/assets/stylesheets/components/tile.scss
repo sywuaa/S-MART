@@ -1,0 +1,28 @@
+.tile-container {
+  border: 1px solid Gray;
+  margin: 30px;
+  width: 200px;
+  height: 400px;
+  flex-direction: column;
+}
+
+img {
+  width: 200px;
+  height: 250px;
+}
+
+.percent-line {
+  width: 160px;
+  margin: 10px;
+}
+
+.tile-info {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  height: 200px;
+}
+
+.tile-info span {
+  margin: 3px;
+}

@@ -11,7 +11,7 @@ class Auth extends React.Component {
   }
 
   demoLogin(){
-    const user = {username: 'miu', password: 'miumiu'};
+    const user = {username: 'miu', password: 'miumiumiu'};
     this.props.login({user});
   }
 

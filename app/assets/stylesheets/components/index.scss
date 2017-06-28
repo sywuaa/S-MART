@@ -1,0 +1,15 @@
+.index-page {
+  display: flex;
+  justify-content: center;
+}
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: #f5f5f5;
+}
+
+.tile:hover{
+  cursor: pointer;
+}

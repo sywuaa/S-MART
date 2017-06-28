@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fecthCampaign = fecthCampaign;
   window.fecthAllCampaigns = fecthAllCampaigns;
   window.updateCampaign = updateCampaign;
+  
   Modal.setAppElement('#main');
   const main = document.getElementById('main');
   ReactDOM.render(<Root store={store}/>, main);

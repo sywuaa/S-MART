@@ -31,8 +31,8 @@ class Reward extends React.Component {
     }
 
   render(){
-    if(this.props.campaign.rewards) {
-      this.rewardList = this.props.campaign.rewards.map( (reward,index) => {
+    if(this.props.campaign.rewards_attributes) {
+      this.rewardList = this.props.campaign.rewards_attributes.map( (reward,index) => {
         return (
 
           <div key={index} className="reward-space">
@@ -131,7 +131,7 @@ class Reward extends React.Component {
 
         <div className="camp-form-continue-submit">
           <div>
-            <button onClick={this.props.change('component')} value='final'>Save & Continue</button>
+            <button onClick={this.props.handleClick('final')} value='final'>Save & Continue</button>
           </div>
         </div>
 

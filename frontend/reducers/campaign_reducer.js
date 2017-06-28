@@ -2,23 +2,30 @@ import { RECEIVE_CAMPAIGN, RECEIVE_ALL_CAMPAIGNS, UPDATE_CAMPAIGN } from '../act
 import selectAllCampaigns from './selectors';
 import { merge } from 'lodash';
 
-const defaultState = () => (
-  {}
-);
+const defaultState = () => ({
+  entities: {},
+  currentCampaign: null
+});
 
 const campaignReducer = (state = defaultState(), action) => {
   Object.freeze(state);
   let campaign;
   switch(action.type){
+
     case RECEIVE_CAMPAIGN:
-      campaign = merge( {}, action.campaign);
-      return { campaign };
+      campaign = action.payload.campaign;
+      return merge( {}, state, {
+        entities: { [campaign.id]: campaign},
+        currentCampaign: campaign.id
+      });
+
     case RECEIVE_ALL_CAMPAIGNS:
-      const campaigns = selectAllCampaigns(action.campaigns);
-      return campaigns;
+      return merge( {}, state, { entities: action.campaigns});
+
     case UPDATE_CAMPAIGN:
       campaign = action.campaign;
       return { campaign };
+      
     default:
       return state;
   }

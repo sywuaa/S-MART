@@ -18,8 +18,4 @@ class Reward < ActiveRecord::Base
     foreign_key: :campaign_id,
     inverse_of: :rewards
 
-  has_many :contributions,
-    class_name: :Contribution,
-    primary_key: :id,
-    foreign_key: :reward_id
 end

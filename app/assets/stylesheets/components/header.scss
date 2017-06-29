@@ -155,9 +155,11 @@
 }
 
 .changeAuth-formtype {
+  display: flex;
   padding: 10px;
   font-size: 14px;
   color: Gray;
+  justify-content: center;
 }
 
 .changeAuth-formtype span {

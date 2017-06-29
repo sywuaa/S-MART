@@ -86,7 +86,7 @@ class ModalContainer extends React.Component {
         </div>
 
         <div className="changeAuth-formtype">
-          <span>Already have an account?</span>
+          <span>New User?</span>
           <button onClick={this.toggleFormType}>Sign Up</button>
         </div>
 

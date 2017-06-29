@@ -9,15 +9,15 @@ import IndexContainer from './body/index_container';
 const App = () => (
   <div >
     <Header />
-
     <Switch>
       <Route exact path='/' component={IndexContainer} />
       <Route exact path='/campaigns/:id' component={CampaignContainer} />
     </Switch>
 
-    <Route exact path='/campaign/new' component={SaveCampaign} />
-
   </div>
 );
 
 export default App;
+
+//
+// <Route exact path='/campaign/new' component={SaveCampaign} />

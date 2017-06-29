@@ -14,18 +14,18 @@ const campaignReducer = (state = defaultState(), action) => {
 
     case RECEIVE_CAMPAIGN:
       campaign = action.payload.campaign;
-      return merge( {}, state, {
-        entities: { [campaign.id]: campaign},
-        currentCampaign: campaign.id
-      });
+      let newState = merge( {}, state);
+      newState.entities[campaign.id] = campaign;
+      newState.currentCampaign = campaign.id;
+      return newState;
 
     case RECEIVE_ALL_CAMPAIGNS:
-      return merge( {}, state, { entities: action.campaigns});
+      return merge( {}, state, { entities: action.payload });
 
     case UPDATE_CAMPAIGN:
       campaign = action.campaign;
       return { campaign };
-      
+
     default:
       return state;
   }

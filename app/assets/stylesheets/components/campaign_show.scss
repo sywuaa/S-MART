@@ -1,5 +1,4 @@
 .body {
-  background-color: #ccb386;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -8,7 +7,6 @@
 }
 
 .camp-show-page {
-  background-color: #bc9789;
   display: flex;
   flex-direction: column;
   width: 1200px;
@@ -22,7 +20,6 @@
 }
 
 .camp-show-top {
-  background-color: #5d98f7;
   display: flex;
   justify-content: space-between;
 
@@ -31,7 +28,6 @@
 }
 
 .camp-show-video {
-  background-color: #f76e5d;
   display: flex;
   justify-content: center;
   width: 550px;
@@ -39,7 +35,6 @@
 }
 
 .camp-show-overview {
-  background-color: #8c8907;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -67,7 +62,6 @@
 }
 
 .camp-show-body-container {
-  background-color: #6a078c;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -75,13 +69,12 @@
 }
 
 .camp-show-body {
-  background-color: #42f456;
   display: flex;
   justify-content: space-between;
   width: 1000px;
+  margin-top: 50px;
 }
 .camp-show-story {
-  background-color: #c16a47;
   display: flex;
   flex-direction: column;
   width: 500px;
@@ -94,9 +87,46 @@
 }
 
 .camp-show-reward {
-  background-color: #4449aa;
   display: flex;
   flex-direction: column;
   width: 400px;
 
+}
+
+.show-percent-line {
+  width: 300px;
+  height: 5px;
+}
+
+.percent-goal {
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.camp-show-overview button {
+}
+
+.camp-show-story img {
+  width: 560px;
+  height: 430px;
+}
+
+.camp-show-story span {
+  font-size: 20px;
+  width: 560px;
+}
+
+.overview-tag {
+  color: #a8a8a8;
+  margin: 20px 0 20px 0;
+  font-size: 24px;
+  border-bottom: 1px solid Gray;
+}
+
+.back-it-button {
+  text-align: center;
+  background-color: #eb1478;
+  color: White;
+  height: 40px;
+  width: 140px;
 }

@@ -1,13 +1,15 @@
 .tile-container {
-  border: 1px solid Gray;
+  border: 1px solid #dee0e2;
   margin: 30px;
-  width: 230px;
-  height: 460px;
+  width: 240px;
+  height: 480px;
   flex-direction: column;
+  font-family: "Benton Sans Medium", "Helvetica", "sans-serif";
 }
 
+
 img {
-  width: 230px;
+  width: 240px;
   height: 280px;
 }
 
@@ -21,8 +23,28 @@ img {
   font-size: 20px;
   flex-direction: column;
   height: 200px;
+  padding: 10px;
 }
 
 .tile-info span {
   margin: 3px;
+}
+
+.tile-contribution {
+  font-size: 16px;
+}
+
+.tile-contribution span {
+  font-weight: bold;
+}
+
+.tile-info-bottom {
+  Color: #adadad;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-slogan {
+  font-size: 16px;
 }

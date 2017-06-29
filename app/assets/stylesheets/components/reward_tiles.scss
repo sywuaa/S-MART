@@ -1,0 +1,70 @@
+.reward-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16;
+  justify-content: center;
+}
+
+.reward-container {
+  margin: 20px;
+  width: 350px;
+  display:flex;
+  flex-direction: column;
+  font-family: "Benton Sans Medium", "Helvetica", "sans-serif";
+}
+
+.show-perk {
+  padding:5px;
+  color: #a8a8a8;
+  margin: 20px 0 20px 0;
+  border-bottom: 1px solid Gray;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.reward-price {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.reward-title {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+
+}
+
+.reward-description {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.reward-item {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.est-delivery {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #fafafa;
+  height: 40px;
+  align-items: center;
+}
+
+.est-delivery span {
+  color: #6a6a6a;
+}
+
+.story-tag {
+  padding:5px;
+  color: #a8a8a8;
+  margin: 20px 0 20px 0;
+  border-bottom: 1px solid Gray;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 20px;
+}

@@ -39,9 +39,9 @@ export const receiveCampaign = (payload) => {
   };
 };
 
-export const receiveAllCampaigns = (campaigns) => {
+export const receiveAllCampaigns = (payload) => {
   return {
     type: RECEIVE_ALL_CAMPAIGNS,
-    campaigns
+    payload
   };
 };

@@ -2,27 +2,28 @@
 #
 # Table name: campaigns
 #
-#  id                 :integer          not null, primary key
-#  user_id            :integer
-#  title              :string
-#  goal               :integer
-#  slogan             :string
-#  square_image_url   :string
-#  city               :string
-#  country            :string
-#  start_date         :date
-#  end_date           :date
-#  vid_url            :string
-#  vid_olay_image_url :string
-#  overview_image_url :string
-#  overview           :string
-#  story              :string
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  image_file_name    :string
-#  image_content_type :string
-#  image_file_size    :integer
-#  image_updated_at   :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  title                       :string
+#  goal                        :integer
+#  slogan                      :string
+#  city                        :string
+#  country                     :string
+#  start_date                  :date
+#  end_date                    :date
+#  vid_url                     :string
+#  overview                    :string
+#  story                       :string
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  square_image_file_name      :string
+#  square_image_content_type   :string
+#  square_image_file_size      :integer
+#  square_image_updated_at     :datetime
+#  overview_image_file_name    :string
+#  overview_image_content_type :string
+#  overview_image_file_size    :integer
+#  overview_image_updated_at   :datetime
 #
 
 class Campaign < ActiveRecord::Base
@@ -46,8 +47,9 @@ class Campaign < ActiveRecord::Base
     inverse_of: :campaign
 
   has_many :contributions,
-    through: :rewards,
-    source: :contributions
+    class_name: :Contribution,
+    primary_key: :id,
+    foreign_key: :campaign_id
 
 
   accepts_nested_attributes_for :rewards

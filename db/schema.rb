@@ -42,8 +42,10 @@ ActiveRecord::Schema.define(version: 20170628181157) do
   create_table "contributions", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "reward_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "campaign_id"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "rewards", force: :cascade do |t|

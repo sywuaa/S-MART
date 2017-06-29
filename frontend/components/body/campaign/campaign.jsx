@@ -10,7 +10,13 @@ class Campaign extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      campaign_id: props.id,
+      amount: ""
+    };
+
     this.makeContribution = this.makeContribution.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidMount(){
@@ -24,12 +30,19 @@ class Campaign extends React.Component {
   }
 
   makeContribution(){
-    const contribution = {
-      campaign_id: this.props.campaign.id,
-      amount: 100000
-    };
+    const contribution = this.state;
 
     this.props.createContribution(contribution);
+    this.setState = {
+      campaign_id: this.props.id,
+      amount: ""
+    };
+  }
+
+  update(input){
+    return(e) => {
+      this.setState({[input]: e.target.value});
+    };
   }
 
   render() {
@@ -91,16 +104,16 @@ class Campaign extends React.Component {
                     {percent}% of ${campaign.goal}
                   </div>
 
-                  <button className="back-it-button" onClick={this.makeContribution}>Back It</button>
+                  <div className="show-overview-bottom">
+                    <input type="number" placeholder="$" onChange={this.update("amount")} />
+                    <button className="back-it-button" onClick={this.makeContribution}>Back It</button>
+                  </div>
 
                 </div>
 
               </div>
             </div>
-
-            <br></br>
-            <br></br>
-
+            
             <div className="camp-show-body-container">
               <div className="camp-show-body">
 
@@ -112,7 +125,7 @@ class Campaign extends React.Component {
                   </div>
 
                   <span className="story-tag">Story</span>
-                  <span>{campaign.story}</span>
+                  <span className="story">{campaign.story}</span>
 
                 </div>
 

@@ -14,16 +14,15 @@
 }
 
 .camp-show-top-block {
-  display: flex;
+  display: block;
   justify-content: center;
   height: 500px;
 }
 
 .camp-show-top {
   display: flex;
-  justify-content: space-between;
-
-  width: 1000px;
+  justify-content: space-around;
+  width: 1200px;
   height: 400px;
 }
 
@@ -39,7 +38,6 @@
   flex-direction: column;
   width: 400px;
   height: 400px;
-  padding: 10px;
 }
 
 .camp-show-overview div {
@@ -63,22 +61,19 @@
 
 .camp-show-body-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
-  margin-top: 50px;
 }
 
 .camp-show-body {
   display: flex;
-  justify-content: space-between;
-  width: 1000px;
-  margin-top: 50px;
+  justify-content: space-around;
+  width: 1200px;
 }
 .camp-show-story {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 1000px;
 }
 
 .camp-show-story span {
@@ -87,6 +82,7 @@
 }
 
 .camp-show-reward {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -129,4 +125,21 @@
   color: White;
   height: 40px;
   width: 140px;
+}
+
+.story {
+  margin-bottom: 200px;
+}
+
+.show-overview-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.show-overview-bottom input {
+  padding-left: 10px;
+  border: 1px solid Gray;
+  height: 40px;
+  width: 100px;
 }

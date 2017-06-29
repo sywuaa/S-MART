@@ -26,17 +26,3 @@ b = Campaign.create([
   { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'},
   { user_id: 3, title: 'CarbotAnimation', goal: 100000, slogan: 'cute cartoon', overview: 'funny cartoon', city: 'new york', country: 'usa', vid_url: 'https://www.youtube.com/embed/_dehv-Kqeqs'}
   ])
-
-c = Reward.create([
-  { title: 'All you can eat', description: 'eating frenzy', campaign_id: 1, price: 15},
-  { title: 'All you can eat X2 ', description: 'eating frenzy X2', campaign_id: 1, price: 30},
-  { title: 'Fish Miu', description: 'fish miu for 10 minutes', campaign_id: 2, price: 10},
-  { title: 'Fish Miu X2', description: 'fish miu for 20 minutes', campaign_id: 2, price: 20},
-  { title: 'Fish Miu X3', description: 'fish miu for 30 minutes', campaign_id: 2, price: 30}
-  ])
-
-d = Contribution.create([
-  { user_id: 1, reward_id: 1},
-  { user_id: 1, reward_id: 2},
-  { user_id: 2, reward_id: 2}
-  ])

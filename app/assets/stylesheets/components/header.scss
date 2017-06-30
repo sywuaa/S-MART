@@ -13,7 +13,9 @@
 }
 
 .right-nav {
+  display: flex;
   margin-right: 20px;
+  align-content: center;
 }
 
 .right-nav div {
@@ -200,6 +202,7 @@
 }
 
 .header-container button {
+  height: 40px;
   margin: 10px;
   border-radius: 5px;
   color: black;
@@ -210,4 +213,14 @@
 .header-container button:hover {
   opacity: 0.9;
   color: $logo-pink
+}
+
+.newCampaign  {
+  border: 2px solid $logo-pink;
+  height: 50px;
+}
+
+.newCampaign button {
+  width: 150px;
+  height: 30px;
 }

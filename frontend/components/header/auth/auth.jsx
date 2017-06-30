@@ -6,8 +6,8 @@ import ModalContainer from './modal';
 class Auth extends React.Component {
   constructor(props){
     super(props);
-
     this.demoLogin = this.demoLogin.bind(this);
+
   }
 
   demoLogin(){
@@ -29,6 +29,7 @@ class Auth extends React.Component {
     }else {
       return(
         <div>
+
         <button onClick={this.demoLogin}>Demo</button>
         <section className='modal-container'>
           <ModalContainer />

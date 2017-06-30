@@ -5,10 +5,12 @@ import CampaignContainer from './body/campaign/campaign_container';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import Campaign from './body/campaign/campaign';
 import IndexContainer from './body/index_container';
+import HeaderContainer from './header/header_container';
+
 
 const App = () => (
   <div >
-    <Header />
+    <Route path='/' component={Header} />
     <Switch>
       <Route exact path='/' component={IndexContainer} />
       <Route exact path='/campaigns/:id' component={CampaignContainer} />
@@ -19,3 +21,5 @@ const App = () => (
 );
 
 export default App;
+
+<HeaderContainer />

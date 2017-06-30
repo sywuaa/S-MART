@@ -8,6 +8,6 @@ json.campaign do
   json.overview_image_url asset_path(campaign.overview_image.url)
 
   json.rewards do
-     json.array! campaign.rewards, :title, :price, :item, :description
+     json.array! campaign.rewards, :id, :title, :price, :item, :description
   end
 end

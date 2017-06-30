@@ -16,6 +16,7 @@ class Campaign extends React.Component {
     };
 
     this.makeContribution = this.makeContribution.bind(this);
+    this.getPerk = this.getPerk.bind(this);
   }
 
   componentDidMount(){
@@ -40,6 +41,17 @@ class Campaign extends React.Component {
     };
   }
 
+  getPerk(reward){
+    return(e) => {
+      const contribution = {
+        campaign_id: this.props.campaign.id,
+        amount: reward.price,
+        reward_id: reward.id
+      };
+      this.props.createContribution(contribution);
+    }
+  }
+
   render() {
     const { campaign } = this.props;
 
@@ -49,8 +61,8 @@ class Campaign extends React.Component {
 
       const rewardList = campaign.rewards.map( (reward,index) => {
         return(
-          <div className="show-reward-container" key={index}>
-            <RewardTile reward={reward} />
+          <div className="show-reward-container" key={index} >
+            <RewardTile reward={reward} getPerk={this.getPerk}/>
           </div>
         );
       });

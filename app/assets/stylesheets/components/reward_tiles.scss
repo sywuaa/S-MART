@@ -59,14 +59,17 @@
   display: flex;
   justify-content: center;
   font-size: 16px;
-  background-color: #b6b7ba;
+  background-color: #d9d9dd;
   height: 40px;
   align-items: center;
 }
 
-.est-delivery span {
-  color: #6a6a6a;
+.est-delivery:hover {
+  background-color: $logo-pink;
+  color: White;
+  cursor: pointer;
 }
+
 
 .story-tag {
   padding:5px;

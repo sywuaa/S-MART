@@ -55,7 +55,7 @@ class Basic extends React.Component {
         <div>
           <br></br>
           <br></br>
-          <label className="label-tag">IMAGE IMAGE IMAGE * </label>
+          <label className="label-tag">SQUARE IMAGE for INDEX TILE * </label>
           <label className="label-tag2">Upload a square image that represents your campaign.640 x 640 recommended resolution, 220 x 220 minimum resolution.
           </label>
 

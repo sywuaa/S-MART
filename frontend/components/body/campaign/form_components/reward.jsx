@@ -36,7 +36,7 @@ class Reward extends React.Component {
         return (
 
           <div key={index} className="reward-space">
-            <strong>Reward {index+1} :</strong>
+            <strong>Perk {index+1} :</strong>
             <div className="reward-container">
 
               <div className="reward-element">
@@ -49,7 +49,7 @@ class Reward extends React.Component {
 
               <div className="reward-element-attributes">
                 <span>{reward.title}</span>
-                <span>{reward.price}</span>
+                <span>${reward.price}</span>
                 <span>{reward.item}</span>
                 <span>{reward.description}</span>
               </div>

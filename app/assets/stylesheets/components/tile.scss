@@ -5,8 +5,12 @@
   height: 480px;
   flex-direction: column;
   font-family: "Benton Sans Medium", "Helvetica", "sans-serif";
+  justify-content: space-around;
 }
 
+.tile-bottom {
+  padding-bottom: 15px;
+}
 
 img {
   width: 240px;
@@ -22,6 +26,7 @@ img {
   display: flex;
   font-size: 20px;
   flex-direction: column;
+  justify-content: space-between;
   height: 200px;
   padding: 10px;
 }

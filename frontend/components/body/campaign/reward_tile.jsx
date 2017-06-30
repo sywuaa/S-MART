@@ -28,8 +28,8 @@ class RewardTile extends React.Component {
         </div>
 
 
-        <div className="est-delivery">
-          <span> Get This Perk {this.props.end_date}</span>
+        <div className="est-delivery" onClick={this.props.getPerk(this.props.reward)}>
+          Get This Perk
         </div>
 
 

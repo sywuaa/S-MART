@@ -19,25 +19,28 @@ class Tile extends React.Component {
         <img src={camp.square_image_url} />
 
         <div className="tile-info">
-          <span>
-            {camp.title}<strong>:</strong>
-          </span>
-
-          <span className="tile-slogan">
-            {camp.slogan}
-          </span>
-
-          <span className="tile-contribution">
-            <span>${camp.contributions}</span> USD Raised
-          </span>
-
-          <Line className="percent-line" percent={bar} strokeWidth="5" strokeColor="#eb1478"/>
-
-          <div className="tile-info-bottom">
+          <div className="tile-top">
             <span>
-              {percent} %
+              {camp.title}<strong>:</strong>
             </span>
 
+            <span className="tile-slogan">
+              {camp.slogan}
+            </span>
+
+            <span className="tile-contribution">
+              <span>${camp.contributions}</span> USD Raised
+            </span>
+          </div>
+
+          <div className="tile-bottom">
+            <Line className="percent-line" percent={bar} strokeWidth="5" strokeColor="#eb1478"/>
+
+            <div className="tile-info-bottom">
+              <span>
+                {percent} %
+              </span>
+            </div>
           </div>
 
         </div>

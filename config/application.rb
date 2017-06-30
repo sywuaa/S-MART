@@ -15,7 +15,7 @@ module FSProject
       :storage => :s3,
       :path => "/:class/:attachment/:id_partition/:style/:filename",
       :s3_credentials => {
-        :bucket => ENV["s3_bucket"],
+        :bucket_name => ENV["s3_bucket"],
         :access_key_id => ENV["s3_access_key_id"],
         :secret_access_key => ENV["s3_secret_access_key"],
         :s3_region => ENV["s3_region"],

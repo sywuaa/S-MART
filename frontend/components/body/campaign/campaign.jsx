@@ -45,6 +45,7 @@ class Campaign extends React.Component {
 
     if(campaign && this.props.currentCampaign === parseInt(this.props.id)){
       let percent = parseFloat(campaign.contributions / campaign.goal * 100).toFixed(2);
+      let bar = (percent > 100) ? 100 : percent;
 
       const rewardList = campaign.rewards.map( (reward,index) => {
         return(
@@ -102,7 +103,7 @@ class Campaign extends React.Component {
                   ${campaign.contributions} raised by {campaign.supporters} backers
                 </div>
 
-                <Line className="show-percent-line" percent={percent} strokeWidth="5" strokeColor="#0eb4b6" />
+                <Line className="show-percent-line" percent={bar} strokeWidth="5" strokeColor="#0eb4b6" />
 
                 <div className="show-percent-goal">
                   {percent}% of ${campaign.goal}

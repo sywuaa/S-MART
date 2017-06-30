@@ -11,7 +11,7 @@ class Tile extends React.Component {
 
     const camp = this.props.camp;
     let percent = parseFloat(camp.contributions / camp.goal * 100).toFixed(2);
-
+    let bar = (percent > 100) ? 100 : percent;
     return(
 
       <div className="tile-container">
@@ -31,7 +31,7 @@ class Tile extends React.Component {
             <span>${camp.contributions}</span> USD Raised
           </span>
 
-          <Line className="percent-line" percent={percent} strokeWidth="5" strokeColor="#eb1478 " />
+          <Line className="percent-line" percent={bar} strokeWidth="5" strokeColor="#eb1478"/>
 
           <div className="tile-info-bottom">
             <span>

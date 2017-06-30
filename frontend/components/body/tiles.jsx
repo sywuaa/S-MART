@@ -27,10 +27,6 @@ class Tile extends React.Component {
             {camp.slogan}
           </span>
 
-          <span>
-            {camp.overview}
-          </span>
-
           <span className="tile-contribution">
             <span>${camp.contributions}</span> USD Raised
           </span>

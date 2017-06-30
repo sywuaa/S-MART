@@ -1,145 +1,107 @@
-.body {
+.camp-show-page {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+}
+
+.body {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 1100px;
   font-size: 24px;
 }
 
-.camp-show-page {
-  display: flex;
+.show-left-column {
+  display:flex;
   flex-direction: column;
-  width: 1200px;
-  padding-top: 50px;
+  width: 550px;
 }
 
-.camp-show-top-block {
-  display: block;
-  justify-content: center;
-  height: 500px;
+.overview-tag {
+  color: #b3b3b5;
+  height: 30px;
+  margin-top: 20px;
+  border-bottom: 1px solid Gray;
+  align-items: baseline;
 }
 
-.camp-show-top {
-  display: flex;
-  justify-content: space-around;
-  width: 1200px;
-  height: 400px;
+.overview_image_url {
+  margin-top: 30px;
 }
 
-.camp-show-video {
-  display: flex;
-  justify-content: center;
+.overview_image_url img {
   width: 550px;
   height: 400px;
 }
 
-.camp-show-overview {
+.story {
+  font-size: 20px;
+  margin-bottom: 200px;
+}
+
+
+
+
+
+.show-right-column {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 400px;
-}
-
-.camp-show-overview div {
-  margin: 10px 0 10px 0;
 }
 
 .overview-label {
+  height: 30px;
   color: #0eb4b6;
   border-bottom: 2px solid #0eb4b6;
 }
 
-.camp-title {
-  font-size: 24px;
-  font-weight: bold;
+.show-camp-title {
   margin-top: 10px;
-}
-
-.camp-title strong {
-  margin: 8px;
-}
-
-.camp-show-body-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.camp-show-body {
-  display: flex;
-  justify-content: space-around;
-  width: 1200px;
-}
-.camp-show-story {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-}
-
-.camp-show-story span {
-  display: block;
-  margin-top: 50px;
-}
-
-.camp-show-reward {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-
-}
-
-.show-percent-line {
-  width: 300px;
-  height: 5px;
-}
-
-.percent-goal {
-  font-size: 16px;
-  margin-left: 30px;
-}
-
-.camp-show-overview button {
-}
-
-.camp-show-story img {
-  width: 560px;
-  height: 430px;
-}
-
-.camp-show-story span {
   font-size: 20px;
-  width: 560px;
 }
 
-.overview-tag {
-  color: #a8a8a8;
-  margin: 20px 0 20px 0;
-  font-size: 24px;
-  border-bottom: 1px solid Gray;
+.show-overview {
+  margin: 10px;
+  font-size: 16px;
 }
 
-.back-it-button {
-  text-align: center;
-  background-color: #eb1478;
-  color: White;
-  height: 40px;
-  width: 140px;
+.show-creator {
+  font-size: 20px;
 }
 
-.story {
-  margin-bottom: 200px;
+.show-camp-supporter {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #b2b2b2;
+}
+
+.show-percent-goal {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #b2b2b2;
 }
 
 .show-overview-bottom {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 50px;
+  align-items: center;
+  margin-top: 10px;
+  height: 50px;
 }
 
 .show-overview-bottom input {
-  padding-left: 10px;
-  border: 1px solid Gray;
   height: 40px;
-  width: 100px;
+  border: 1px solid Gray;
+  width: 120px;
+  padding-left: 10px;
+}
+
+.show-overview-bottom button {
+  height: 40px;
+  background-color: $logo-pink;
+  color: White;
+  width: 140px;
+  text-align: center;
+  border-radius: 2px;
 }

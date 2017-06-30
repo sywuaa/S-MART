@@ -49,8 +49,7 @@ class Campaign extends React.Component {
     const { campaign } = this.props;
 
     if(campaign && this.props.currentCampaign === parseInt(this.props.id)){
-      let percent = parseFloat(campaign.contributions / campaign.goal).toFixed(2);
-
+      let percent = parseFloat(campaign.contributions / campaign.goal * 100).toFixed(2);
 
       const rewardList = campaign.rewards.map( (reward,index) => {
         return(
@@ -62,86 +61,76 @@ class Campaign extends React.Component {
 
 
       return(
-        <div className="body">
-          <div className="camp-show-page">
-            <div className="camp-show-top-block">
+        <div className="camp-show-page">
+          <div className="body">
 
-              <div className="camp-show-top">
+            <div className="show-left-column">
 
-                <div className="camp-show-video">
-
-                  <iframe width="550" height="400" src={campaign.vid_url} ></iframe>
-
-                </div>
-
-                <div className="camp-show-overview">
-
-                  <div className="overview-label">
-                    InDemand
-                  </div>
-
-                  <div className="camp-title">
-                    {campaign.title}
-                    <strong>:</strong>
-                    {campaign.slogan}
-                  </div>
-
-                  <div>
-                    {campaign.overview}
-                  </div>
-
-                  <div className="creator">
-                    Creator : {campaign.creator.username}
-                  </div>
-
-                  <div className="camp-supporter">
-                    ${campaign.contributions} raised by {campaign.supporters} backers
-                  </div>
-
-                  <Line className="show-percent-line" percent={percent} strokeWidth="5" strokeColor="#0eb4b6" />
-
-                  <div className="percent-goal">
-                    {percent}% of ${campaign.goal}
-                  </div>
-
-                  <div className="show-overview-bottom">
-                    <input type="number" placeholder="$" onChange={this.update("amount")} />
-                    <button className="back-it-button" onClick={this.makeContribution}>Back It</button>
-                  </div>
-
-                </div>
-
+              <div className="camp-show-video">
+                <iframe width="550" height="400" src={campaign.vid_url} ></iframe>
               </div>
-            </div>
-            
-            <div className="camp-show-body-container">
-              <div className="camp-show-body">
 
-                <div className="camp-show-story">
-                  <span className="overview-tag">Overview</span>
+              <span className="overview-tag">Overview</span>
 
-                  <div className="overview_image_url">
-                    <img src={campaign.overview_image_url} />
-                  </div>
-
-                  <span className="story-tag">Story</span>
-                  <span className="story">{campaign.story}</span>
-
-                </div>
-
-                <div className="camp-show-reward">
-                  <div className="show-perk">Perks</div>
-
-                  <div className="reward-list-container">
-                    {rewardList}
-                  </div>
-                </div>
-
+              <div className="overview_image_url">
+                <img src={campaign.overview_image_url} />
               </div>
+
+              <span className="story-tag">Story</span>
+              <span className="story">{campaign.story}</span>
             </div>
+
+
+            <div className="show-right-column">
+
+              <div className="camp-show-overview">
+
+                <div className="overview-label">
+                  InDemand
+                </div>
+
+                <div className="show-camp-title">
+                  {campaign.title}
+                  <strong>:</strong>
+                  {campaign.slogan}
+                </div>
+
+                <div className="show-overview">
+                  {campaign.overview}
+                </div>
+
+                <div className="creator">
+                  <span>Creator : {campaign.creator.username}</span>
+                </div>
+
+                <div className="show-camp-supporter">
+                  ${campaign.contributions} raised by {campaign.supporters} backers
+                </div>
+
+                <Line className="show-percent-line" percent={percent} strokeWidth="5" strokeColor="#0eb4b6" />
+
+                <div className="show-percent-goal">
+                  {percent}% of ${campaign.goal}
+                </div>
+
+                <div className="show-overview-bottom">
+                  <input type="number" placeholder="$" onChange={this.update("amount")} />
+                  <button className="back-it-button" onClick={this.makeContribution}>Back It</button>
+                </div>
+              </div>
+
+              <div className="camp-show-reward">
+                <div className="show-perk">Perks</div>
+
+                <div className="reward-list-container">
+                  {rewardList}
+                </div>
+              </div>
+
+            </div>
+
 
           </div>
-
         </div>
       );
     }else {

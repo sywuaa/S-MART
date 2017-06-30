@@ -143,6 +143,11 @@
   background-color: #ffffff;
 }
 
+.rewardList-container {
+  font-size: 20px;
+  margin: 20px;
+}
+
 .reward-space {
   margin-bottom: 20px;
 }
@@ -151,14 +156,9 @@
   display: block;
 }
 
-.rewardList-container {
-  font-size: 20px;
-  margin: 20px;
-}
-
 .reward-container {
   display: flex;
-  justify-content: space-around;
+  width: 450px;
   padding: 5px;
   border: 1px solid Gray;
 }
@@ -166,11 +166,13 @@
 .reward-element {
   display: flex;
   flex-direction: column;
+  width: 200px;
 }
 
 .reward-element-attributes {
   display: flex;
   flex-direction: column;
+  width: 200px;
 }
 
 .camp-form-launch {

@@ -1,7 +1,7 @@
 json.campaign do
   json.extract! campaign, :id, :title, :goal, :slogan, :city, :country, :start_date, :end_date
   json.extract! campaign, :vid_url, :overview, :story
-  json.contributions campaign.contributions.map{|contribution| contribution.amount }.reduce(0,:+)
+  json.contributions campaign.contributions.map{|contribution| contribution.amount.to_i }.reduce(0,:+)
   json.supporters campaign.contributions.length
   json.creator campaign.creator, :username
 

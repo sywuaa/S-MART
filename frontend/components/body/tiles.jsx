@@ -4,13 +4,14 @@ import { Line } from 'rc-progress';
 class Tile extends React.Component {
   constructor(props){
     super(props);
+    debugger
   }
 
 
   render(){
 
     const camp = this.props.camp;
-    let percent = parseFloat(camp.contributions / camp.goal).toFixed(2);
+    let percent = parseFloat(camp.contributions / camp.goal * 100).toFixed(2);
 
     return(
 
@@ -38,9 +39,6 @@ class Tile extends React.Component {
               {percent} %
             </span>
 
-            <span>
-              End: {camp.s_date}
-            </span>
           </div>
 
         </div>

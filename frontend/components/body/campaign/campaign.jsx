@@ -16,7 +16,6 @@ class Campaign extends React.Component {
     };
 
     this.makeContribution = this.makeContribution.bind(this);
-    this.update = this.update.bind(this);
   }
 
   componentDidMount(){
@@ -33,15 +32,11 @@ class Campaign extends React.Component {
     const contribution = this.state;
 
     this.props.createContribution(contribution);
-    this.setState = {
-      campaign_id: this.props.id,
-      amount: ""
-    };
   }
 
   update(input){
     return(e) => {
-      this.setState({[input]: e.target.value});
+      this.setState({[input]: e.currentTarget.value});
     };
   }
 
@@ -53,7 +48,7 @@ class Campaign extends React.Component {
 
       const rewardList = campaign.rewards.map( (reward,index) => {
         return(
-          <div className="reward-container" key={index}>
+          <div className="show-reward-container" key={index}>
             <RewardTile reward={reward} />
           </div>
         );

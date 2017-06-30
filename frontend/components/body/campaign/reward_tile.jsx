@@ -15,21 +15,21 @@ class RewardTile extends React.Component {
           <strong>$ {this.props.reward.price}</strong> USD + Shipping
         </div>
 
-        <div className="reward-title">
+        <div className="show-reward-title">
           {this.props.reward.title}
         </div>
-        <div className="reward-description">
+        <div className="show-reward-description">
           {this.props.reward.description}
         </div>
 
-        <div className="reward-item">
-          Items included:
-          {this.props.reward.items}
+        <div className="show-reward-item">
+          <strong>Items included:</strong>
+          {this.props.reward.item}
         </div>
 
 
         <div className="est-delivery">
-          <span>Estimated Delivery {this.props.end_date}</span>
+          <span> Get This Perk {this.props.end_date}</span>
         </div>
 
 

@@ -37,7 +37,6 @@ Campaign.create({
   })
 
 
-
 Reward.create({
   campaign_id: 1,
   price: 287,

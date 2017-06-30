@@ -371,3 +371,83 @@ Reward.create({
   item: "ZEPPY (2)",
   description: "Get 2 x Zeppy including the Loop for only 79€ each. Save 60% from the 398€ retail price. Zeppy is available in the colors Black, Silver and Rainbow."
 })
+
+j = Campaign.create({
+  user_id: 6,
+  goal: 1000,
+  title: "intelliPLUG",
+  slogan: "your friendly Wi-Fi Smart Plug",
+  city: "Budapest",
+  country: "Hungary",
+  start_date: "6/27/2017",
+  end_date: "7/26/2017",
+  square_image: File.open("app/assets/images/camp9/1.png"),
+  overview_image: File.open("app/assets/images/camp9/2.png"),
+  vid_url: "https://www.youtube.com/embed/51hRR61Bkfo",
+  overview: "App Enabled Smart Plug, No Hub Required, Control Anything From Anywhere, Works w/Alexa & Google Home",
+  story: "intelliPLUG is a sleek,  affordable, wi-fi enabled smart plug that allows you to control your lights, appliances & any plugged-in device directly from your smartphone or tablet, anywhere in the world! Through the app you can turn on/off plugs, set timers and schedule plugs to turn on & off automatically. Use Amazon Alexa or Google Home?  Connect your intellIPLUG and you’ll able to access all the features with nothing but the sound of your voice. Smart Home for Everyone! Premium features- Amazon Alexa integration, UL certification, automatic upgrades as new features are implemented; you're all set with intelliPLUG. User-friendliness- Download the app, plug in the intelliPLUG, and go from zero to smart-home in less than 60 seconds! Affordability. - intelliPLUG is the most competitively priced smart plug on the market, so go wild, grab a bunch, and turn your home into a smart-house haven! intelliPLUG is perfect for controlling devices without having to manually switch it on or off. Compact and designed around modern lifestyles, intelliPLUG doesn’t block off adjacent sockets, while its neutral color and minimal form blend in completely with indoor environments. It’s sturdy, built to last and remarkably easy to set up, and has been conceived and designed as a low-cost solution to turn everyday electronic devices into smart appliances."
+})
+
+Reward.create({
+  campaign_id: j.id,
+  price: 10,
+  title: "Thank you! Every bit counts!",
+  item: "A Heartfelt Thank You",
+  description: "Thank you! Every bit counts and we mean it! We'll even post a public thank you to you on our Indiegogo and on social media."
+})
+
+Reward.create({
+  campaign_id: j.id,
+  price: 30,
+  title: "A Made For You Snack",
+  item: "A Heartfelt Thank You, A Thank You Snack",
+  description: "We're so thankful we're writing you a thank you note, which you can bring to the restaurant and redeem for a complimentary snack made specifically for you by our chef!"
+})
+
+Reward.create({
+  campaign_id: j.id,
+  price: 50,
+  title: "Kanpai with Chef Soma",
+  item: "A Heartfelt Thank You,A Thank You Snack, Kanpai with Chef",
+  description: "Bring in our heartfelt, handwritten thank you note for a special snack made and delivered by chef along with a complimentary glass of sake. We'll make chef Soma say thanks with a big hug, which will be a slight torture for her and worth every penny!"
+})
+
+k = Campaign.create({
+  user_id: 1,
+  goal: 1000,
+  title: "Kamonegi",
+  slogan: "Handmade Soba and Traditional Tempura",
+  city: "Budapest",
+  country: "Hungary",
+  start_date: "6/27/2017",
+  end_date: "7/26/2017",
+  square_image: File.open("app/assets/images/camp10/1.png"),
+  overview_image: File.open("app/assets/images/camp10/2.png"),
+  vid_url: "https://www.youtube.com/embed/LB6q5uJVtes",
+  overview: "Help Kamonegi bring traditional soba and tempura to Seattle",
+  story: "Kamonegi, the first pop-up series in the nation to highlight handmade soba, has found its brick and mortar location in Seattle's Fremont-Wallingford neighborhood. Kamonegi the restaurant will be unique in its offerings, making Seattle home to one of the few restaurants in the nation focused on buckwheat noodles, soba, made by hand in the nihachi style - 80 percent buckwheat and 20 percent flour, and seasonal tempura featuring the region's heirloom, organic, and foraged produce. Kamonegi, founded by Chef Mutsuko Soma. started as a series of pop-ups along the west coast, but having a restaurant has always been a goal for Soma, who worked as a chef in many Seattle restaurants before returning to Japan to study soba making. There, she learned that Washington state was among the highest producers of buckwheat in the U.S. and made the decision to bring and promote the art of soba making to the United States, specifically Seattle. The name Kamonegi refers to a harmonious culinary pairing of duck and leek, or more specifically, a duck bringing you a leek which symbolizes the good luck of one good thing that brings another. Kamonegi the restaurant will continue to focus on handmade soba along with craft tempura, two classic dishes born out of Japan's Edo period. Your support of our campaign will help bring two currently underrepresented facets of Japanese cuisine to the Pacific Northwest and support a small neighborhood restaurant with wholesome food and a family friendly atmosphere. "
+})
+
+Reward.create({
+  campaign_id: k.id,
+  price: 10,
+  title: "Thank you! Every bit counts!",
+  item: "A Heartfelt Thank You",
+  description: "Thank you! Every bit counts and we mean it! We'll even post a public thank you to you on our Indiegogo and on social media."
+})
+
+Reward.create({
+  campaign_id: k.id,
+  price: 30,
+  title: "A Made For You Snack",
+  item: "A Heartfelt Thank You, A Thank You Snack",
+  description: "We're so thankful we're writing you a thank you note, which you can bring to the restaurant and redeem for a complimentary snack made specifically for you by our chef!"
+})
+
+Reward.create({
+  campaign_id: k.id,
+  price: 50,
+  title: "Kanpai with Chef Soma",
+  item: "A Heartfelt Thank You,A Thank You Snack, Kanpai with Chef",
+  description: "Bring in our heartfelt, handwritten thank you note for a special snack made and delivered by chef along with a complimentary glass of sake. We'll make chef Soma say thanks with a big hug, which will be a slight torture for her and worth every penny!"
+})

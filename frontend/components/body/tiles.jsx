@@ -4,7 +4,6 @@ import { Line } from 'rc-progress';
 class Tile extends React.Component {
   constructor(props){
     super(props);
-    debugger
   }
 
 

@@ -5,7 +5,8 @@
   justify-content: space-between;
   font-size: 15px;
   background-color: $lightest-blue;
-  font-family: "Benton Sans","Helvetica","sans-serif"
+  font-family: "Benton Sans","Helvetica","sans-serif";
+  width: 100%;
 }
 
 .header {
@@ -15,11 +16,13 @@
 .right-nav {
   display: flex;
   margin-right: 20px;
-  align-content: center;
+  align-items: baseline;
 }
 
 .right-nav div {
+  margin-right: 20px;
   display: flex;
+  height: 40px;
 }
 
 .left-nav {
@@ -202,11 +205,9 @@
 }
 
 .header-container button {
-  height: 40px;
   margin: 10px;
   border-radius: 5px;
   color: black;
-  width: 100px;
   text-align: center;
 }
 
@@ -215,12 +216,12 @@
   color: $logo-pink
 }
 
-.newCampaign  {
-  border: 2px solid $logo-pink;
-  height: 50px;
+.newCampaign {
+  margin-right: 50px;
 }
 
 .newCampaign button {
+  color: $logo-pink;
   width: 150px;
   height: 30px;
 }

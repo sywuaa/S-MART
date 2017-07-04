@@ -20,7 +20,7 @@ class Auth extends React.Component {
       const currentUser = this.props.currentUser;
       return(
         <div>
-          <span> Welcome! {this.props.currentUser.username}</span>
+          <span> Welcome!  {this.props.currentUser.username.toUpperCase()}</span>
           <button onClick={this.props.logout}>
             Log Out
           </button>

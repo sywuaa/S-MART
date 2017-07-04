@@ -38,10 +38,12 @@
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.0",
-    "redux-logger": "^3.0.6",
+
     "redux-thunk": "^2.2.0",
     "video-react": "^0.8.5",
     "webpack": "^3.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
 }

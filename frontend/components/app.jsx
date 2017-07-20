@@ -8,6 +8,7 @@ import Campaign from './body/campaign/campaign';
 import IndexContainer from './body/index_container';
 import HeaderContainer from './header/header_container';
 import UserProfileContainer from './user/user_profile_container';
+import Footer from './body/footer';
 
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
 
     <Route exact path='/user/profile/:id' component={UserProfileContainer} />
     <Route exact path='/campaign/new' component={SaveCampaign} />
+    <Footer />
   </div>
 );
 

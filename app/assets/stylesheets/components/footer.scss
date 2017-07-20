@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #2a2a2a;
+  height: 200px;
+  z-index: -1;
+  color: White;
+}
+
+.foot-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-icon i {
+  margin: 20px;
+  font-size: 4rem;
+}
+
+.foot-icon i:hover {
+  transform: scale(1.1);
+}
+// i {
+//   font-size: 4rem;
+// }

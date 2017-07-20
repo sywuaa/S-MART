@@ -1,6 +1,8 @@
 import React from 'react';
 import { Component } from 'react-redux';
 import Tile from './tiles';
+import Carousel from './carousel_container';
+// import Slides from './carousel';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -44,3 +46,5 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage;
+
+// <Carousel />

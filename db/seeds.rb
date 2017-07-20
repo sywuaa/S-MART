@@ -19,48 +19,42 @@ a = User.create([
 a = Campaign.create({
   user_id: 1,
   goal: 400000,
-  title: "KOOV",
-  slogan: "Next Generation Coding & Robotics Kit",
-  city: "San Diego",
+  title: "FlexSafe Plus",
+  slogan: "The Ultimate Portable Safe",
+  city: "MIAMI BEACH",
   country: "United States",
   start_date: "6/27/2017",
   end_date: "7/26/2017",
   square_image: File.open("app/assets/images/camp1/1.png"),
   overview_image: File.open("app/assets/images/camp1/2.png"),
-  vid_url: "https://www.youtube.com/embed/4ooLRSAvIks",
-  overview: "The all-in-one coding, robotics and design kit for the next generation of innovators from Sony.",
-  story: "KOOV is the next generation of coding & robotics kits - a comprehensive solution for STEM education.
-  We believe that engaging educational materials for robotics and programming will play a major role in cultivating STEM literacy and nurturing the next generation of creative problem solvers. That is why we built KOOV - on the belief that STEM learning tools should be accessible to all children. The coding & robotics kit for the innovators of tomorrow brought to you by Sony Electronics in conjunction with Sony Global Education.  KOOV comes with everything your child needs to start building robots, make them move with code and share them with other young inventors from across the globe.
-  Build using colorful KOOV blocks
-  Add sensors, actuators and much more for almost limitless robotic combinations
-  Make the robot come alive by coding with the KOOV app
-  Share robots with other KOOVers around the world.
-  Perfect for those aged 8 and up
-  Combining this with a comprehensive, 30+ hour educational course focussing on coding, robotics and design, KOOV is the perfect place for children to enter this exciting space. We all know that our children face an exciting future, with a demand for skills that may not currently be a part of existing curricula.  KOOV helps develop 21st Century Skills; creativity, critical thinking, collaboration and communication, setting them up with the kind of abilities they need for this ever-changing landscape.",
+  carousel_image: File.open("app/assets/images/camp1/3.png"),
+  vid_url: "https://www.youtube.com/embed/iQYn1RUo6GI",
+  overview: "Lock up your stuff wherever you go! Motion Alarm, ULTRA Cut Resistant, Solar Charger & more",
+  story: "After being robbed at the beach and taking our first invention on Shark Tank (which got us a deal), we challenged ourselves to invent the Ultimate Portable Safe.  Peace of mind is priceless. The Patented FlexSafe+ is loaded with features. It's made from ULTRA Cut and Slash Resistant Materials, has a Motion Sensor Alarm System, a Water-Proof Solar Charger & More.  Whether you're indoors or outdoors, this is where you lock up your valuables. Never worry about your STUFF again.We were three college buddies just staying in South Beach over the weekend for a friend's wedding.  Our first day down at the hotel pool started off amazing. Not a cloud in the sky, the margaritas were flowing and the music was just right. After a few drinks, we decided to hop in the pool and go for a quick swim. Without hesitation, we took our valuables and put them in our shoes which we then tucked under our lounge chairs. Although we were a little concerned, we figured what are the chances that someone is going to steal our stuff. It's a gamble that everyone takes and has accepted as a common concern. Even though we were continuously watching our lounge chairs and thought we always had at least once person monitoring our stuff, when we came back, everything was gone. It was very simple, we became victims to a crime that happens every single day at beaches and pools around the world. Why there has never been a solution to this problem was simply mind-blowing to us. After the police reports, dealing with hotel security, watching everyone else have fun in the sun while we sat there and blamed ourselves for being so naive and getting robbed, the idea came to us for creating a portable safe that attaches to your lounge chair. Fast forward a few years after we invented our first product and realized how successful it became, we decided to challenge ourselves and create the BEST Portable Safe you have ever seen. We spent years looking for the right materials and assembling the best factories to help create our vision. At this point, all the preparation has been done and now all we need is you. With your help, we can bring our vision to life and deliver a product that so many people around the world have asked for and can benefit from. We can't think of a single person that cannot use this product in some way, shape or form. Please help us bring this creation to life and we promise you will see a product that absolutely blows your mind. After years of research and preparation, we are finally ready to introduce our Newest Generation of Portable Safes exclusively to you guys in the Crowd Funding Community!",
 })
 
 Reward.create({
   campaign_id: a.id,
-  price: 287,
-  title: "KOOV Starter Early Bird 2",
-  item: "KOOV Starter Kit",
-  description: "1 KOOV Starter kit at 20% off retail. Includes: * KOOV Core micro controller * 172 Blocks & Accessories * 15 Electronic parts * 14 Robot Recipes * Free access to 2 KOOV Learning Courses * Free access to KOOV Robot Recipe sharing"
+  price: 20,
+  title: "Waterproof Phone Pouch & Hat",
+  item: "AquaVault Snap Back Hat & Waterproof Phone Case",
+  description: "Receive one of our 100% waterproof phone pouches. Includes a neck strap and features a patented airbag which allows the phone to float if dropped in water. Retain full functionality of your device while in pouch AND in water. Touch.Talk. Listen. Dustproof. Waterproof. Snowproof. Fits phones up to iPhone 7+ And one of our branded snap back hats"
 })
 
 Reward.create({
   campaign_id: a.id,
-  price: 300,
-  title: "KOOV Adv Early Bird 2",
-  item: "KOOV Advance Kit",
-  description: "1 KOOV Advanced kit at 30% off retail. Includes: * KOOV Core micro controller * 302 Blocks & Accessories * 23 Electronic parts * 23 Robot Recipes * Free access to 2 KOOV Learning Courses * Free access to KOOV Robot Recipe sharing"
+  price: 59,
+  title: "EARLY BIRD SPECIAL-FlexSafe",
+  item: "AquaVault Snap Back Hat, Waterproof Phone Case, FlexSafe",
+  description: "Receive your own FlexSafe so you can travel and hit the outdoors knowing you’re going to have a worry free time! - Ultra Slash Resistant and RFID signal blocker for ultimate protection. Fits Phones, sunglasses, wallets, keys, & more Dimensions: 9 x 5.5 x 2.5 Added Bonus Included - AquaVault Floating Waterproof Phone Case & SnapBack Hat"
 })
 
 Reward.create({
   campaign_id: a.id,
-  price: 300,
-  title: "KOOV Adv Early Bird 4",
-  item: "KOOV Advance Early Bird Kit",
-  description: "1 KOOV Advanced kit at 20% off retail. Includes: * KOOV Core micro controller * 302 Blocks & Accessories * 23 Electronic Parts * 23 Robot Recipes * Free access to 2 KOOV Learning Courses * Free access to KOOV Robot Recipe sharing"
+  price: 69,
+  title: "FlexSafe",
+  item: "AquaVault Snap Back Hat, Waterproof Phone Case, FlexSafe",
+  description: "Receive your own FlexSafe so you can travel and hit the outdoors knowing you’re going to have a worry free time! - Ultra Slash Resistant and RFID signal blocker for ultimate protection. Fits Phones, wallets, keys, & More Dimensions: 9 x 5.5 2.5 Added Bonus Included - AquaVault Floating Waterproof Phone Case & SnapBack Hat ($40 value)"
 })
 
 b = Campaign.create({

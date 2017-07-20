@@ -6,3 +6,12 @@ export const selectAllCampaigns = (campaigns) => {
     return campArray;
   }
 };
+
+export const selectCarousels = (carousels) => {
+  if ( !carousels) {
+    return null;
+  }else {
+    let carouArray = Object.keys(carousels).map ( id => carousels[id]);
+    return carouArray;
+  }
+};

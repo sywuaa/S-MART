@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628181157) do
+ActiveRecord::Schema.define(version: 20170713143920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20170628181157) do
     t.string   "overview_image_content_type"
     t.integer  "overview_image_file_size"
     t.datetime "overview_image_updated_at"
+    t.string   "carousel_image_file_name"
+    t.string   "carousel_image_content_type"
+    t.integer  "carousel_image_file_size"
+    t.datetime "carousel_image_updated_at"
   end
 
   create_table "contributions", force: :cascade do |t|

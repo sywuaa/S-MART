@@ -2,6 +2,13 @@
   <% if log_in? %>
     window.currentUser = <%= render("api/sessions/user.json.jbuilder", user: current_user).html_safe %>
   <% end %>
+
+  window.images = {
+    profile: "<%=image_path("go.png")%>",
+    howItWork1: "<%=image_path("howItWork1.png")%>",
+    howItWork2: "<%=image_path("howItWork2.png")%>"
+  }
+
 </script>
 
 

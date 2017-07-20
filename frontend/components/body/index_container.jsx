@@ -6,7 +6,7 @@ import { selectAllCampaigns } from '../../reducers/selectors';
 
 const mapStateToProps = (state) => {
   return({
-    campaigns: selectAllCampaigns(state.campaign.entities)
+    campaigns: selectAllCampaigns(state.campaigns.entities)
   });
 };
 

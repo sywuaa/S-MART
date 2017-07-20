@@ -15,7 +15,6 @@ class Tile extends React.Component {
     return(
 
       <div className="tile-container">
-
         <img src={camp.square_image_url} />
 
         <div className="tile-info">
@@ -28,12 +27,12 @@ class Tile extends React.Component {
               {camp.slogan}
             </span>
 
-            <span className="tile-contribution">
-              <span>${camp.contributions}</span> USD Raised
-            </span>
           </div>
 
           <div className="tile-bottom">
+            <span className="tile-contribution">
+              <span>${camp.contributions}</span> USD Raised
+            </span>
             <Line className="percent-line" percent={bar} strokeWidth="5" strokeColor="#eb1478"/>
 
             <div className="tile-info-bottom">

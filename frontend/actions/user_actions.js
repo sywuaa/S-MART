@@ -1,10 +1,17 @@
+export const RECEIVE_USER = 'RECEIVE_USER';
 import * as APIUtil from '../util/user_api_util';
-import { receiveCurrentUser } from './session_actions';
 
 
-export const fecthUser = () => dispatch => {
+export const fetchUser = (id) => dispatch => {
   return(
-    APIUtil.fetchUser()
-      .then( user => dispatch(receiveCurrentUser(user)))
+    APIUtil.fetchUser(id)
+      .then( user => dispatch(receiveUser(user)))
   );
+};
+
+export const receiveUser = (user) => {
+  return {
+    type: RECEIVE_USER,
+    user
+  };
 };

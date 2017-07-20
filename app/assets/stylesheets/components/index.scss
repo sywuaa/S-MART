@@ -3,13 +3,15 @@
   display: flex;
   justify-content: center;
   height: 130vh;
+  flex-direction: column;
 }
 
 .tiles-container {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   background-color: White;
+  margin: auto;
 }
 
 .tile:hover{

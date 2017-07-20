@@ -17,16 +17,16 @@ class Header extends React.Component {
       <div className="header-container">
         <div className="left-nav">
           <Link className="logo" to='/'>S-Mart</Link>
-          <span>Explore</span>
-          <span>How It Works</span>
-          <span>About Us</span>
+            <a target='_blank' href="https://www.github.com/sywuaa" ><span>Github</span></a>
+            <a target='_blank' href="https://www.linkedin.com/in/shaoyong-wu-38a8a4103"><span>LinkedIn</span></a>
+            <a target='_blank' href="http://sywu.us/" ><span>Portfolio</span></a>
         </div>
 
         <div className="right-nav">
           <div className="newCampaign">
             <button onClick={this.newCampaign} >Start A Campaign</button>
           </div>
-          <AuthContainer />
+          <AuthContainer ownProps={this.props} />
         </div>
       </div>
     );

@@ -17,6 +17,7 @@ class Campaign extends React.Component {
 
     this.makeContribution = this.makeContribution.bind(this);
     this.getPerk = this.getPerk.bind(this);
+    this.handleProfile = this.handleProfile.bind(this);
   }
 
   componentDidMount(){
@@ -49,7 +50,13 @@ class Campaign extends React.Component {
         reward_id: reward.id
       };
       this.props.createContribution(contribution);
-    }
+    };
+  }
+
+  handleProfile(id){
+    return() => {
+      this.props.history.push(`/user/profile/${id}`);
+    };
   }
 
   render() {
@@ -108,7 +115,7 @@ class Campaign extends React.Component {
                 </div>
 
                 <div className="creator">
-                  <span>Creator : {campaign.creator.username}</span>
+                  <span onClick={this.handleProfile(campaign.creator.id)}>Creator : {campaign.creator.username}</span>
                 </div>
 
                 <div className="show-camp-supporter">

@@ -16,7 +16,7 @@
 
 class User < ActiveRecord::Base
 
-  has_one :campaign,
+  has_many :campaigns,
     class_name: :Campaign,
     primary_key: :id,
     foreign_key: :user_id
@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
     through: :contributions,
     source: :reward
 
-  
+
 
   validates :username, :password_digest, :session_token, :first_name, :last_name, :email, presence: true
   validates :password_digest, :session_token, uniqueness: true

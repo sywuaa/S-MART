@@ -7,7 +7,7 @@ class Auth extends React.Component {
   constructor(props){
     super(props);
     this.demoLogin = this.demoLogin.bind(this);
-
+    this.profile = this.profile.bind(this);
   }
 
   demoLogin(){
@@ -15,12 +15,18 @@ class Auth extends React.Component {
     this.props.login({user});
   }
 
+  profile(id){
+    return () => {
+      this.props.ownProps.history.push(`/user/profile/${id}`);
+    };
+  }
+
   render(){
     if(this.props.currentUser){
       const currentUser = this.props.currentUser;
       return(
         <div>
-          <span> Welcome!  {this.props.currentUser.username.toUpperCase()}</span>
+          <button onClick={this.profile(currentUser.id)} > Welcome!  {this.props.currentUser.username.toUpperCase()}</button>
           <button onClick={this.props.logout}>
             Log Out
           </button>

@@ -66,8 +66,14 @@
   font-size: 16px;
 }
 
-.show-creator {
+.creator {
   font-size: 20px;
+
+}
+
+.creator span:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .show-camp-supporter {

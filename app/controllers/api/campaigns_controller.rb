@@ -1,5 +1,6 @@
 class Api::CampaignsController < ApplicationController
 
+
   def index
     @campaigns = Campaign.all
     render :index
@@ -33,7 +34,7 @@ class Api::CampaignsController < ApplicationController
 
   private
   def camp_params
-    params.require(:campaign).permit(:title, :goal, :slogan, :square_image, :city, :country, :start_date, :end_date, :vid_url, :vid_olay_image, :overview_image, :overview, :story, rewards_attributes: [:title, :description, :price, :item])
+    params.require(:campaign).permit(:title, :goal, :slogan, :square_image, :city, :country, :start_date, :end_date, :vid_url, :vid_olay_image, :overview_image, :carousel_image, :overview, :story, rewards_attributes: [:title, :description, :price, :item])
   end
 
 end

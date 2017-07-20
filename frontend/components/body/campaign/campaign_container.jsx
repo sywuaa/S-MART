@@ -6,11 +6,10 @@ import { createContribution } from '../../../actions/contribution_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
-
   return({
     id: id,
-    currentCampaign: state.campaign.currentCampaign,
-    campaign: state.campaign.entities[id]
+    currentCampaign: state.campaigns.currentCampaign,
+    campaign: state.campaigns.entities[id]
   });
 };
 

@@ -3,7 +3,7 @@ json.campaign do
   json.extract! campaign, :vid_url, :overview, :story
   json.contributions campaign.contributions.map{|contribution| contribution.amount.to_i }.reduce(0,:+)
   json.supporters campaign.contributions.length
-  json.creator campaign.creator, :username
+  json.creator campaign.creator, :username, :id
 
   json.overview_image_url asset_path(campaign.overview_image.url)
 

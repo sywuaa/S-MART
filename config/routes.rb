@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :show, :destroy]
     resources :campaigns, only: [:index, :show, :create, :edit]
+    resources :carousels, only: [:index]
     resources :contributions, only: [:create]
   end
 

@@ -16,7 +16,6 @@ const components = {
 class SaveCampaign extends React.Component {
   constructor(props){
     super(props);
-    // this.state = merge( {} , this.props.campaign, {component: 'basic', rewards_attributes: []});
     this.state = {
       component: 'basic',
       rewards_attributes: [],

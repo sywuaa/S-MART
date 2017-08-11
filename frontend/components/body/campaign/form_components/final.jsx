@@ -11,7 +11,7 @@ class Final extends React.Component {
   render(){
 
     return(
-      <div className="camp-components">
+      <div className="camp-components-final">
         <div>
           <h2>Final</h2>
         </div>

@@ -23,4 +23,9 @@ class Contribution < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :campaign_id
 
+  belongs_to :reward,
+    class_name: :Reward,
+    primary_key: :id,
+    foreign_key: :reward_id
+
 end

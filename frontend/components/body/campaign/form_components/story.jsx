@@ -58,9 +58,9 @@ class Story extends React.Component {
           <label className="label-tag">Campaign Overview *</label>
           <label className="label-tag2">Lead with a compelling statement that describes your campaign and why it’s important to you, highlight key campaign features, and remember - keep it short!</label>
 
-            <input className="form-input" onChange={this.props.change('overview')}
+            <textarea className="form-input-textarea" onChange={this.props.change('overview')}
               value={this.props.campaign.overview} placeholder="Tell us a bit" >
-            </input>
+            </textarea>
         </div>
 
 
@@ -76,9 +76,9 @@ class Story extends React.Component {
           <br></br>
           <br></br>
 
-            <input type="textarea" onChange={this.props.change('story')}
+            <textarea className="form-input-textarea" onChange={this.props.change('story')}
               value={this.props.campaign.story} placeholder="Tell us the story">
-            </input>
+            </textarea>
         </div>
 
         <div className="camp-form-continue-submit">

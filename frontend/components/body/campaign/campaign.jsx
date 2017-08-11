@@ -31,8 +31,8 @@ class Campaign extends React.Component {
   }
 
   makeContribution(){
+    this.state.reward_id = 1;
     const contribution = this.state;
-
     this.props.createContribution(contribution);
   }
 

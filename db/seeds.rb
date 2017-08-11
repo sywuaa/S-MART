@@ -16,6 +16,12 @@ a = User.create([
   { username: 'okay cool', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu@gmail.com'}
   ])
 
+Reward.create({
+  title: 'Thank You',
+  item: 'Message: Thank You for your support',
+  description: 'Thanks for your support'
+})
+
 a = Campaign.create({
   user_id: 1,
   goal: 400000,

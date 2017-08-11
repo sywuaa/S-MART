@@ -1,15 +1,15 @@
 .index-page {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #fafafa;
 }
 
 .tiles-container {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
-  background-color: White;
+  width: 80%;
   margin: auto;
 }
 

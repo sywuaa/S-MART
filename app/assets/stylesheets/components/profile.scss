@@ -38,11 +38,11 @@
   padding: 40px 0 40px 0;
 
 }
-
-.component-container{
-  display: flex;
-  justify-content: center;
-}
+//
+// .component-container{
+//   display: flex;
+//   justify-content: center;
+// }
 
 .content-nav {
   display: block;
@@ -85,6 +85,11 @@
   padding: 20px;
   margin-right: 40px;
   font-size: 20px;
+}
+
+.component-profile-info-container strong {
+  font-size: 24px;
+  font-weight: bolder;
 }
 
 .component-campaigns-container {
@@ -140,4 +145,58 @@
 .component-campaign-id span {
   font-size: 14px;
   color: Gray;
+}
+
+.component-contribution-message {
+  margin: 20px 0 20px 20px;
+  color: #a8a8a8;
+}
+
+.component-contribution-detail-bar {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  border-top: 1px solid Gray;
+  border-bottom: 1px solid Gray;
+  padding: 20px;
+}
+
+.component-contribution-detail-bar span {
+  font-size: 20px;
+  margin-right: 80px;
+}
+
+.component-contribution-List-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.component-contribution-detail-container{
+  display: flex;
+  font-size: 16px;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid lightGray;
+}
+
+.component-contribution-detail-container div {
+  font-size: 16px;
+}
+
+.profile-con-id {
+  margin-left: 25px;
+}
+.profile-con-camp {
+  margin-left: 130px;
+}
+.profile-con-price {
+  margin-left: 150px;
+}
+.profile-con-item {
+  margin-left: 100px;
+  flex-wrap: wrap-reverse;
+}
+
+.component-contribution-detail-container:hover {
+  background-color: lightGray;
+  cursor: pointer;
 }

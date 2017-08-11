@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { login, logout, signup } from './util/session_api_util';
 import { createCampaign, fecthCampaign, fecthAllCampaigns, updateCampaign } from './actions/campaign_actions';
 import configureStore from './store/store';
 import Root from './components/root';

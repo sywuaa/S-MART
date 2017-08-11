@@ -42,9 +42,6 @@ class Contributions extends React.Component {
       </div>
     );
   }
-
-
-
 }
 
 export default Contributions;

@@ -42,8 +42,6 @@ class Campaigns extends React.Component {
     );
   }
 
-
-
 }
 
 export default Campaigns;

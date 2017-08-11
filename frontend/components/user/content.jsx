@@ -52,5 +52,3 @@ class ProfileContent extends React.Component {
 }
 
 export default ProfileContent;
-//
-// <span onClick={this.handleClick('contributions')} > Contributions </span>

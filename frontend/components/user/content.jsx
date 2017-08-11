@@ -35,7 +35,6 @@ class ProfileContent extends React.Component {
         <div className="content-nav" >
           <span onClick={this.handleClick('profile')} > Profile </span>
           <span onClick={this.handleClick('campaigns')} > Campaigns </span>
-          <span onClick={this.handleClick('contributions')} > Contributions </span>
         </div>
 
         <div className='component-container'>
@@ -52,3 +51,4 @@ class ProfileContent extends React.Component {
 }
 
 export default ProfileContent;
+// <span onClick={this.handleClick('contributions')} > Contributions </span>

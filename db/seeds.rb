@@ -17,6 +17,7 @@ a = User.create([
   ])
 
 Reward.create({
+  campaign_id: null,
   title: "Thank You",
   item: "Message: Thank You for your support",
   description: "Thanks for your support"

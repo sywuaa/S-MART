@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 20170628181157) do
     t.string   "first_name",                      null: false
     t.string   "last_name",                       null: false
     t.string   "email",                           null: false
-    t.integer  "total_contributions", default: 0
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end

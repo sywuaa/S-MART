@@ -9,8 +9,8 @@ class CreateCampaign < ActiveRecord::Migration[5.0]
       t.string :slogan, null: false
       t.string :city, null: false
       t.string :country, null: false
-      t.date :start_date, null: false
-      t.date :end_date, null: false
+      t.date :start_date
+      t.date :end_date
 
       # story
       t.string :vid_url, null: false

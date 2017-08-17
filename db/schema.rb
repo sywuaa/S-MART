@@ -16,17 +16,17 @@ ActiveRecord::Schema.define(version: 20170628181157) do
   enable_extension "plpgsql"
 
   create_table "campaigns", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "title"
-    t.integer  "goal"
-    t.string   "slogan"
-    t.string   "city"
-    t.string   "country"
+    t.integer  "user_id",                     null: false
+    t.string   "title",                       null: false
+    t.integer  "goal",                        null: false
+    t.string   "slogan",                      null: false
+    t.string   "city",                        null: false
+    t.string   "country",                     null: false
     t.date     "start_date"
     t.date     "end_date"
-    t.string   "vid_url"
-    t.string   "overview"
-    t.string   "story"
+    t.string   "vid_url",                     null: false
+    t.string   "overview",                    null: false
+    t.string   "story",                       null: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "square_image_file_name"
@@ -40,20 +40,20 @@ ActiveRecord::Schema.define(version: 20170628181157) do
   end
 
   create_table "contributions", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "reward_id"
-    t.integer  "campaign_id"
-    t.integer  "amount"
+    t.integer  "user_id",     null: false
+    t.integer  "reward_id",   null: false
+    t.integer  "campaign_id", null: false
+    t.integer  "amount",      null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "rewards", force: :cascade do |t|
-    t.string  "title"
-    t.string  "description"
+    t.string  "title",       null: false
+    t.string  "description", null: false
+    t.string  "item",        null: false
     t.integer "campaign_id"
-    t.integer "price"
-    t.string  "item"
+    t.integer "price",       null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20170628181157) do
     t.string   "first_name",                      null: false
     t.string   "last_name",                       null: false
     t.string   "email",                           null: false
+    t.integer  "total_contributions", default: 0
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end

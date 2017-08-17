@@ -3,19 +3,19 @@ class CreateCampaign < ActiveRecord::Migration[5.0]
     create_table :campaigns do |t|
 
       # basic
-      t.integer :user_id
-      t.string :title
-      t.integer :goal
-      t.string :slogan
-      t.string :city
-      t.string :country
-      t.date :start_date
-      t.date :end_date
+      t.integer :user_id, null: false
+      t.string :title, null: false
+      t.integer :goal, null: false
+      t.string :slogan, null: false
+      t.string :city, null: false
+      t.string :country, null: false
+      t.date :start_date, null: false
+      t.date :end_date, null: false
 
       # story
-      t.string :vid_url
-      t.string :overview
-      t.string :story
+      t.string :vid_url, null: false
+      t.string :overview, null: false
+      t.string :story, null: false
 
       t.timestamps
 

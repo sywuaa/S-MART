@@ -28,4 +28,7 @@ class Contribution < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :reward_id
 
+  validates :user_id, :reward_id, :campaign_id, :amount, presence: true
+  validates :amount, :numericality => { :greater_than => 0}
+
 end

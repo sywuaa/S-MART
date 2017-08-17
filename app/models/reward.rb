@@ -18,4 +18,6 @@ class Reward < ActiveRecord::Base
     foreign_key: :campaign_id,
     inverse_of: :rewards
 
+  validates :title, :description, :item, :campaign_id, :price, presence: true
+
 end

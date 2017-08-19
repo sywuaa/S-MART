@@ -111,5 +111,8 @@ belongs_to :contributor,
 Continue on User Profile and include options for edit campaign and allow user to claim perks that does not require shipping. Such as coupon vouchers, Digital Keys, etc.
 
 #### Commenting on the campaign show page
+Front Page Carousel:
+-- Top Carousel
+-- Tile Carousel
 
 Allow user to post question on the campaign show page where campaign creator can post responses to questions or common Q/A.

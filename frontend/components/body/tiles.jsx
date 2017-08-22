@@ -17,7 +17,7 @@ class Tile extends React.Component {
       <div className="tile-container">
 
         <img src={camp.square_image_url} />
-        <br></br>
+        
         <div className="tile-info">
           <div className="tile-top">
             <span>

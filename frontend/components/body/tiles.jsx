@@ -15,8 +15,9 @@ class Tile extends React.Component {
     return(
 
       <div className="tile-container">
-        <img src={camp.square_image_url} />
 
+        <img src={camp.square_image_url} />
+        <br></br>
         <div className="tile-info">
           <div className="tile-top">
             <span>

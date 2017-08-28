@@ -19,7 +19,7 @@ class Header extends React.Component {
           <Link className="logo" to='/'>S-Mart</Link>
             <a target='_blank' href="https://www.github.com/sywuaa" ><span>Github</span></a>
             <a target='_blank' href="https://www.linkedin.com/in/shaoyong-wu-38a8a4103"><span>LinkedIn</span></a>
-            <a target='_blank' href="http://sywu.us/" ><span>Portfolio</span></a>
+            <a target='_blank' href="https://www.sywu.us/" ><span>Portfolio</span></a>
         </div>
 
         <div className="right-nav">

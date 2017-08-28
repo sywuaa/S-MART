@@ -22,6 +22,7 @@ class Header extends React.Component {
             <a target='_blank' href="https://www.sywu.us/" ><span>Portfolio</span></a>
         </div>
 
+
         <div className="right-nav">
           <div className="newCampaign">
             <button onClick={this.newCampaign} >Start A Campaign</button>

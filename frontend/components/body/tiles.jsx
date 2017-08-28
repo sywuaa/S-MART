@@ -1,5 +1,6 @@
 import React from 'react';
 import { Line } from 'rc-progress';
+import { Link } from 'react-router-dom';
 
 class Tile extends React.Component {
   constructor(props){
@@ -17,7 +18,7 @@ class Tile extends React.Component {
       <div className="tile-container">
 
         <img src={camp.square_image_url} />
-        
+
         <div className="tile-info">
           <div className="tile-top">
             <span>

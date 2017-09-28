@@ -8,7 +8,8 @@ import { receiveErrors, clearErrors } from './error_actions';
 export const createCampaign = (formData) => dispatch => {
   return(
     APIUtil.createCampaign(formData)
-      .then( campaign => dispatch(receiveCampaign(campaign)))
+      .then( campaign => dispatch(receiveCampaign(campaign)),
+             errors => dispatch(receiveErrors(errors.responseJSON)))
   );
 };
 
@@ -22,8 +23,7 @@ export const fetchCampaign = (id) => dispatch => {
 export const fetchAllCampaigns = () => dispatch => {
   return(
     APIUtil.fetchAllCampaigns()
-      .then( campaigns => dispatch(receiveAllCampaigns(campaigns)),
-             errors => dispatch(receiveErrors(errors.responseJSON)))
+      .then( campaigns => dispatch(receiveAllCampaigns(campaigns)))
   );
 };
 

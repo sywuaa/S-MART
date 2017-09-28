@@ -3,6 +3,7 @@ export const RECEIVE_ALL_CAMPAIGNS = 'RECEIVE_ALL_CAMPAIGNS';
 export const UPDATE_CAMPAIGN = 'UPDATE_CAMPAIGN';
 
 import * as APIUtil from '../util/campaign_api_util';
+import { receiveErrors, clearErrors } from './error_actions';
 
 export const createCampaign = (formData) => dispatch => {
   return(
@@ -21,7 +22,8 @@ export const fetchCampaign = (id) => dispatch => {
 export const fetchAllCampaigns = () => dispatch => {
   return(
     APIUtil.fetchAllCampaigns()
-      .then( campaigns => dispatch(receiveAllCampaigns(campaigns)))
+      .then( campaigns => dispatch(receiveAllCampaigns(campaigns)),
+             errors => dispatch(receiveErrors(errors.responseJSON)))
   );
 };
 

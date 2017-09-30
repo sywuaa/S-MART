@@ -92,10 +92,26 @@ class SaveCampaign extends React.Component {
       this.setState({rewards_attributes: rewardList});
   }
 
+  errors() {
+    debugger
+    if(this.props.campaign.errors) {
+      return (
+        this.props.campaign.errors.map( error => {
+          return (<li key={error}> * {error} </li>);
+        })
+      );
+    }
+  }
+
   render(){
+    debugger
     const Com = components[this.state.component];
     return(
       <div className="camp-page">
+        <ul>
+          {this.errors()}
+        </ul>
+
           <div className="campaign-sidebar">
 
             <div className="camp-form-title">

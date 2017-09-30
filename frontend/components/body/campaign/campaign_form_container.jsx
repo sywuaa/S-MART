@@ -4,8 +4,9 @@ import { createCampaign } from '../../../actions/campaign_actions';
 import SaveCampaign from './campaign_form';
 
 const mapStateToProps = (state) => {
+  debugger
   return({
-    campaign: state.campaign
+    campaign: state.campaigns
   });
 };
 

@@ -105,10 +105,6 @@ class SaveCampaign extends React.Component {
   render(){
     const Com = components[this.state.component];
     return(
-      <div className="camp-page-container">
-        <ul className="error-container">
-          {this.errors()}
-        </ul>
 
         <div className="camp-page">
           <div className="campaign-sidebar">
@@ -140,6 +136,9 @@ class SaveCampaign extends React.Component {
           </div>
 
         <div className="camp-com-page">
+          <ul className="error-container">
+            {this.errors()}
+          </ul>
           <div className="campaign-form-components">
             <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit} handleClick={this.handleClick} updateFile={this.updateFile}/>
           </div>
@@ -149,7 +148,6 @@ class SaveCampaign extends React.Component {
 
       </div>
 
-    </div>
     );
   }
 

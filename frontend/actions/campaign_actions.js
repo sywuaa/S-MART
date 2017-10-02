@@ -6,7 +6,6 @@ import * as APIUtil from '../util/campaign_api_util';
 import { receiveErrors, clearErrors, RECEIVE_ERRORS, CLEAR_ERRORS } from './error_actions';
 
 export const createCampaign = (formData) => dispatch => {
-  debugger
   return(
     APIUtil.createCampaign(formData)
       .then( campaign => dispatch(receiveCampaign(campaign)),

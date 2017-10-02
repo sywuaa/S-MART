@@ -224,3 +224,12 @@
 .form-input-textarea :focus {
   border-color: black;
 }
+
+.error-container {
+  color: red;
+}
+
+.camp-page-container{
+  display: flex;
+  flex-direction: column;
+}

@@ -93,7 +93,6 @@ class SaveCampaign extends React.Component {
   }
 
   errors() {
-    debugger
     if(this.props.campaign.errors) {
       return (
         this.props.campaign.errors.map( error => {
@@ -104,14 +103,14 @@ class SaveCampaign extends React.Component {
   }
 
   render(){
-    debugger
     const Com = components[this.state.component];
     return(
-      <div className="camp-page">
-        <ul>
+      <div className="camp-page-container">
+        <ul className="error-container">
           {this.errors()}
         </ul>
 
+        <div className="camp-page">
           <div className="campaign-sidebar">
 
             <div className="camp-form-title">
@@ -149,6 +148,8 @@ class SaveCampaign extends React.Component {
 
 
       </div>
+
+    </div>
     );
   }
 

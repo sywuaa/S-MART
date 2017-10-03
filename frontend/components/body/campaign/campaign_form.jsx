@@ -43,6 +43,10 @@ class SaveCampaign extends React.Component {
     this.updateFile = this.updateFile.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit() {
     const campaign = this.state;
     const formData = new FormData();

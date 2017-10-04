@@ -11,7 +11,7 @@ const sessionReducer = ( state = defaultState, action ) => {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.user;
       return { currentUser, errors: [] };
-    case RECEIVE_ERRORS:
+    case RECEIVE_ERRORS: //= "RECEIVE_ERRORS"
       const errors = action.errors;
       return { currentUser: null, errors };
     case CLEAR_ERRORS:

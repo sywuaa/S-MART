@@ -28,7 +28,7 @@ const campaignReducer = (state = defaultState(), action) => {
       campaign = action.campaign;
       return { campaign };
 
-    case RECEIVE_ERRORS:
+    case RECEIVE_ERRORS: //= "RECEIVE_ERRORS"
       const errors = action.errors;
       return { currentUser: null, errors };
     case CLEAR_ERRORS:

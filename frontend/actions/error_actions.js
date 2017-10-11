@@ -1,5 +1,5 @@
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-export const CLEAR_ERROR = 'CLEAR_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 export const receiveErrors = errors => {
   return {
@@ -8,7 +8,7 @@ export const receiveErrors = errors => {
   };
 };
 
-export const clearErrors = () =>{
+export const clearErrors = () => {
   return {
     type: CLEAR_ERRORS
   };

@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   campaigns: campaignReducer,
   carousels: carouselReducer,
   users: userReducer,
-  error: errorReducer,
+  errors: errorReducer,
 });
 
 export default rootReducer;

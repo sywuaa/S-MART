@@ -96,18 +96,14 @@ class SaveCampaign extends React.Component {
       this.setState({rewards_attributes: rewardList});
   }
 
-  errors() {
-    if(this.props.campaign.errors) {
-      return (
-        this.props.campaign.errors.map( error => {
-          return (<li key={error}> * {error} </li>);
-        })
-      );
-    }
-  }
-
   render(){
     const Com = components[this.state.component];
+    if(this.props.errors) {
+        this.errorList = this.props.errors.map( error => {
+          return (<li key={error}> * {error} </li>);
+        });
+    }
+
     return(
 
         <div className="camp-page">
@@ -141,7 +137,7 @@ class SaveCampaign extends React.Component {
 
         <div className="camp-com-page">
           <ul className="error-container">
-            {this.errors()}
+            {this.errorList}
           </ul>
           <div className="campaign-form-components">
             <Com change={this.handleChange} campaign={this.state} handleRewards={this.handleRewards} handleSubmit={this.handleSubmit} handleClick={this.handleClick} updateFile={this.updateFile}/>

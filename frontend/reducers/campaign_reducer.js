@@ -6,7 +6,6 @@ import { merge } from 'lodash';
 const defaultState = () => ({
   entities: {},
   currentCampaign: null,
-  error: [],
 });
 
 const campaignReducer = (state = defaultState(), action) => {

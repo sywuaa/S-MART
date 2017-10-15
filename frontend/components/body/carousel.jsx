@@ -35,22 +35,3 @@ class Carousels extends React.Component {
 
 
 export default Carousels;
-
-// const Slides = React.createClass( {
-//   minxin
-//   componentDidMount(){
-//   },
-//
-//   render() {
-//     return (
-//       <div style={{height: '400px'}} >
-//         <Carousel>
-//           <img src="http://s3-us-east-2.amazonaws.com/smart-aa-dev/campaigns/carousel_images/000/000/001/original/3.png?1499957138" />
-//             <img src="http://s3-us-east-2.amazonaws.com/smart-aa-dev/campaigns/carousel_images/000/000/001/original/3.png?1499957138" />
-//         </Carousel>
-//       </div>
-//     )
-//   }
-// });
-
-// export default Slides;

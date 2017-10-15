@@ -1,17 +1,19 @@
 import React from 'react';
-// import Carousel from 'nuka-carousel';
 
 class Carousels extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      pic: 0
+      campaigns: [],
+      direction: 'left',
+      active: false
     };
   }
 
   componentDidMount(){
     this.props.fetchCarousels();
+    this.interval = setInterval(this.auto, 10000);
   }
 
   render(){

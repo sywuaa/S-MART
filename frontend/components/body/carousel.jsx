@@ -29,8 +29,6 @@ class Carousels extends React.Component {
     }
   }
 
-
-
 }
 
 

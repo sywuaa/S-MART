@@ -1,18 +1,19 @@
 .index-page {
-  padding-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: White;
   margin: auto;
 }
 
 .tiles-container {
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 80%;
   margin: auto;
+  background-color: #fafafa;
 }
 
 .tile:hover{

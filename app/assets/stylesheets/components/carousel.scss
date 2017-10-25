@@ -40,18 +40,18 @@
   }
 
   .carousel-tile {
-    width: 670px;
-    height: 350px;
+    width: 500px;
+    height: 400px;
   -webkit-transition: background-size 0.2s ease-in-out;
   }
 
   .carousel-tile:not(:nth-child(3)) {
-    background-size: 101.5%;
+    background-size: 100%;
   }
 
   .carousel-tile:not(:nth-child(3)):hover {
     cursor: pointer;
-    background-size: 100%;
+    background-size: 200%;
   }
 
   .carousel-btn {

@@ -35,7 +35,11 @@ class Carousels extends React.Component {
       } else if (idx === 3) {
         this.setState({ active: true, direction: 'left' });
       }
-    }
+    };
+  }
+
+  autoSlide() {
+    this.setState({ active: true, direction: 'left' });
   }
 
   render(){

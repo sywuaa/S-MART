@@ -11,9 +11,19 @@ class Carousels extends React.Component {
     };
   }
 
-  componentDidMount(){
-    this.props.fetchCarousels();
-    this.interval = setInterval(this.auto, 10000);
+  componentDidMount() {
+    this.props.fetchCarousel();
+    window.addEventListener('animationend', this.slideCarousel);
+    this.interval = setInterval(this.autoSlide, 7000);
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState({ campaigns: newProps.carousel });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('animationend', this.slideCarousel);
+    clearInterval(this.interval);
   }
 
   render(){

@@ -26,6 +26,18 @@ class Carousels extends React.Component {
     clearInterval(this.interval);
   }
 
+  handleClick(idx) {
+    return () => {
+      clearInterval(this.interval);
+
+      if (idx === 1) {
+        this.setState({ active: true, direction: 'right' });
+      } else if (idx === 3) {
+        this.setState({ active: true, direction: 'left' });
+      }
+    }
+  }
+
   render(){
     if(this.props.carousels.length > 0){
       this.state

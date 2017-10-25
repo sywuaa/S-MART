@@ -35,8 +35,8 @@ class Campaign < ActiveRecord::Base
   has_attached_file :overview_image, default_url: "miu.jpg"
   validates_attachment_content_type :overview_image, content_type: /\Aimage\/.*\z/
 
-  # has_attached_file :carousel_image, default_url: "miu.jpg"
-  # validates_attachment_content_type :carousel_image, content_type: /\Aimage\/.*\z/
+  has_attached_file :carousel_image, default_url: "miu.jpg"
+  validates_attachment_content_type :carousel_image, content_type: /\Aimage\/.*\z/
 
   belongs_to :creator,
     class_name: :User,

@@ -36,6 +36,7 @@ class IndexPage extends React.Component {
 
     return(
       <div className="index-page">
+        <Carousel />
         <div className="tiles-container">
           {this.tileList}
         </div>
@@ -48,7 +49,6 @@ class IndexPage extends React.Component {
 
 export default IndexPage;
 
-// <Carousel />
 
   // <div  onClick={this.handleClick(campaign.id)} className="tile">
   //     <Tile camp={campaign} />

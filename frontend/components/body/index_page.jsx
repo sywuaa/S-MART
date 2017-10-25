@@ -36,7 +36,9 @@ class IndexPage extends React.Component {
 
     return(
       <div className="index-page">
+        <div className="carousel">
         <Carousel />
+        </div>
         <div className="tiles-container">
           {this.tileList}
         </div>

@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 
 class Carousel extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.state = {
       active: false,
-      carousels: [],
+      campaigns: [],
       direction: 'left',
     };
 
@@ -88,26 +87,19 @@ class Carousel extends React.Component {
   }
 
   renderCarouselTiles() {
-    debugger
     return this.props.carousels.map((carousel, idx) => {
     let tileClass = (idx === 2 ? "main-tile" : "side-tile");
-    let slide = (this.state.active ? "slides-${this.state.direction}" : "");
+    let slide = (this.state.active ? `slides-${this.state.direction}` : "");
 
     let style = {
-      backgroundImage: "url(${campaign.mediabox})"
+      backgroundImage: `url(${carousel.carousel_image})`
     };
 
     return (
-      <div key={idx}
-           className={`carousel-tile ${slide}`}
-           style={style}
+      <div key={idx} className={`carousel-tile ${slide}`} style={style}
            onClick={this.handleClick(idx).bind(this)}>
         <div className={`${tileClass} ${this.centerTile(idx)}`}>
-          <div className="carousel-tile-text">
-            <h3>{carousel.title}</h3>
-            <p>{carousel.tagline}</p>
-          </div>
-          <Link className="carousel-btn" to={`campaigns/${campaign.id}`} >
+          <Link className="carousel-btn" to={`campaigns/${carousel.id}`} >
             <span>SEE CAMPAIGN</span>
           </Link>
         </div>

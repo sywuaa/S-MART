@@ -50,8 +50,3 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage;
-
-
-  // <div  onClick={this.handleClick(campaign.id)} className="tile">
-  //     <Tile camp={campaign} />
-  // </div>

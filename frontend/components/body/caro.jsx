@@ -25,7 +25,17 @@ class Caro extends React.Component {
     }
   }
 
+  render(){
+    return (
+      <div className="carousel-container">
+        <leftCaro />
+        <CenterCaro />
+        <RightCaro />
+      </div>
+    )
 
+
+  }
 
 
 

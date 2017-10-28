@@ -8,10 +8,26 @@ class Caro extends React.Component {
     this.state = {
       direction: 'left',
       campaigns: [],
-      left: 1,
-      center: 2,
-      right: 3
+      left: 0,
+      center: 1,
+      right: 2
     };
 
+    this.handleClick = this.handleClick.bind(this);
+
   }
+
+  handleClick(direction){
+    if (direction === 'left'){
+      this.setState(this.state.center -= 1);
+    }else {
+      this.setState(this.state.center += 1);
+    }
+  }
+
+
+
+
+
+
 }

@@ -20,3 +20,5 @@ class LeftCaro extends React.Component{
   }
 
 }
+
+export default LeftCaro;

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LeftCaro from './left_caro';
+import CenterCaro from './center_caro';
+import RightCaro from './right_caro';
 
 class Caro extends React.Component {
   constructor(props) {
@@ -36,8 +39,6 @@ class Caro extends React.Component {
 
 
   }
-
-
-
-
 }
+
+export default Caro;

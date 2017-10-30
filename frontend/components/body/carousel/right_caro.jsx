@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LeftCaro extends React.Component{
+class RightCaro extends React.Component{
 
   constructor(props){
     super(props);
@@ -20,3 +20,5 @@ class LeftCaro extends React.Component{
   }
 
 }
+
+export default RightCaro;

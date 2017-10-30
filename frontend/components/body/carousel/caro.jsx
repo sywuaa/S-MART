@@ -7,17 +7,26 @@ import RightCaro from './right_caro';
 class Caro extends React.Component {
   constructor(props) {
     super(props);
-
+    debugger
     this.state = {
       direction: 'left',
       campaigns: [],
-      left: 0,
-      center: 1,
-      right: 2
+      left: 1,
+      center: 2,
+      right: 3
     };
 
     this.handleClick = this.handleClick.bind(this);
 
+  }
+
+  componentDidMount(){
+    this.props.fetchCarousels();
+  }
+
+  componentWillReceiveProps(newProps) {
+    debugger
+    this.setState({ campaigns: newProps.carousels });
   }
 
   handleClick(direction){
@@ -29,9 +38,10 @@ class Caro extends React.Component {
   }
 
   render(){
+    debugger
     return (
       <div className="carousel-container">
-        <LeftCaro />
+        <LeftCaro campaign={this.state.campaigns[this.state.left]}/>
         <CenterCaro />
         <RightCaro />
       </div>

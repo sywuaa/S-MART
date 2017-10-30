@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect } from 'react-redux';
-import { fectchCarousels } from '../../../actions/carousel_actions';
+import { connect } from 'react-redux';
+import { fetchCarousels } from '../../../actions/carousel_actions';
 import Caro from './caro';
-import {selectCarousels } from '../../../reducers/selectors';
+import { selectCarousels } from '../../../reducers/selectors';
 
 const mapStateToProps = (state) => {
   return({
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return({
-    fetchCarousels: () => dispatch(detchCarousels())
+    fetchCarousels: () => dispatch(fetchCarousels())
   });
 };
 

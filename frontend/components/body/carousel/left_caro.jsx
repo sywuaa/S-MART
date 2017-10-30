@@ -12,9 +12,20 @@ class LeftCaro extends React.Component{
   }
 
   render(){
+    debugger
+    const { campaign } = this.props;
+
+    if (campaign){
+      this.img = <img src={campaign.carousel_image} />
+    }else {
+      this.img = "No Image";
+    }
+
     return(
       <div className="left-caro" >
-        Left
+        <div className="left-caro_image_url">
+          {this.img}
+        </div>
       </div>
     );
   }

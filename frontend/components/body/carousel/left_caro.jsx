@@ -12,7 +12,6 @@ class LeftCaro extends React.Component{
   }
 
   render(){
-    debugger
     const { campaign } = this.props;
 
     if (campaign){

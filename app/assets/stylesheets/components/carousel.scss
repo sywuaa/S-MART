@@ -1,31 +1,57 @@
 .carousel-container {
   display:flex;
-  height: 400px;
-  background-color: lightGray;
+  height: 450px;
+  background-color: black;
 }
 
 .left-caro {
   display:inline-block;
-  width: 25%;
-  background-color: red;
+  width: 28%;
 }
 
 .center-caro {
   display: inline-block;
-  width: 50%;
-  background-color: blue;
+  width: 44%;
 }
 
 .right-caro {
   display: inline-block;
-  width: 25%;
-  background-color: orange;
+  width: 28%;
 }
 
 .left-caro_image_url {
   height: 100%;
   width: 100%;
+  opacity: 0.4;
 }
+
+.left-caro_image_url:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.right-caro_image_url {
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.right-caro_image_url:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.center-caro_image_url {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.center-caro_image_url:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 
 // ------------------------------------------------
 // .carousel {

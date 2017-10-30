@@ -25,7 +25,6 @@ class Caro extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     this.setState({ campaigns: newProps.carousels });
   }
 
@@ -38,12 +37,11 @@ class Caro extends React.Component {
   }
 
   render(){
-    debugger
     return (
       <div className="carousel-container">
         <LeftCaro campaign={this.state.campaigns[this.state.left]}/>
-        <CenterCaro />
-        <RightCaro />
+        <CenterCaro campaign={this.state.campaigns[this.state.center]}/>
+        <RightCaro campaign={this.state.campaigns[this.state.right]}/>
       </div>
     )
 

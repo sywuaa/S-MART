@@ -9,10 +9,9 @@ class CenterCaro extends React.Component{
   }
 
   render(){
-    const { campaign } = this.props;
 
-    if (campaign){
-      this.img = <img src={campaign.carousel_image} />
+    if (this.props.campaign){
+      this.img = (<img key={this.props.campaign.id} src={this.props.campaign.carousel_image} />);
     }else {
       this.img = "No Image";
     }

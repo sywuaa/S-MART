@@ -33,7 +33,6 @@ class IndexPage extends React.Component {
       });
     }
 
-
     return(
       <div className="index-page">
         <div className="carousel">

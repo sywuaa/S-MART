@@ -12,15 +12,15 @@ class CenterCaro extends React.Component{
     const { campaign } = this.props;
 
     if (campaign){
-      this.img = <img src={campaign.carousel_image} />
+      this.imgUrl = campaign.carousel_image;
     }else {
-      this.img = "No Image";
+      this.imgUrl = "No Image";
     }
 
     return(
       <div className="center-caro" >
         <div className="center-caro_image_url">
-          {this.img}
+          <img src={this.imgUrl} />
         </div>
       </div>
     );

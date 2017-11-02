@@ -7,7 +7,6 @@ import RightCaro from './right_caro';
 class Caro extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.state = {
       direction: 'left',
       campaigns: [],

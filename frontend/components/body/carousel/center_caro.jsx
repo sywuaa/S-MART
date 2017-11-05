@@ -16,8 +16,14 @@ class CenterCaro extends React.Component{
   render(){
 
     if (this.props.campaign){
-      this.img = (<img key={this.props.campaign.id} src={this.props.campaign.carousel_image}>
-        </img> );
+      this.img = (<img key={this.props.campaign.id}
+                  src={this.props.campaign.carousel_image}>
+                  </img>
+                  );
+      this.button = (<Link to={`/campaigns/${this.props.campaign.id}`}
+                     className="carousel-span">View Campaign
+                   </Link>
+                   );
     }else {
       this.img = "No Image";
     }
@@ -26,7 +32,7 @@ class CenterCaro extends React.Component{
       <div className="center-caro" >
         <div className="center-caro_image_url">
           {this.img}
-          <span className="carousel-span">View Campaign</span>
+          {this.button}
         </div>
       </div>
     );

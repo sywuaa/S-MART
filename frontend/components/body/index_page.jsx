@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react-redux';
 import Tile from './tiles';
-// import Carousel from './carousel_container';
 import { Link } from 'react-router-dom';
 import Caro from './carousel/caro_container';
 

@@ -14,9 +14,21 @@
   width: 44%;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .carousel-span {
-  color: White;
-  display: float;
+  border: 2px solid Red;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  font-size: 16px;
+  padding: 10px;
+  color: Blue;
+  display: block;
   z-index: 2;
 }
 

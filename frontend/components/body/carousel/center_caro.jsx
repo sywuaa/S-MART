@@ -20,6 +20,7 @@ class CenterCaro extends React.Component{
       <div className="center-caro" >
         <div className="center-caro_image_url">
           {this.img}
+          <span className="carousel-span">View Campaign</span>
         </div>
       </div>
     );

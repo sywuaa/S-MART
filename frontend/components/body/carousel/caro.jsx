@@ -16,7 +16,7 @@ class Caro extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-
+    debugger
   }
 
   componentDidMount(){
@@ -28,23 +28,23 @@ class Caro extends React.Component {
   }
 
   handleClick(direction){
-    if (direction === 'left'){
-      this.setState(this.state.center -= 1);
-    }else {
-      this.setState(this.state.center += 1);
-    }
+    return (e) => {
+      if (direction === 'left'){
+        this.setState({center: this.state.center-= 1, left: this.state.left-=1, right: this.state.right-= 1});
+      }else {
+        this.setState({center: this.state.center+= 1, left: this.state.left+=1, right: this.state.right+= 1});
+      }
+    };
   }
 
   render(){
     return (
       <div className="carousel-container">
-        <LeftCaro campaign={this.state.campaigns[this.state.left]}/>
+        <LeftCaro campaign={this.state.campaigns[this.state.left]} handleClick={this.handleClick}/>
         <CenterCaro campaign={this.state.campaigns[this.state.center]}/>
-        <RightCaro campaign={this.state.campaigns[this.state.right]}/>
+        <RightCaro campaign={this.state.campaigns[this.state.right]} handleClick={this.handleClick} />
       </div>
     )
-
-
   }
 }
 

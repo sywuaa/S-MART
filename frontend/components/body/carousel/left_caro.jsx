@@ -8,7 +8,7 @@ class LeftCaro extends React.Component{
     this.state = {
       direction: 'left'
     };
-
+    debugger
   }
 
   render(){
@@ -22,7 +22,7 @@ class LeftCaro extends React.Component{
 
     return(
       <div className="left-caro" >
-        <div className="left-caro_image_url">
+        <div className="left-caro_image_url" onClick={this.props.handleClick('left')}>
           {this.img}
         </div>
       </div>

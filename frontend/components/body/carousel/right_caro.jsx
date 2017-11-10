@@ -22,7 +22,7 @@ class RightCaro extends React.Component{
 
     return(
       <div className="right-caro" >
-        <div className="right-caro_image_url">
+        <div className="right-caro_image_url" onClick={this.props.handleClick('right')}>
           {this.img}
         </div>
       </div>

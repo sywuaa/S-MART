@@ -16,15 +16,19 @@ class Caro extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    debugger
   }
 
   componentDidMount(){
     this.props.fetchCarousels();
+    this.interval = setInterval(this.handleClick('right'), 5000);
   }
 
   componentWillReceiveProps(newProps) {
     this.setState({ campaigns: newProps.carousels });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   handleClick(direction){

@@ -13,12 +13,14 @@ class RightCaro extends React.Component{
 
   render(){
     const { campaign } = this.props;
+    let style = `w3-center w3-animate-${this.direction}` ;
 
     if (campaign){
-      this.img = <img src={campaign.carousel_image} />
+      this.img = <img src={campaign.carousel_image}/>
     }else {
       this.img = "No Image";
     }
+
 
     return(
       <div className="right-caro" >

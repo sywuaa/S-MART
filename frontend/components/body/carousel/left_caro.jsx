@@ -8,7 +8,6 @@ class LeftCaro extends React.Component{
     this.state = {
       direction: 'left'
     };
-    debugger
   }
 
   render(){

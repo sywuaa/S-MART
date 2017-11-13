@@ -16,6 +16,7 @@ class Caro extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.calPosition = this.calPosition.bind(this);
   }
 
   componentDidMount(){
@@ -31,13 +32,23 @@ class Caro extends React.Component {
     clearInterval(this.interval);
   }
 
+  calPosition(idx,dif) {
+    let length = this.state.campaigns.length;
+    return (idx + dif + length) % length ;
+  }
+
   handleClick(direction){
+    let dif = 1;
+    if (direction === 'left'){
+      dif = -1;
+    }else {
+      dif = 1;
+    }
     return (e) => {
-      if (direction === 'left'){
-        this.setState({center: this.state.center-= 1, left: this.state.left-=1, right: this.state.right-= 1});
-      }else {
-        this.setState({center: this.state.center+= 1, left: this.state.left+=1, right: this.state.right+= 1});
-      }
+      let newLeft = this.calPosition(this.state.left, dif);
+      let newCenter = this.calPosition(this.state.center, dif);
+      let newRight = this.calPosition(this.state.right, dif);
+      this.setState({center: newCenter, left: newLeft, right: newRight});
     };
   }
 

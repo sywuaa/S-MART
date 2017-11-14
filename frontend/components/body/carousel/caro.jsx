@@ -8,7 +8,6 @@ class Caro extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      direction: 'left',
       campaigns: [],
       left: 1,
       center: 2,
@@ -38,13 +37,8 @@ class Caro extends React.Component {
   }
 
   handleClick(direction){
-    let dif = 1;
-    if (direction === 'left'){
-      dif = -1;
-    }else {
-      dif = 1;
-    }
-    return (e) => {
+    let dif = direction === 'right' ? -1 : 1;
+    return () => {
       let newLeft = this.calPosition(this.state.left, dif);
       let newCenter = this.calPosition(this.state.center, dif);
       let newRight = this.calPosition(this.state.right, dif);

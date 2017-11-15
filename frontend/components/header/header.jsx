@@ -16,7 +16,7 @@ class Header extends React.Component {
     return(
       <div className="header-container">
         <div className="left-nav">
-          <Link className="logo" to='/'>S-Mart</Link>
+          <Link className="logo" to='/'>S-MART</Link>
             <a target='_blank' href="https://www.github.com/sywuaa" ><span>Github</span></a>
             <a target='_blank' href="https://www.linkedin.com/in/shaoyong-wu-38a8a4103"><span>LinkedIn</span></a>
             <a target='_blank' href="https://www.sywu.us/" ><span>Portfolio</span></a>

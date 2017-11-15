@@ -4,19 +4,21 @@
   align-items: center;
   justify-content: space-between;
   font-size: 15px;
-  background-color: $lightest-blue;
+  background-color: #DCECF7;
   font-family: "Benton Sans","Helvetica","sans-serif";
   width: 100%;
+  height: 80px;
 }
 
 .header {
-  height: 20%;
 }
 
 .right-nav {
+  padding-top: 12px;
   display: flex;
   margin-right: 20px;
-  align-items: baseline;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .right-nav div {
@@ -29,13 +31,18 @@
   margin-left: 50px;
 }
 
+.left-nav span {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
 .logo {
-  font-size: 30px;
+  font-size: 36px;
   margin: 20px;
   margin-right: 30px;
   color: $logo-pink;
   font-weight: Bolder;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Seymour One', sans-serif;
 }
 
 .login-container {
@@ -223,6 +230,4 @@
 
 .newCampaign button {
   color: $logo-pink;
-  width: 150px;
-  height: 30px;
 }

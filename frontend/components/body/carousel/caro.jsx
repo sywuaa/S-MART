@@ -37,7 +37,7 @@ class Caro extends React.Component {
   }
 
   handleClick(direction){
-    let dif = direction === 'right' ? -1 : 1;
+    let dif = direction === 'left' ? -1 : 1;
     return () => {
       let newLeft = this.calPosition(this.state.left, dif);
       let newCenter = this.calPosition(this.state.center, dif);

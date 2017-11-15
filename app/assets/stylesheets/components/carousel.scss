@@ -23,14 +23,15 @@
 }
 
 .carousel-span {
-  border: 2px solid #fafafa;
-  position: absolute;
-  left: 30%;
-  top: 50%;
+  border: 2px solid White;
+  position: relative;
+  left: 20px;
+  bottom: 60px;
   font-size: 16px;
+  font-weight: bold;
   padding: 10px;
-  color: White;
-  display: block;
+  color: $logo-pink;
+  display: inline-block;
   z-index: 2;
 }
 

@@ -3,6 +3,7 @@ import { Component } from 'react-redux';
 import Tile from './tiles';
 import { Link } from 'react-router-dom';
 import Caro from './carousel/caro_container';
+import TileCaro from './tile_carousel/tile_caro';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -37,6 +38,7 @@ class IndexPage extends React.Component {
         <div className="carousel">
         <Caro />
         </div>
+        <TileCaro tiles={this.tileList} />
         <div className="tiles-container">
           {this.tileList}
         </div>

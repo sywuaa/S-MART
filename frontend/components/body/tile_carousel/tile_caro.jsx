@@ -7,14 +7,24 @@ class TileCaro extends React.Component {
     super(props);
 
     this.state = {
-      campaign: [],
+      tiles: [],
       center: 3,
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    this.setState({ tiles: newProps.tiles });
+  }
+
+
   render(){
+    if(this.props.tiles){
+      this.tileList = this.state.tiles.slice(this.state.center, this.state.center+4);
+    }
+
     return (
-      <div>  Testing !!!
+      <div className="tiles-container">
+        {this.tileList}
       </div>
     );
   }

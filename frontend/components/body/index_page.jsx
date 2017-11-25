@@ -39,9 +39,6 @@ class IndexPage extends React.Component {
         <Caro />
         </div>
         <TileCaro tiles={this.tileList} />
-        <div className="tiles-container">
-          {this.tileList}
-        </div>
       </div>
     )
   }
@@ -50,3 +47,9 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage;
+
+
+
+// <div className="tiles-container">
+//   {this.tileList}
+// </div>

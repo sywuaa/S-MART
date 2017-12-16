@@ -4,7 +4,7 @@
 [SMART](https://smart-aa.herokuapp.com/#/)
 
 
-MapMyPath is full-stack web application clone of INDIEGOGO, created using Ruby on Rails on the backend with a PostgreSQL database and React.js with a Redux architectural framework on the frontend. Users are able to start funding campaigns or make contributions to campaigns they desire. Users can also receive perks from making contributions to campaisngs.
+S-Mart is full-stack web application clone of INDIEGOGO, created using Ruby on Rails on the backend with a PostgreSQL database and React.js with a Redux architectural framework on the frontend. Users are able to start funding campaigns or make contributions to campaigns they desire. (Because of academic purposes, no payment is accepted) Users can also receive perks from making contributions to campaigns. (No actual perks is being purchased).
 
 
 ## Features & Implementation
@@ -44,7 +44,7 @@ Each child component render will not effect the parent state.
 
 ![Perk](app/assets/images/pro/perk.png)
 
-Unfortunately, a campaign can have multiple perks which I need to store them as an array of objects. Doing do, my parent component will be the array and child component will keep track of the state of a new perk. Perk object will be store into the parent array when click "Add Perk" and the state is reset.
+Unfortunately, a campaign can have multiple perks which I need to store them as an array of objects. Doing that, my parent component will be the array and child component will keep track of the state of a new perk. Perk object will be store into the parent array when "Add Perk" is clicked and the state will reset.
 
 ---
 ```javascript
@@ -113,6 +113,5 @@ Continue on User Profile and include options for edit campaign and allow user to
 #### Commenting on the campaign show page
 Front Page Carousel:
 -- Top Carousel
--- Tile Carousel
 
 Allow user to post question on the campaign show page where campaign creator can post responses to questions or common Q/A.

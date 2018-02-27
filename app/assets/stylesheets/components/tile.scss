@@ -1,7 +1,7 @@
 .tile-container {
   border: 1px solid #dee0e2;
-  margin: 30px 30px 30px 30px;
-  width: 240px;
+  margin: 30px 0 30px 0;
+  width: 200px;
   height: 480px;
   flex-direction: column;
   font-family: "Benton Sans Medium", "Helvetica", "sans-serif";
@@ -13,12 +13,12 @@
 }
 
 .tile-container img {
-  width: 240px;
-  height: 280px;
+  width: 200px;
+  height: 240px;
 }
 
 .percent-line {
-  width: 200px;
+  width: 160px;
   margin: 10px;
 }
 

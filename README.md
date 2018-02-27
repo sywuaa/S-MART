@@ -78,7 +78,7 @@ handlePerk() {
 }
 ```
 ---
-### Friending
+### Contributions
 
 ![Contributions](app/assets/images/pro/contributions.png)
 

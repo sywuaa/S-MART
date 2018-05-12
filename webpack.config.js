@@ -22,6 +22,7 @@ plugins = plugins.concat(
 )
 
 module.exports = {
+  mode: 'development',
   context: __dirname,
   entry: './frontend/smart.jsx',
   output: {
@@ -33,7 +34,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '*']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,

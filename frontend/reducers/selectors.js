@@ -15,3 +15,11 @@ export const selectCarousels = (carousels) => {
     return carouArray;
   }
 };
+
+export const selectImages = (array) => {
+  let images = [];
+  for(let i = 0; i < array.length; i++){
+    images.push(array[i].carousel_image);
+  }
+  return images;
+};

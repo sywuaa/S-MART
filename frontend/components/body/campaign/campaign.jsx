@@ -31,9 +31,13 @@ class Campaign extends React.Component {
   }
 
   makeContribution(){
-    this.state.reward_id = 1;
-    const contribution = this.state;
-    this.props.createContribution(contribution);
+    if(this.props.session !== null){
+      this.state.reward_id = 1;
+      const contribution = this.state;
+      this.props.createContribution(contribution).then(window.alert('Thanks!!'));
+    }else {
+      window.alert('please sign in');
+    }
   }
 
   update(input){
@@ -43,13 +47,17 @@ class Campaign extends React.Component {
   }
 
   getPerk(reward){
-    return(e) => {
+    return () => {
+      if(this.props.session !== null){
       const contribution = {
         campaign_id: this.props.campaign.id,
         amount: reward.price,
         reward_id: reward.id
       };
-      this.props.createContribution(contribution);
+      this.props.createContribution(contribution).then(window.alert('Thanks!'));
+    }else {
+      window.alert('please sign in');
+    }
     };
   }
 
@@ -69,7 +77,7 @@ class Campaign extends React.Component {
       const rewardList = campaign.rewards.map( (reward,index) => {
         return(
           <div className="show-reward-container" key={index} >
-            <RewardTile reward={reward} getPerk={this.getPerk}/>
+            <RewardTile reward={reward} getPerk={this.getPerk} session={this.props.session}/>
           </div>
         );
       });

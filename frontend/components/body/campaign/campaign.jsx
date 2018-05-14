@@ -34,7 +34,7 @@ class Campaign extends React.Component {
     if(this.props.session !== null){
       this.state.reward_id = 1;
       const contribution = this.state;
-      this.props.createContribution(contribution).then(window.alert('Thanks!!'));
+      this.props.createContribution(contribution).then(window.alert('Thanks!'));
     }else {
       window.alert('please sign in');
     }

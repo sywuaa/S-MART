@@ -4,9 +4,20 @@ class RewardTile extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      openModal: false,
+    };
 
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(){
+    if(this.props.session !== null){
+      this.props.getPerk(this.props.reward);
+    }else {
+      window.alert('please sign in');
+    }
+  }
 
   render(){
     return(
@@ -26,12 +37,9 @@ class RewardTile extends React.Component {
           <strong>Items included:</strong>
           {this.props.reward.item}
         </div>
-
-
         <div className="est-delivery" onClick={this.props.getPerk(this.props.reward)}>
           Get This Perk
         </div>
-
 
       </div>
     );

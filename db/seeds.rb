@@ -7,13 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 a = User.create([
-  { username: 'shao', password: 'shaoshao', first_name: 'shao', last_name: 'wu', email: 'shao@gmail.com'},
-  { username: 'User1', password: 'asdasdasd',first_name: 'Mr. A', last_name: 'bb', email: 'b@gmail.com'},
-  { username: 'User2', password: 'miumiumiu',first_name: 'Mr. Miu', last_name: 'Miu Miu', email: 'miumiu@gmail.com'},
+  { username: 'shao', password: 'shaoshao', first_name: 'Shao', last_name: 'wu', email: 'shao@gmail.com'},
+  { username: 'User1', password: 'asdasdasd',first_name: 'User1', last_name: 'bb', email: 'b@gmail.com'},
+  { username: 'User2', password: 'miumiumiu',first_name: 'User2', last_name: 'Miu Miu', email: 'miumiu@gmail.com'},
   { username: 'Miu2', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu2@gmail.com'},
-  { username: 'Mew', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
-  { username: 'Cool Guy', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'mium@gmail.com'},
-  { username: 'Mr Cool Guy', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu@gmail.com'}
+  { username: 'Mew', password: 'miumiumiu',first_name: 'Mr. Mew', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
+  { username: 'CoolGuy2', password: 'miumiumiu',first_name: 'Cool', last_name: 'Miu Miu2', email: 'mium@gmail.com'},
+  { username: 'CoolGuy', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
+  { username: 'guest', password: 'miumiumiu',first_name: 'Guest', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
+
   ])
 
 Reward.create({

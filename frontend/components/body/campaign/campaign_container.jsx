@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   return({
     id: id,
     currentCampaign: state.campaigns.currentCampaign,
-    campaign: state.campaigns.entities[id]
+    campaign: state.campaigns.entities[id],
+    session: state.session.currentUser
   });
 };
 

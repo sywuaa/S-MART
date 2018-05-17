@@ -1,11 +1,12 @@
 .tile-container {
   border: 1px solid #dee0e2;
   margin: 30px 0 30px 0;
-  width: 200px;
+  width: 240px;
   height: 480px;
   flex-direction: column;
   font-family: "Benton Sans Medium", "Helvetica", "sans-serif";
   justify-content: space-around;
+  max-width: 1500px;
 }
 
 .tile-bottom {
@@ -13,7 +14,7 @@
 }
 
 .tile-container img {
-  width: 200px;
+  width: 240px;
   height: 240px;
 }
 

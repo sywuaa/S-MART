@@ -13,9 +13,8 @@ a = User.create([
   { username: 'Miu2', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu2@gmail.com'},
   { username: 'Mew', password: 'miumiumiu',first_name: 'Mr. Mew', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
   { username: 'CoolGuy2', password: 'miumiumiu',first_name: 'Cool', last_name: 'Miu Miu2', email: 'mium@gmail.com'},
-  { username: 'CoolGuy', password: 'miumiumiu',first_name: 'Mr. Miu 2', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
+  { username: 'CoolGuy', password: 'miumiumiu',first_name: 'Mr. Miu 3', last_name: 'Miu Miu3', email: 'miu@gmail.com'},
   { username: 'guest', password: 'miumiumiu',first_name: 'Guest', last_name: 'Miu Miu2', email: 'miu@gmail.com'},
-
   ])
 
 Reward.create({

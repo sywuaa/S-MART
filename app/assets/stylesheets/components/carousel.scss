@@ -78,5 +78,10 @@
 
 
 .newCaro img {
-  height: 500px;
+  min-height: 500px;
+  height:auto;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid #e6e6e6;
 }

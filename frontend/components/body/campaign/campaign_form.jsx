@@ -85,7 +85,6 @@ class SaveCampaign extends React.Component {
 
   handleChange(input){
       return (e) => {
-        window.scrollTo(0,0);
         this.setState({[input]: e.target.value});
       };
   }

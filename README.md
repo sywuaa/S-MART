@@ -4,18 +4,18 @@
 [SMART](https://smart-aa.herokuapp.com/#/)
 
 
-S-Mart is full-stack web application clone of INDIEGOGO, created using Ruby on Rails on the backend with a PostgreSQL database and React.js with a Redux architectural framework on the frontend. Users are able to start funding campaigns or make contributions to campaigns they desire. (Because of academic purposes, no payment is accepted) Users can also receive perks from making contributions to campaigns. (No actual perks is being purchased).
+S-Mart is full-stack web application clone of IndieGoGo, created using Ruby on Rails as the backend with PostgreSQL database and React.js with a Redux architectural framework on the frontend. Users are able to start funding campaigns or make contributions to campaigns they desire. (Because of academic purposes, no payment is accepted) Users can also receive perks from making contributions to campaigns. (No actual perks is being purchased).
 
 
 ## Features & Implementation
 * Account creation and authentication
 * Create Campaigns for fundraising or promote products
-* Make contributions to campaigns that you desire
+* Make contributions to campaigns
 * View campaign show pages
     * Campaign video, Slogan/TagLine, Overview, Story, Perks for contributors
-    * Has options to make desire contribution amounts or contributions for perks
-* Create campaign in one go
-    * No empty campaign were created in the backend. Instead, all campaign information is kept within the parent state and will be updated by passing "handling functions" to the child component.
+    * Options to make desire contribution amounts or contributions for perks
+* Create a campaign in one go
+    * No empty campaign was created in the backend. Instead, all campaign information is kept within the parent state and will be updated by passing "handling functions" as props to the child component.
 
 ---
 ```javascript
@@ -44,7 +44,7 @@ Each child component render will not effect the parent state.
 
 ![Perk](app/assets/images/pro/perk.png)
 
-Unfortunately, a campaign can have multiple perks which I need to store them as an array of objects. Doing that, my parent component will be the array and child component will keep track of the state of a new perk. Perk object will be store into the parent array when "Add Perk" is clicked and the state will reset.
+A campaign can have multiple perks where we need to store them as an array of objects. In order to achieve that, our parent component will be an array and child component will keep track of the state of a new perk. Perk objects will be stored in the parent array when "Add Perk" is clicked and the state will reset.
 
 ---
 ```javascript
@@ -82,7 +82,7 @@ handlePerk() {
 
 ![Contributions](app/assets/images/pro/contributions.png)
 
-Users have the abilities to make desired contributions toward a campaign or contribute to campaign for perks they like
+Users have the abilities to make desired contributions toward a campaign or contribute to the campaign for perks they like
 
 ---
 ```ruby
@@ -108,10 +108,10 @@ belongs_to :contributor,
 
 ## Future Directions for the Project
 
-Continue on User Profile and include options for edit campaign and allow user to claim perks that does not require shipping. Such as coupon vouchers, Digital Keys, etc.
+Continue on User Profile and include options for edit campaign and allow the user to claim perks that do not require shipping. Such as coupon vouchers, Digital Keys, etc.
 
 #### Commenting on the campaign show page
 Front Page Carousel:
 -- Top Carousel
 
-Allow user to post question on the campaign show page where campaign creator can post responses to questions or common Q/A.
+Allow users to post questions on the campaign show page where campaign creator can post responses to questions or common Q/A.

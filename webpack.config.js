@@ -23,7 +23,6 @@ plugins = plugins.concat(
 
 module.exports = {
   context: __dirname,
-  mode: 'development',
   entry: './frontend/smart.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),

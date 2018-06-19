@@ -22,8 +22,8 @@ class Caro extends React.Component {
     this.imageList = this.props.images.map((img,index) => {
       var url = "#/campaigns/" + (index + 1);
       return(
-        <div>
-          <img key={index} src={img} />
+        <div key={index}>
+          <img src={img} />
           <a href={url} className="view-camp-button"><button>View Campaign</button></a>
         </div>
       );

@@ -77,7 +77,6 @@ class SaveCampaign extends React.Component {
   }
 
   handleClick(target) {
-    window.scrollTo(0,0);
     return () => {
       this.setState({component: target});
     };
@@ -103,6 +102,30 @@ class SaveCampaign extends React.Component {
         });
     }
 
+    this.basicActive = 'null';
+    this.storyActive = 'null';
+    this.rewardActive = 'null';
+    this.finalActive = 'null';
+    switch(this.state.component){
+
+      case 'basic':
+        this.basicActive = 'active';
+        break;
+
+      case 'story':
+        this.storyActive = 'active';
+        break;
+
+      case 'reward':
+        this.rewardActive = 'active';
+        break;
+
+      case 'final':
+        this.finalActive = 'active';
+        break;
+
+    }
+
     return(
 
         <div className="camp-page">
@@ -117,16 +140,16 @@ class SaveCampaign extends React.Component {
             </div>
 
             <div className="form-tabs">
-              <section onClick={this.handleClick('basic')}>
+              <section className={this.basicActive} onClick={this.handleClick('basic')}>
                 Basic
               </section>
-              <section onClick={this.handleClick('story')}>
+              <section className={this.storyActive} onClick={this.handleClick('story')}>
                 Story
               </section>
-              <section onClick={this.handleClick('reward')}>
+              <section className={this.rewardActive} onClick={this.handleClick('reward')}>
                 Perks
               </section>
-              <section onClick={this.handleClick('final')}>
+              <section className= {this.finalActive} onClick={this.handleClick('final')}>
                 Final
               </section>
             </div>

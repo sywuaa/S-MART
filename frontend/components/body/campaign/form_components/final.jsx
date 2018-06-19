@@ -6,8 +6,6 @@ class Final extends React.Component {
 
     }
 
-
-
   render(){
 
     return(

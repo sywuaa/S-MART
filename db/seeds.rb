@@ -20,18 +20,18 @@ a = User.create([
 Reward.create({
   title: "Thank You",
   item: "Message: Thank You for your support",
-  description: "Thanks for your support"
+  description: "Thanks!!!"
 })
 
 a = Campaign.create({
   user_id: 1,
   goal: 400000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 1",
+  slogan: "Support Campaign 1",
   city: "MIAMI BEACH",
   country: "United States",
-  start_date: "10-27-2017",
-  end_date: "12-26-2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp1/1.jpeg"),
   overview_image: File.open("app/assets/images/camp1/11.jpeg"),
   carousel_image: File.open("app/assets/images/camp1/111.jpeg"),
@@ -44,36 +44,36 @@ a = Campaign.create({
 Reward.create({
   campaign_id: a.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 1 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: a.id,
   price: 59,
-  title: "Lorem Ipsum",
-  item: "What is Lorem Ipsum?",
+  title: "Perk 2",
+  item: "Camp 1 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: a.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 1 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 b = Campaign.create({
   user_id: 3,
   goal: 10000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 2",
+  slogan: "Support Campaign 2",
   city: "Boulder",
   country: "United States",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp2/2.jpeg"),
   overview_image: File.open("app/assets/images/camp2/22.jpeg"),
   carousel_image: File.open("app/assets/images/camp2/222.jpeg"),
@@ -86,24 +86,24 @@ b = Campaign.create({
 Reward.create({
   campaign_id: b.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 2 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: b.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 2 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: b.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 2 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
@@ -111,12 +111,12 @@ Reward.create({
 c = Campaign.create({
   user_id: 4,
   goal: 5000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 3",
+  slogan: "Support Campaign 3",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp3/3.jpeg"),
   overview_image: File.open("app/assets/images/camp3/33.jpeg"),
   carousel_image: File.open("app/assets/images/camp3/333.jpeg"),
@@ -129,36 +129,36 @@ c = Campaign.create({
 Reward.create({
   campaign_id: c.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 3 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: c.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 3 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: c.id,
   price: 69,
-  title: "Lorem Ipsum",
-  item: "What is Lorem Ipsum?",
+  title: "Perk 3",
+  item: "Camp 3 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 d = Campaign.create({
   user_id: 5,
   goal: 5000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 4",
+  slogan: "Support Campaign 4",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp4/4.jpeg"),
   overview_image: File.open("app/assets/images/camp4/44.jpeg"),
   carousel_image: File.open("app/assets/images/camp4/444.jpeg"),
@@ -171,24 +171,24 @@ d = Campaign.create({
 Reward.create({
   campaign_id: d.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 4 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: d.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 4 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: d.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 4 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
@@ -196,12 +196,12 @@ Reward.create({
 e = Campaign.create({
   user_id: 6,
   goal: 5000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 5",
+  slogan: "Support Campaign 5",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp5/5.jpeg"),
   overview_image: File.open("app/assets/images/camp5/55.jpeg"),
   carousel_image: File.open("app/assets/images/camp5/555.jpeg"),
@@ -214,36 +214,36 @@ e = Campaign.create({
 Reward.create({
   campaign_id: e.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 5 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: e.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 5 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: e.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 5 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 f = Campaign.create({
   user_id: 7,
   goal: 1000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 6",
+  slogan: "Support Campaign 6",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp6/6.jpeg"),
   overview_image: File.open("app/assets/images/camp6/66.jpeg"),
   carousel_image: File.open("app/assets/images/camp6/666.jpeg"),
@@ -256,36 +256,36 @@ f = Campaign.create({
 Reward.create({
   campaign_id: f.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 6 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: f.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 6 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: f.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 6",
+  item: "Camp 3 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 g = Campaign.create({
   user_id: 7,
   goal: 1000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 7",
+  slogan: "Support Campaign 7",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp7/7.jpeg"),
   overview_image: File.open("app/assets/images/camp7/77.jpeg"),
   carousel_image: File.open("app/assets/images/camp7/777.jpeg"),
@@ -298,24 +298,24 @@ g = Campaign.create({
 Reward.create({
   campaign_id: g.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 7 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: g.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 7 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: g.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 7 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
@@ -326,8 +326,8 @@ h = Campaign.create({
   slogan: "What is Lorem Ipsum?",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp8/8.jpeg"),
   overview_image: File.open("app/assets/images/camp8/88.jpeg"),
   carousel_image: File.open("app/assets/images/camp8/888.jpeg"),
@@ -340,36 +340,36 @@ h = Campaign.create({
 Reward.create({
   campaign_id: h.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 8 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: h.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 8 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: h.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 8 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 j = Campaign.create({
   user_id: 6,
   goal: 1000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 9",
+  slogan: "Support Campaign 9",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp9/9.jpeg"),
   overview_image: File.open("app/assets/images/camp9/99.jpeg"),
   carousel_image: File.open("app/assets/images/camp9/999.jpeg"),
@@ -382,36 +382,36 @@ j = Campaign.create({
 Reward.create({
   campaign_id: j.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 9 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: j.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 9 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: j.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 9 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 k = Campaign.create({
   user_id: 1,
   goal: 1000,
-  title: "Lorem Ipsum",
-  slogan: "What is Lorem Ipsum?",
+  title: "Camp 10",
+  slogan: "Support Campaign 10",
   city: "Budapest",
   country: "Hungary",
-  start_date: "06/27/2017",
-  end_date: "07/26/2017",
+  start_date: "06-01-2018",
+  end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp10/10.jpeg"),
   overview_image: File.open("app/assets/images/camp10/100.jpeg"),
   carousel_image: File.open("app/assets/images/camp10/1000.jpeg"),
@@ -424,23 +424,23 @@ k = Campaign.create({
 Reward.create({
   campaign_id: k.id,
   price: 20,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 1",
+  item: "Camp 10 Reward 1",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: k.id,
   price: 59,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 2",
+  item: "Camp 10 Reward 2",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })
 
 Reward.create({
   campaign_id: k.id,
   price: 69,
-  title: "Where does it come from?",
-  item: "Where can I get some?",
+  title: "Perk 3",
+  item: "Camp 10 Reward 3",
   description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 })

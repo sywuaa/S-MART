@@ -20,8 +20,12 @@ class Caro extends React.Component {
     };
 
     this.imageList = this.props.images.map((img,index) => {
+      var url = "#/campaigns/" + (index + 1);
       return(
-        <img key={index} src={img} />
+        <div>
+          <img key={index} src={img} />
+          <a href={url} className="view-camp-button"><button>View Campaign</button></a>
+        </div>
       );
     });
 
@@ -34,22 +38,3 @@ class Caro extends React.Component {
 }
 
 export default Caro;
-
-// <div>
-//     <img src={this.state.slides[1].carousel_image} />
-// </div>
-// <div>
-//     <img src={this.state.slides[2].carousel_image} />
-// </div>
-// <div>
-//     <img src={this.state.slides[3].carousel_image} />
-// </div>
-// <div>
-//     <img src={this.state.slides[4].carousel_image}/>
-// </div>
-// <div>
-//     <img src={this.state.slides[5].carousel_image} />
-// </div>
-// <div>
-//     <img src={this.state.slides[6].carousel_image} />
-// </div>

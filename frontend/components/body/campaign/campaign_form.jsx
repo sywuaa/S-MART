@@ -78,6 +78,7 @@ class SaveCampaign extends React.Component {
 
   handleClick(target) {
     return () => {
+      window.scroll(0,0);
       this.setState({component: target});
     };
   }
@@ -149,7 +150,7 @@ class SaveCampaign extends React.Component {
               <section className={this.rewardActive} onClick={this.handleClick('reward')}>
                 Perks
               </section>
-              <section className= {this.finalActive} onClick={this.handleClick('final')}>
+              <section className={this.finalActive} onClick={this.handleClick('final')}>
                 Final
               </section>
             </div>

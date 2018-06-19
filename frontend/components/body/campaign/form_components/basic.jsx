@@ -13,7 +13,7 @@ class Basic extends React.Component {
           <h2>Basic</h2>
         </div>
         <div>
-          <span className="basic">
+          <span className="story">
             Make a good first impression: introduce your campaign objectives and entice people to learn more. This basic information will represent your campaign on your campaign page, on your campaign card, and in searches.
           </span>
         </div>

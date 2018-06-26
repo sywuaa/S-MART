@@ -12,25 +12,26 @@ class Caro extends React.Component {
 
   render() {
     const settings = {
-      dots: true,
       infinite: true,
       speed: 200,
       slidesToShow: 1,
       slidesToScroll: 1
     };
 
+    debugger
+
     this.imageList = this.props.images.map((img,index) => {
       var url = "#/campaigns/" + (index + 1);
       return(
         <div key={index}>
-          <img src={img} />
+          <img className='caro-img' src={img} />
           <a href={url} className="view-camp-button"><button>View Campaign</button></a>
         </div>
       );
     });
 
     return (
-      <Carousel wrapAround={true} autoplayInterval={5000} autoplay>
+      <Carousel renderCenterLeftControls={false} renderCenterRightControls={false} renderBottomCenterControls={false} wrapAround={true} autoplayInterval={5000} autoplay>
         {this.imageList}
       </Carousel>
     );

@@ -26,10 +26,11 @@ class Contributions extends React.Component {
         );
       });
     }
+    debugger
 
     return (
       <div className='component-contribution-container'>
-          <h2 className='component-contribution-message'>Don't worry, this tab and all its content is only visible to you. </h2>
+          <h2 className='component-contribution-message'>Don't worry, this tab and all its content is only visible to the user. </h2>
         <div className='component-contribution-detail-bar'>
           <span>ID</span>
           <span>Campaign ID</span>

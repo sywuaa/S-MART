@@ -34,7 +34,7 @@ class Campaigns extends React.Component {
 
     return (
       <div className='component-campaigns-container'>
-          <h2>Campaigns I'm On</h2>
+          <h2>My Campaign(s)</h2>
         <div className='component-campaignList-container'>
           {this.campaignList}
         </div>

@@ -23,10 +23,7 @@ class UserProfile extends React.Component {
       return(
         <div className="profile-page" >
           <div className="profile-nav" >
-
             <span>Profile</span>
-
-
           </div>
           <div className='profile-detail-container'>
             <h1 className='profile-name'>{user.first_name}</h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Profile from './content_components/profile';
 import Campaigns from './content_components/campaigns';
-import Contributions from './content_components/contributions';
+import Contributions from './content_components/contributions_container';
 
 const components = {
   profile: Profile,

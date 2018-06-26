@@ -26,27 +26,26 @@ Reward.create({
 a = Campaign.create({
   user_id: 1,
   goal: 400000,
-  title: "Camp 1",
-  slogan: "Support Campaign 1",
+  title: "Smart Scanner",
+  slogan: "build your own digital library",
   city: "MIAMI BEACH",
   country: "United States",
   start_date: "06-01-2018",
   end_date: "08-01-2018",
   square_image: File.open("app/assets/images/camp1/1.jpeg"),
   overview_image: File.open("app/assets/images/camp1/11.jpeg"),
-  carousel_image: File.open("app/assets/images/camp1/111.jpeg"),
+  carousel_image: File.open("app/assets/images/camp1/11111.jpeg"),
   vid_url: "https://www.youtube.com/embed/dWja_zn_ftc",
-  overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  story: "Why do we use it?
-  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+  overview: "Let CZUR scanner help to build your private digital library with an easier and faster way.",
+  story: "It is Thanksgiving week now. We should thank all of your great support! In return, we will start a thanksgiving customer feedback event. Everyone can get a gift from us. From Nov. 23 to Nov. 30, you can directly get another free button,(besides the one attached with czur scanner that you bought)  once you share our indiegogo on your facebook, twitter or google+. There is one click share button on the left of campaign video. The button is a useful accessory for CZUR scanner, which normally can click 200,000 times.",
 })
 
 Reward.create({
   campaign_id: a.id,
   price: 20,
-  title: "Perk 1",
-  item: "Camp 1 Reward 1",
-  description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+  title: "Scanner",
+  item: "Scanner + accessories",
+  description: "Get one CZUR scanner ET16 Plus with foot pedal and side lights. Side lights can let you scan glossy paper in well results. You will enjoy $40 off. Future Retail Price: $499+ taxes + shipping"
 })
 
 Reward.create({

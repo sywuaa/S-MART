@@ -90,7 +90,7 @@
 .view-camp-button{
   position: relative;
   bottom: 50px;
-  left: 48%;
+  left: 47%;
   z-index: 1;
   background-color: #fef2ff;
   padding: 5px;
@@ -98,4 +98,10 @@
 
 .view-camp-button button{
   border-radius: 5px solid lightgray;
+}
+
+.caro-img {
+  height: 500px;
+  width: auto;
+  min-width: 1500px;
 }

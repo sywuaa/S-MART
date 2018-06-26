@@ -31,7 +31,7 @@ class Caro extends React.Component {
     });
 
     return (
-      <Carousel renderCenterLeftControls={false} renderCenterRightControls={false} renderBottomCenterControls={false} wrapAround={true} autoplayInterval={5000} autoplay>
+      <Carousel renderCenterLeftControls={false} renderCenterRightControls={false} wrapAround={true} autoplayInterval={5000} autoplay>
         {this.imageList}
       </Carousel>
     );

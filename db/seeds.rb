@@ -42,26 +42,26 @@ a = Campaign.create({
 
 Reward.create({
   campaign_id: a.id,
-  price: 20,
-  title: "Scanner",
+  price: 400,
+  title: "Core Scanner",
   item: "Scanner + accessories",
-  description: "Get one CZUR scanner ET16 Plus with foot pedal and side lights. Side lights can let you scan glossy paper in well results. You will enjoy $40 off. Future Retail Price: $499+ taxes + shipping"
+  description: "Get one scanner plus with foot pedal and side lights. Side lights can let you scan glossy paper in well results. Future Retail Price: $499+ taxes + shipping"
+})
+
+Reward.create({
+  campaign_id: a.id,
+  price: 29,
+  title: "Accessory",
+  item: "Cable",
+  description: "Need extra cable to handle your work? Now you can bring it anywhere and simply connect and scan. You can also use it as an extension cord and manage to scan from twice as far."
 })
 
 Reward.create({
   campaign_id: a.id,
   price: 59,
-  title: "Perk 2",
-  item: "Camp 1 Reward 2",
-  description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-})
-
-Reward.create({
-  campaign_id: a.id,
-  price: 69,
-  title: "Perk 3",
-  item: "Camp 1 Reward 3",
-  description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+  title: "Accessory",
+  item: "Cables + warranty",
+  description: "Need extra cable to handle your work? Now you can bring it anywhere and simply connect and scan. You can also use it as an extension cord and manage to scan from twice as far. Extensive warranty on all cables."
 })
 
 b = Campaign.create({

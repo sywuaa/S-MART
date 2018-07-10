@@ -67,19 +67,19 @@ Reward.create({
 b = Campaign.create({
   user_id: 3,
   goal: 10000,
-  title: "Camp 2",
-  slogan: "Support Campaign 2",
+  title: "EverRatchet",
+  slogan: "World's First Ratchet Keychain Tool",
   city: "Boulder",
   country: "United States",
   start_date: "06-01-2018",
   end_date: "08-01-2018",
-  square_image: File.open("app/assets/images/camp2/2.jpeg"),
-  overview_image: File.open("app/assets/images/camp2/22.jpeg"),
-  carousel_image: File.open("app/assets/images/camp2/222.jpeg"),
+  square_image: File.open("app/assets/images/camp2/2222.jpeg"),
+  overview_image: File.open("app/assets/images/camp2/2222.jpeg"),
+  carousel_image: File.open("app/assets/images/camp2/22222.jpeg"),
   vid_url: "https://www.youtube.com/embed/gyo3gUl70HM",
-  overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  story: "Why do we use it?
-  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  overview: "Thanks to EverRatchet's dynamic ratcheting feature you don't need to lift and reset the tool between each turn making it extremely practical for large jobs or when you are working with limited visibility or space. Fix what you need to fix and get back to life.",
+  story: "As our thanks to you for supporting us, we are offering this tool in Stainless Steel and Titanium at a 40% discount on all levels and are including a #2 Phillips Bit and a custom-sized Fire Flint!
+  Shipping on our Previous Campaigns - On our previously funded campaigns running from 400 to 900 backers we have shipped anywhere from 3 days to 1.5 weeks ahead of schedule. We make our timelines honest, transparent, and realistic to ensure that you when you support us that we are able to deliver."
 })
 
 Reward.create({
@@ -110,8 +110,8 @@ Reward.create({
 c = Campaign.create({
   user_id: 4,
   goal: 5000,
-  title: "Camp 3",
-  slogan: "Support Campaign 3",
+  title: "Shirt",
+  slogan: "Advanced Stain & Odour Repellent Cotton T-shirt",
   city: "Budapest",
   country: "Hungary",
   start_date: "06-01-2018",
@@ -120,9 +120,8 @@ c = Campaign.create({
   overview_image: File.open("app/assets/images/camp3/33.jpeg"),
   carousel_image: File.open("app/assets/images/camp3/333.jpeg"),
   vid_url: "https://www.youtube.com/embed/JcR1_PPbhTk",
-  overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  story: "Why do we use it?
-  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+  overview: "It “only” took 1 year, but we finally cracked how to engineer t-shirts that will make it easier than ever to look your best.",
+  story: "The t-shirts are engineered to make life easier and last a lifetime - without compromising on style and comfort. We use a unique combination of 3 of the most innovative textile technologies - something which has never been done before in a 100% cotton product.",
 })
 
 Reward.create({

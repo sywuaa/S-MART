@@ -308,7 +308,7 @@ Reward.create({
 Reward.create({
   campaign_id: g.id,
   price: 59,
-  title: "Perk 3",
+  title: "Charge anywhere",
   item: "3 x Magnetic cables + 6 ports ( microUSB and lighting )",
   description: "Magnetic Charging Cable - Magnetic Phone Charger - Micro USB Charger Cord - Fast Charging Cable. Now your whole family can use the same technology and stay charged anywhere around you house."
 })

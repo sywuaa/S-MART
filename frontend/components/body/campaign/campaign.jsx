@@ -57,7 +57,7 @@ class Campaign extends React.Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({modalIsOpen: false, amount: ""});
   }
 
   toggleFormType(){
@@ -71,7 +71,6 @@ class Campaign extends React.Component {
       this.state.reward_id = 1;
       const contribution = this.state;
       this.props.createContribution(contribution);
-      this.state.amount = '';
       this.openContribution();
 
     }else {
@@ -248,7 +247,7 @@ class Campaign extends React.Component {
                 </div>
 
                 <div className="show-overview-bottom">
-                  <input type="number" placeholder="$" onChange={this.update("amount")} />
+                  <input type="number" placeholder="$" onChange={this.update("amount")} value={this.state.amount} />
                   <button className="back-it-button" onClick={this.makeContribution}>Back It</button>
                 </div>
               </div>

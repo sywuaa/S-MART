@@ -9,6 +9,7 @@ import IndexContainer from './body/index_container';
 import HeaderContainer from './header/header_container';
 import UserProfileContainer from './user/user_profile_container';
 import Footer from './body/footer';
+import About from './about';
 
 
 const App = () => (
@@ -21,10 +22,9 @@ const App = () => (
 
     <Route exact path='/user/profile/:id' component={UserProfileContainer} />
     <Route exact path='/campaign/new' component={SaveCampaign} />
+    <Route exact path='/about' component={About} />
     <Footer />
   </div>
 );
 
 export default App;
-
-// <HeaderContainer />

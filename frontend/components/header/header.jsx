@@ -20,6 +20,7 @@ class Header extends React.Component {
             <a target='_blank' href="https://www.github.com/sywuaa" ><span>Github</span></a>
             <a target='_blank' href="https://www.linkedin.com/in/shaoyong-wu-38a8a4103"><span>LinkedIn</span></a>
             <a target='_blank' href="https://www.sywu.us/" ><span>Portfolio</span></a>
+          <Link className="header-about" to='/about'><span>About S-Mart</span></Link>
         </div>
 
 

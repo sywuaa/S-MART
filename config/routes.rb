@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :campaigns, only: [:index, :show, :create, :edit]
     resources :carousels, only: [:index]
     resources :contributions, only: [:create]
+    resources :about, only: [:index]
   end
 
 end

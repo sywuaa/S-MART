@@ -7,7 +7,7 @@ import RewardTile from './reward_tile';
 import Modal from 'react-modal';
 import LogInContainer from '../../header/auth/login_container';
 import SignUpContainer from '../../header/auth/signup_container';
-// import ModalContainer from '../../header/auth/modal';
+import { Link } from 'react-router-dom';
 
 
 class Campaign extends React.Component {
@@ -51,6 +51,11 @@ class Campaign extends React.Component {
     this.setState({modalIsOpen: true});
   }
 
+  openContribution() {
+    this.state.formType = 'contribution';
+    this.setState({modalIsOpen: true});
+  }
+
   closeModal() {
     this.setState({modalIsOpen: false});
   }
@@ -65,9 +70,11 @@ class Campaign extends React.Component {
     if(this.props.session !== null){
       this.state.reward_id = 1;
       const contribution = this.state;
-      this.props.createContribution(contribution).then(window.alert('Thanks!'));
+      this.state.amount = '';
+      this.props.createContribution(contribution);
+      this.openContribution();
     }else {
-      window.alert('please sign in');
+      this.openLoginModal();
     }
   }
 
@@ -80,15 +87,16 @@ class Campaign extends React.Component {
   getPerk(reward){
     return () => {
       if(this.props.session !== null){
-      const contribution = {
-        campaign_id: this.props.campaign.id,
-        amount: reward.price,
-        reward_id: reward.id
-      };
-      this.props.createContribution(contribution).then(window.alert('Thanks!'));
-    }else {
-      window.alert('please sign in');
-    }
+        const contribution = {
+          campaign_id: this.props.campaign.id,
+          amount: reward.price,
+          reward_id: reward.id
+        };
+        this.props.createContribution(contribution);
+        this.openContribution();
+      }else {
+        this.openLoginModal();
+      }
     };
   }
 
@@ -160,6 +168,29 @@ class Campaign extends React.Component {
 
       </div>
     );
+
+
+    const Contribution = (
+      <div className="modal-contribution">
+        <div>
+          This app is for demonstration purposes.
+        </div>
+
+        <div>
+          Please refer to <Link to='/about'>about this app</Link> for additional information.
+        </div>
+
+        <div>
+          Thanks for you support!!
+        </div>
+      </div>
+    );
+
+    this.form;
+
+    if (this.state.formType == 'login') this.form = LogInForm;
+    if (this.state.formType == 'signup') this.form = SignUpForm;
+    if (this.state.formType == 'contribution') this.form = Contribution;
 
 
       return(
@@ -237,7 +268,7 @@ class Campaign extends React.Component {
               >
 
               <div className="auth-form">
-                {this.state.formType === 'signup' ? SignUpForm : LogInForm }
+                {this.form}
               </div>
               </Modal>
 

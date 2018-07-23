@@ -108,3 +108,24 @@
   text-align: center;
   border-radius: 2px;
 }
+
+.modal-contribution {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: White;
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal-contribution div:nth-child(odd) {
+  color: $logo-pink;
+  font-size: 24px;
+  margin: 20px 0 20px 0;
+}
+
+.modal-contribution a {
+  text-decoration: underline;
+  font-style: italic;
+  color: Blue;
+}

@@ -183,6 +183,10 @@ class Campaign extends React.Component {
         <div>
           Thanks for you support!!
         </div>
+
+        <div className='contribution-button'>
+          <button onClick={this.closeModal}>Confirm</button>
+        </div>
       </div>
     );
 

@@ -18,8 +18,6 @@ class Caro extends React.Component {
       slidesToScroll: 1
     };
 
-    debugger
-
     this.imageList = this.props.images.map((img,index) => {
       var url = "#/campaigns/" + (index + 1);
       return(
@@ -31,7 +29,7 @@ class Caro extends React.Component {
     });
 
     return (
-      <Carousel renderCenterLeftControls={false} renderCenterRightControls={false} wrapAround={true} autoplayInterval={5000} autoplay>
+      <Carousel renderCenterLeftControls renderCenterRightControls wrapAround={true} autoplayInterval={4000} autoplay>
         {this.imageList}
       </Carousel>
     );

@@ -7,7 +7,6 @@ class Tile extends React.Component {
     super(props);
   }
 
-
   render(){
 
     const camp = this.props.camp;

@@ -27,3 +27,20 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.tileCarousel {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    min-width: 1200px;
+    padding: 0 85px 0 85px;
+    margin: auto;
+    background-color: #fafafa;
+}
+
+.tileCarouselContainer {
+  display: flex;
+  justify-content: space-between;
+}

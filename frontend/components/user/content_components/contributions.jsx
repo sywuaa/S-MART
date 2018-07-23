@@ -26,7 +26,6 @@ class Contributions extends React.Component {
         );
       });
     }
-    debugger
 
     return (
       <div className='component-contribution-container'>

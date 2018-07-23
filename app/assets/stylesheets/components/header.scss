@@ -8,6 +8,11 @@
   font-family: "Benton Sans","Helvetica","sans-serif";
   width: 100%;
   height: 45px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header {

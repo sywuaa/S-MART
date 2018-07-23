@@ -4,6 +4,7 @@ import Tile from './tiles';
 import { Link } from 'react-router-dom';
 import Caro from './caro/new_caro_container';
 import TileCaro from './tile_carousel/tile_caro';
+import Carousel from 'nuka-carousel';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -33,12 +34,26 @@ class IndexPage extends React.Component {
       });
     }
 
+    this.first4 = this.tileList.slice(0,4);
+    this.last4 = this.tileList.slice(4)
+
+    this.tileCarousel = [[this.first4],[this.last4]].map( (arrayOf4, index) => {
+      return(
+        <div className='tileCarouselContainer' key={index}>
+          {arrayOf4}
+        </div>
+      );
+    });
+
     return(
       <div className="index-page">
         <div className="newCaro">
           <Caro />
         </div>
-        <TileCaro tiles={this.tileList} />
+
+        <Carousel className='tileCarousel' renderBottomCenterControls={false} wrapAround={true} autoplayInterval={6000} autoplay>
+          {this.tileCarousel}
+        </Carousel>
       </div>
     )
   }
@@ -47,6 +62,8 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage;
+
+// <TileCaro tiles={this.tileList} />
 
 
 

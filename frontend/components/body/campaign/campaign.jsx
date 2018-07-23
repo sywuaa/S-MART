@@ -70,9 +70,10 @@ class Campaign extends React.Component {
     if(this.props.session !== null){
       this.state.reward_id = 1;
       const contribution = this.state;
-      this.state.amount = '';
       this.props.createContribution(contribution);
+      this.state.amount = '';
       this.openContribution();
+
     }else {
       this.openLoginModal();
     }

@@ -25,7 +25,7 @@ Reward.create({
 
 a = Campaign.create({
   user_id: 1,
-  goal: 400000,
+  goal: 10000,
   title: "Smart Scanner",
   slogan: "build your own digital library",
   city: "MIAMI BEACH",
@@ -66,7 +66,7 @@ Reward.create({
 
 b = Campaign.create({
   user_id: 3,
-  goal: 10000,
+  goal: 1000,
   title: "EverRatchet",
   slogan: "World's First Ratchet Keychain Tool",
   city: "Boulder",
@@ -192,7 +192,7 @@ Reward.create({
 
 e = Campaign.create({
   user_id: 6,
-  goal: 5000,
+  goal: 20000,
   title: "Evolutional Laptop",
   slogan: "Fit in the size of your palm",
   city: "Budapest",
@@ -233,7 +233,7 @@ Reward.create({
 
 f = Campaign.create({
   user_id: 7,
-  goal: 1000,
+  goal: 10000,
   title: "The Best Wine",
   slogan: "Buy now or never",
   city: "Budapest",
@@ -315,7 +315,7 @@ Reward.create({
 
 h = Campaign.create({
   user_id: 1,
-  goal: 1000,
+  goal: 500,
   title: "Exotic Spa Candles",
   slogan: "Brilliant Colours and Sensual Sensations!",
   city: "Budapest",

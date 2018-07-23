@@ -4,6 +4,10 @@ import { Component } from 'react-redux';
 import { Player } from 'video-react';
 import { Line } from 'rc-progress';
 import RewardTile from './reward_tile';
+import Modal from 'react-modal';
+import LogInContainer from '../../header/auth/login_container';
+import SignUpContainer from '../../header/auth/signup_container';
+// import ModalContainer from '../../header/auth/modal';
 
 
 class Campaign extends React.Component {
@@ -12,12 +16,18 @@ class Campaign extends React.Component {
 
     this.state = {
       campaign_id: props.id,
-      amount: ""
+      amount: "",
+      modalIsOpen: false,
+      formType: 'login',
     };
 
     this.makeContribution = this.makeContribution.bind(this);
     this.getPerk = this.getPerk.bind(this);
     this.handleProfile = this.handleProfile.bind(this);
+    this.openSignupModal = this.openSignupModal.bind(this);
+    this.openLoginModal = this.openLoginModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.toggleFormType = this.toggleFormType.bind(this);
   }
 
   componentDidMount(){
@@ -28,6 +38,27 @@ class Campaign extends React.Component {
     if(!this.props.campaign || parseInt(newProps.match.params.id) !== this.props.campaign.id){
       this.props.fetchCampaign(newProps.match.params.id);
     }
+  }
+
+  openSignupModal() {
+    this.state.formType = 'signup';
+    this.setState({modalIsOpen: true});
+  }
+
+
+  openLoginModal() {
+    this.state.formType = 'login';
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
+  toggleFormType(){
+    let type;
+    this.state.formType === 'login' ? type = 'signup' : type = 'login';
+    this.setState({formType: type });
   }
 
   makeContribution(){
@@ -80,7 +111,55 @@ class Campaign extends React.Component {
             <RewardTile reward={reward} getPerk={this.getPerk} session={this.props.session}/>
           </div>
         );
-      });
+    });
+
+    const SignUpForm = (
+      <div className="modal-container-inside">
+        <div className="modal-container-top">
+          <div>
+            Sign up with email
+          </div>
+        </div>
+        <br></br>
+        <SignUpContainer />
+
+        <div className="modal-container-bottom">
+          <span>
+            By signing up you agree to our Terms of Use and Privacy Policy.
+          </span>
+        </div>
+
+        <div className="changeAuth-formtype">
+          <span>Already have an account?</span>
+          <button onClick={this.toggleFormType}>Log In</button>
+        </div>
+
+      </div>
+    );
+
+    const LogInForm = (
+      <div className="modal-container-inside">
+        <div className="modal-container-top">
+          <div>
+            Welcome Back !!
+          </div>
+        </div>
+        <br></br>
+        <LogInContainer/>
+
+        <div className="modal-container-bottom">
+          <span>
+            By logging in you agree to our Terms of Use and Privacy Policy.
+          </span>
+        </div>
+
+        <div className="changeAuth-formtype">
+          <span>New User?</span>
+          <button onClick={this.toggleFormType}>Sign Up</button>
+        </div>
+
+      </div>
+    );
 
 
       return(
@@ -149,6 +228,18 @@ class Campaign extends React.Component {
                   {rewardList}
                 </div>
               </div>
+
+              <Modal
+                isOpen={this.state.modalIsOpen}
+                onRequestClose={this.closeModal}
+                className='modal-style'
+                contentLabel="auth-form-container"
+              >
+
+              <div className="auth-form">
+                {this.state.formType === 'signup' ? SignUpForm : LogInForm }
+              </div>
+              </Modal>
 
             </div>
 

@@ -62,11 +62,3 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage;
-
-// <TileCaro tiles={this.tileList} />
-
-
-
-// <div className="tiles-container">
-//   {this.tileList}
-// </div>

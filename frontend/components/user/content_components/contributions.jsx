@@ -8,12 +8,13 @@ class Contributions extends React.Component {
 
   handleClick(id) {
     return() => {
-      this.props.props.history.push(`/campaigns/${id}`);
+      this.props.history.push(`/campaigns/${id}`);
     };
   }
 
   render(){
-    const {perks} = this.props.props.user;
+    debugger
+    const {perks} = this.props.user;
     if( perks ){
       this.perkList = perks.map( (perk, index) => {
         return(

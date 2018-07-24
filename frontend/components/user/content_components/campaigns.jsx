@@ -9,12 +9,12 @@ class Campaigns extends React.Component {
 
   handleClick(id) {
     return() => {
-      this.props.props.history.push(`/campaigns/${id}`);
+      this.props.history.push(`/campaigns/${id}`);
     };
   }
 
   render(){
-    const {campaigns} = this.props.props.user;
+    const {campaigns} = this.props.user;
     if( campaigns ){
       this.campaignList = campaigns.map( (camp, index) => {
         return(

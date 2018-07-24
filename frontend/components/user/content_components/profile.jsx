@@ -7,7 +7,7 @@ class Profile extends React.Component {
   }
 
   render(){
-    const {user} = this.props.props;
+    const {user} = this.props;
     return (
       <div className='component-profile-container'>
         <div className='component-profile-pic-container'>

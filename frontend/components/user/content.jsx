@@ -27,7 +27,7 @@ class ProfileContent extends React.Component {
   }
 
   render(){
-
+    debugger
     const Com = components[this.state.component];
 
     return(
@@ -39,7 +39,7 @@ class ProfileContent extends React.Component {
         </div>
 
         <div className='component-container'>
-          <Com props={this.props.props}/>
+          <Com {...this.props}/>
         </div>
 
       </div>

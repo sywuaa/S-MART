@@ -22,6 +22,7 @@ plugins = plugins.concat(
 )
 
 module.exports = {
+  mode: 'development',
   context: __dirname,
   entry: './frontend/smart.jsx',
   output: {

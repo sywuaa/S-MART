@@ -12,6 +12,12 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if log_in? && current_user.id == params[:id].to_i
+      render :show
+    else
+      @user = User.find(params[:id])
+      render 'api/users/show_min'
+    end
   end
 
   private

@@ -19,6 +19,7 @@ class UserProfile extends React.Component {
 
   render(){
     const { user } = this.props;
+    var allProps = this.props;
     if( user ){
       return(
         <div className="profile-page" >
@@ -28,7 +29,7 @@ class UserProfile extends React.Component {
           <div className='profile-detail-container'>
             <h1 className='profile-name'>{user.first_name}</h1>
             <div className="profile-content" >
-                <ProfileContent props={this.props}/>
+                <ProfileContent {...this.props}/>
             </div>
           </div>
         </div>

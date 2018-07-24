@@ -13,7 +13,6 @@ class Contributions extends React.Component {
   }
 
   render(){
-    debugger
     const {perks} = this.props.user;
     if( perks ){
       this.perkList = perks.map( (perk, index) => {

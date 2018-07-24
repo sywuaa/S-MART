@@ -27,6 +27,7 @@
   background-color: White;
   display: flex;
   flex-direction: column;
+  width: 800px;
 }
 
 .profile-name {
@@ -149,6 +150,7 @@
 .component-contribution-message {
   margin: 20px 0 20px 20px;
   color: #a8a8a8;
+  font-size: 27px;
 }
 
 .component-contribution-detail-bar {
@@ -157,13 +159,13 @@
   display: flex;
   border-top: 1px solid Gray;
   border-bottom: 1px solid Gray;
-  padding: 20px;
+  padding: 20px 0 20px 0;
+  display: grid;
+  width: 800px;
+  grid-template-columns: 150px 200px 150px 280px;
+  text-align: center;
 }
 
-.component-contribution-detail-bar span {
-  font-size: 20px;
-  margin-right: 80px;
-}
 
 .component-contribution-List-container {
   display: flex;
@@ -171,29 +173,37 @@
 }
 
 .component-contribution-detail-container{
-  display: flex;
+  width: 800px;
   font-size: 16px;
   padding: 20px 0 20px 0;
   border-bottom: 1px solid lightGray;
+  display: grid;
+  grid-template-columns: 150px 200px 150px 300px;
+  text-align: center;
 }
 
 .component-contribution-detail-container div {
   font-size: 16px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: center;
+  min-width: 100px;
+  max-width: 250px;
 }
 
-.profile-con-id {
-  margin-left: 25px;
-}
-.profile-con-camp {
-  margin-left: 130px;
-}
-.profile-con-price {
-  margin-left: 150px;
-}
-.profile-con-item {
-  margin-left: 100px;
-  flex-wrap: wrap-reverse;
-}
+// .profile-con-id {
+//   margin-left: 25px;
+// }
+// .profile-con-camp {
+//   margin-left: 130px;
+// }
+// .profile-con-price {
+//   margin-left: 150px;
+// }
+// .profile-con-item {
+//   margin-left: 100px;
+//   flex-wrap: wrap-reverse;
+// }
 
 .component-contribution-detail-container:hover {
   background-color: lightGray;

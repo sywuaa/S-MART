@@ -27,7 +27,6 @@ class ProfileContent extends React.Component {
   }
 
   render(){
-    debugger
     const Com = components[this.state.component];
 
     return(
